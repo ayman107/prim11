@@ -23,9 +23,9 @@ module.exports = async function handler(req, res) {
     res.end(JSON.stringify({ error: String((err && err.message) || err) }));
   };
 
-  if (voice === 'web:google:ar') {
+  if (voice.startsWith('web:google:')) {
     try {
-      respond(await synthGoogle(text));
+      respond(await synthGoogle(text, voice.split(':')[2]));
     } catch (err) {
       respondError(err);
     }
@@ -33,12 +33,13 @@ module.exports = async function handler(req, res) {
   }
 
   if (!EQ[voice]) voice = 'ar-SA-ZariyahNeural';
+  const lang = voice.startsWith('en') ? 'en' : 'ar';
 
   try {
     respond(await synthEdge(text, voice));
   } catch (err) {
     try {
-      respond(await synthGoogle(text));
+      respond(await synthGoogle(text, lang));
     } catch (err2) {
       respondError(err2);
     }

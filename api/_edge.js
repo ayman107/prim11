@@ -23,6 +23,12 @@ const EQ = {
   'ar-SY-AmanyNeural': 1, 'ar-SY-LaithNeural': 1,
   'ar-TN-HediNeural': 1, 'ar-TN-ReemNeural': 1,
   'ar-YE-MaryamNeural': 1, 'ar-YE-SalehNeural': 1,
+  'en-US-AvaNeural': 1, 'en-US-GuyNeural': 1,
+  'en-US-JennyNeural': 1, 'en-US-AriaNeural': 1,
+  'en-US-DavisNeural': 1, 'en-US-AndrewNeural': 1,
+  'en-US-BrianNeural': 1, 'en-US-EmmaNeural': 1,
+  'en-GB-SoniaNeural': 1, 'en-GB-RyanNeural': 1,
+  'en-AU-NatashaNeural': 1, 'en-AU-WilliamNeural': 1,
 };
 
 const EDGE_VOICES = Object.keys(EQ).sort();
@@ -150,9 +156,10 @@ function httpsGet(url, { referer }) {
   });
 }
 
-function synthGoogle(text) {
+function synthGoogle(text, lang) {
+  const tl = lang || 'ar';
   const url =
-    'https://translate.google.com/translate_tts?ie=UTF-8&tl=ar&client=tw-ob&q=' +
+    'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
     encodeURIComponent(String(text).slice(0, 200));
   return httpsGet(url, { referer: 'https://translate.google.com/' });
 }

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8f2" />
+    <meta name="description" content="Yumo - Interactive English Language Learning for Primary 1" />
+    <title>Yumo | English Language</title>
+    <script>
+    /* Redirect all /books/ fetches to /books-en/ and /audio/ to /audio-en/ */
+    (function () {
+      var origFetch = window.fetch;
+      window.fetch = function (url) {
+        var u = typeof url === 'string' ? url : (url && url.url) || '';
+        if (u.startsWith('/books/book-data.json'))
+          return origFetch.call(this, '/books-en/book-data.json');
+        if (u.startsWith('/books/audio-map.json'))
+          return origFetch.call(this, '/books-en/audio-map.json');
+        return origFetch.apply(this, arguments);
+      };
+    })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DVM_Cyny.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CEFcqToO.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

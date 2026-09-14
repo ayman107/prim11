@@ -43,6 +43,12 @@ const EQ = {
   'ar-SY-AmanyNeural': 1, 'ar-SY-LaithNeural': 1,
   'ar-TN-HediNeural': 1, 'ar-TN-ReemNeural': 1,
   'ar-YE-MaryamNeural': 1, 'ar-YE-SalehNeural': 1,
+  'en-US-AvaNeural': 1, 'en-US-GuyNeural': 1,
+  'en-US-JennyNeural': 1, 'en-US-AriaNeural': 1,
+  'en-US-DavisNeural': 1, 'en-US-AndrewNeural': 1,
+  'en-US-BrianNeural': 1, 'en-US-EmmaNeural': 1,
+  'en-GB-SoniaNeural': 1, 'en-GB-RyanNeural': 1,
+  'en-AU-NatashaNeural': 1, 'en-AU-WilliamNeural': 1,
 };
 
 const EDGE_VOICES = Object.keys(EQ).sort();
@@ -173,9 +179,10 @@ function httpsGet(url, { referer }) {
   });
 }
 
-function synthGoogle(text) {
+function synthGoogle(text, lang) {
+  const tl = lang || 'ar';
   const url =
-    'https://translate.google.com/translate_tts?ie=UTF-8&tl=ar&client=tw-ob&q=' +
+    'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
     encodeURIComponent(String(text).slice(0, 200));
   return httpsGet(url, { referer: 'https://translate.google.com/' });
 }
@@ -192,7 +199,20 @@ function handleTTS(req, res, u) {
   }
 
   if (voice === 'web:google:ar') {
-    synthGoogle(text)
+    synthGoogle(text, 'ar')
+      .then((buf) => {
+        res.writeHead(200, { 'Content-Type': 'audio/mpeg', 'Content-Length': buf.length, 'Cache-Control': 'public, max-age=86400' });
+        res.end(buf);
+      })
+      .catch((err) => {
+        res.writeHead(502, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ error: String(err.message || err) }));
+      });
+    return;
+  }
+
+  if (voice === 'web:google:en') {
+    synthGoogle(text, 'en')
       .then((buf) => {
         res.writeHead(200, { 'Content-Type': 'audio/mpeg', 'Content-Length': buf.length, 'Cache-Control': 'public, max-age=86400' });
         res.end(buf);
@@ -205,6 +225,7 @@ function handleTTS(req, res, u) {
   }
 
   if (!EQ[voice]) voice = 'ar-SA-ZariyahNeural';
+  const lang = voice.startsWith('en') ? 'en' : 'ar';
 
   synthEdge(text, voice)
     .then((buf) => {
@@ -212,7 +233,7 @@ function handleTTS(req, res, u) {
       res.end(buf);
     })
     .catch(() => {
-      synthGoogle(text)
+      synthGoogle(text, lang)
         .then((buf) => {
           res.writeHead(200, { 'Content-Type': 'audio/mpeg', 'Content-Length': buf.length, 'Cache-Control': 'public, max-age=86400' });
           res.end(buf);

@@ -1,5 +1,6 @@
 server.cjs
 scan-words.cjs
+process-en-pdf.py
 books/arabic-grade1.pdf
 node_modules/
 .git

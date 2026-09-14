@@ -1,17 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f8f2" />
-    <meta name="description" content="مع يومو، يصبح كتاب اللغة العربية مساحة تفاعلية للقراءة والتلوين والتعلم. كتاب الصف الأول كاملًا، وصديق يتحرك ويقرأ معك." />
-    <title>يومو | كتابي، مساحة تعلّمي</title>
-    <script type="module" crossorigin src="/assets/index-DVM_Cyny.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CEFcqToO.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8f2" />
+  <meta name="description" content="يومو - منصة تعليمية تفاعلية للصف الأول الابتدائي" />
+  <title>يومو | منصات التعليم</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #f7f8f2;
+      color: #2d2d2d;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #ff6d5a;
+      margin-bottom: .4rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 420px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 800px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1.2rem;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: transform .18s, box-shadow .18s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .8rem;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 6px 24px rgba(0,0,0,.1); }
+    .card .icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .card h2 { font-size: 1.25rem; font-weight: 700; }
+    .card .desc { font-size: .9rem; color: #888; line-height: 1.5; }
+    .card.coming { opacity: .55; pointer-events: none; }
+    .icon-ar  { background: #fff0ec; }
+    .icon-en  { background: #e8f4fd; }
+    .icon-more { background: #f0f0f0; }
+    .footer {
+      margin-top: 3rem;
+      font-size: .8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>يومو</h1>
+    <p>منصة تعليمية تفاعلية للصف الأول الابتدائي — اختر مادتك وابدأ التعلّم</p>
+  </div>
+
+  <div class="grid">
+    <a href="/ar/" class="card">
+      <div class="icon icon-ar">العربية</div>
+      <h2>اللغة العربية</h2>
+      <p class="desc">كتاب اللغة العربية — قراءة، استماع، وتمارين تفاعلية</p>
+    </a>
+
+    <a href="/en/" class="card">
+      <div class="icon icon-en">EN</div>
+      <h2>اللغة الإنجليزية</h2>
+      <p class="desc">English Language — reading, listening &amp; interactive exercises</p>
+    </a>
+
+    <div class="card coming">
+      <div class="icon icon-more">soon</div>
+      <h2>منصات قادمة</h2>
+      <p class="desc">رياضيات، علوم،以及其他 مواد — قريبًا إن شاء الله</p>
+    </div>
+  </div>
+
+  <div class="footer">يومو © 2026</div>
+</body>
 </html>
