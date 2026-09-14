@@ -24,6 +24,167 @@
     </script>
     <script type="module" crossorigin src="/assets/index-DVM_Cyny.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CEFcqToO.css">
+    <script>
+    /* Yumo EN: Arabic→English runtime translation layer */
+    (function(){
+    var M = {
+      'نقرأ.. نكتشف.. نتعلّم':'Read · Discover · Learn',
+      'التنقل الرئيسي':'Main navigation',
+      'مساحة التعلّم':'Learning Space',
+      'مكتبتي':'My Library',
+      'إنجازاتي':'My Achievements',
+      'وقت التعلّم':'Study Time',
+      'مرحبًا،':'Hello,',
+      'الصف الأول الابتدائي':'Grade 1',
+      'صفحات قرأتها.. وكنوز تنتظرك!':'Pages you read\u2026 and treasures await!',
+      'صفحات قرأتها':'Pages read',
+      'كلمات اكتشفتها':'Words discovered',
+      'صفحات أحببتها':'Favorite pages',
+      'أول كلمة':'First word',
+      'إغلاق الفهرس':'Close index',
+      'غلاف الكتاب':'Book cover',
+      'غلاف كتاب اللغة العربية':'Arabic Language Book Cover',
+      'كتابي المرفوع':'My Uploaded Book',
+      'اللغة العربية':'Arabic Language',
+      'الفصل الدراسي الأول':'First Semester',
+      'محفوظ في المتصفح':'Saved in browser',
+      'نسخة الكتاب المدمجة':'Built-in book copy',
+      'كتابي':'My Book',
+      'كتابك دائمًا معك.. اختر مغامرتك القادمة.':'Your book is always with you \u2014 choose your next adventure.',
+      'تنزيل نسخة PDF':'Download PDF copy',
+      'نسختك المحفوظة':'Your saved copy',
+      'من الكتاب الأصلي':'From the original book',
+      'حفظ علامة الصفحة':'Bookmark this page',
+      'أُزيلت علامة الصفحة.':'Bookmark removed.',
+      'أُضيفت الصفحة إلى علاماتك.':'Page added to your bookmarks.',
+      'القراءة والتحديد':'Reading & Highlighting',
+      'أداة القراءة':'Reading tool',
+      'قلم فسفوري':'Highlighter',
+      'لون القلم':'Pen color',
+      'أخضر فسفوري':'Neon green',
+      'أصفر':'Yellow',
+      'بنفسجي':'Purple',
+      'رسم حر على الكتاب':'Free drawing on the book',
+      'قلم الرسم':'Drawing pen',
+      'الممحاة':'Eraser',
+      'تراجع':'Undo',
+      'تراجع عن آخر تحديد':'Undo last highlight',
+      'تصغير':'Zoom out',
+      'إعادة الحجم الأصلي':'Reset zoom',
+      'تكبير':'Zoom in',
+      'إغلاق وضع التركيز':'Close focus mode',
+      'وضع التركيز':'Focus mode',
+      'أعد المحاولة':'Try again',
+      'الصفحة التالية':'Next page',
+      'الصفحة السابقة':'Previous page',
+      'إيقاف مؤقت':'Pause',
+      'اقرأ لي يا يومو':'Read to me, Yumo',
+      'إعادة القراءة':'Re-read',
+      'إعادة':'Retry',
+      'سرعة القراءة':'Reading speed',
+      'بطيئة':'Slow',
+      'هادئة':'Relaxed',
+      'عادية':'Normal',
+      'سريعة':'Fast',
+      'أسرع':'Fastest',
+      'كتم الصوت':'Mute',
+      'تشغيل الصوت':'Unmute',
+      'صديقك يومو':'Your friend Yumo',
+      'يقرأ معك':'Reads with you',
+      'معك دائمًا':'Always with you',
+      ' يومو الثعلب، صديقك في القراءة':'Yumo the fox, your reading buddy',
+      'أرشدني يا يومو':'Guide me, Yumo',
+      'الإرشاد':'Guidance',
+      'تحديد الكلمات أثناء القراءة':'Highlighting words while reading',
+      'إغلاق':'Close',
+      '理解した、ありがとう يومو':'Got it, thanks Yumo!',
+      'فهمت، شكرًا يومو':'Got it, thanks Yumo!',
+      'التالي':'Next',
+      'نهاية الإرشاد':'End tour',
+      'إنهاء الإرشاد':'End tour',
+      'تحتاج مساعدة؟':'Need help?',
+      'إغلاق التنبيه':'Close alert',
+      'تنزيل نسخة PDF':'Download PDF',
+      'إعدادات رحلتنا':'Our Settings',
+      'اسم القارئ الصغير':"Reader's name",
+      'صوت يومو':"Yumo's voice",
+      'مفعّل':'On',
+      'مكتوم':'Off',
+      'حركة يومو':"Yumo's movement",
+      'مفعّلة':'On',
+      'متوقفة':'Off',
+      'التحديد التلقائي للكلمات':'Auto-highlight words',
+      'متوقف':'Off',
+      'نتعلّم مع يومو':'Learning with Yumo',
+      'الكتاب هو مساحة عملك':'The book is your workspace',
+      'لوّن واكتب مباشرة':'Color and write directly',
+      'ترتيب الصفحات الصحيح':'Correct page order',
+      'نسخة مدمجة وحفظ محلي':'Built-in copy & local save',
+      'مكتبتي الصغيرة':'My Little Library',
+      'تلقائي (افتراضي)':'Auto (default)',
+      'نوع الصوت':'Voice type',
+      'الغلاف':'Cover',
+      'كلماتي الجميلة':'My Beautiful Words',
+      'لسماعها':'to hear it',
+      'لنقرأ معًا':'Let\'s read together',
+      'إنجازاتي الصغيرة':'My Small Achievements',
+      'أحسنت، حصلت عليها!':'Well done, you got it!',
+      'القارئ الصغير':'Little Reader',
+      'أكمل قراءة صفحة':'Finish reading a page',
+      'صديق الكتاب':'Book Friend',
+      'أحسنت يا قارئي الصغير!':'Well done, little reader!',
+      'nehإعادة':'Retry',
+      'أضافت':'Added',
+      'levelname':'level name',
+    };
+
+    var RE = {};
+    for (var k in M) { RE[k] = new RegExp(k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g'); }
+
+    var SKIP = {SCRIPT:1,STYLE:1,SVG:1,CANVAS:1,INPUT:1,TEXTAREA:1};
+
+    function tx(node) {
+      if (node.nodeType===3) {
+        var o=node.textContent, t=o.trim();
+        if (!t) return;
+        if (M[t]) { node.textContent=o.replace(t,M[t]); return; }
+        var changed=false, r=o;
+        for (var k in RE) { if (k.length>3 && r.indexOf(k)!==-1) { r=r.replace(RE[k],M[k]); changed=true; } }
+        if (changed) node.textContent=r;
+        return;
+      }
+      if (node.nodeType!==1 || SKIP[node.tagName]) return;
+      ['aria-label','title','alt','placeholder'].forEach(function(a){
+        var v=node.getAttribute(a); if(!v) return;
+        var vt=v.trim();
+        if (M[vt]) { node.setAttribute(a,M[vt]); return; }
+        var c=false, r2=vt;
+        for (var k2 in RE) { if(k2.length>3 && r2.indexOf(k2)!==-1) { r2=r2.replace(RE[k2],M[k2]); c=true; } }
+        if (c) node.setAttribute(a,r2);
+      });
+      var ch=node.childNodes;
+      for (var j=0;j<ch.length;j++) tx(ch[j]);
+    }
+
+    var lt=0;
+    function run(){var n=Date.now();if(n-lt<150)return;lt=n;if(document.body)tx(document.body);}
+
+    var ob=new MutationObserver(function(ms){
+      for(var i=0;i<ms.length;i++){var ns=ms[i].addedNodes;for(var j=0;j<ns.length;j++)if(ns[j].nodeType===1)tx(ns[j]);}
+      run();
+    });
+
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded',function(){
+        setTimeout(run,600);setTimeout(run,1500);setTimeout(run,3000);
+        ob.observe(document.body,{childList:true,subtree:true});
+      });
+    } else {
+      setTimeout(run,600);setTimeout(run,1500);setTimeout(run,3000);
+      ob.observe(document.body,{childList:true,subtree:true});
+    }
+    })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
