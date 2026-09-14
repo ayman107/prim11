@@ -1,4 +1,4 @@
-const VERSION = 'yomo-platform-v3';
+const VERSION = 'yomo-platform-v4';
 const BLANK_WEBP = 'UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAAFZQOCAYAAAAMAEAnQEqAQABAAFAJiWkAANwAP789AAA';
 
 self.addEventListener('install', (event) => { event.waitUntil(caches.delete(VERSION)); self.skipWaiting(); });
@@ -10,16 +10,26 @@ self.addEventListener('activate', (event) => {
   })());
 });
 
+const clientLang = {};
+
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin || event.request.method !== 'GET' || url.pathname.startsWith('/api/') || url.pathname.endsWith('.pdf') || event.request.headers.has('range')) return;
 
   event.respondWith((async () => {
     let isEn = url.pathname.startsWith('/books-en/');
+
     if (!isEn) {
       try {
-        const client = await self.clients.get(event.clientId);
-        if (client && client.url) isEn = client.url.includes('/en');
+        if (event.clientId && clientLang[event.clientId] !== undefined) {
+          isEn = clientLang[event.clientId];
+        } else {
+          const client = await self.clients.get(event.clientId);
+          if (client && client.url) {
+            isEn = client.url.includes('/en');
+            if (event.clientId) clientLang[event.clientId] = isEn;
+          }
+        }
       } catch (e) {}
     }
 
