@@ -2,6 +2,7 @@ const VERSION = 'yomo-platform-v4';
 const BLANK_WEBP = 'UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAAFZQOCAYAAAAMAEAnQEqAQABAAFAJiWkAANwAP789AAA';
 
 self.addEventListener('install', (event) => { event.waitUntil(caches.delete(VERSION)); self.skipWaiting(); });
+
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
@@ -14,11 +15,14 @@ const clientLang = {};
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin || event.request.method !== 'GET' || url.pathname.startsWith('/api/') || url.pathname.endsWith('.pdf') || event.request.headers.has('range')) return;
+  if (url.origin !== self.location.origin) return;
+  if (event.request.method !== 'GET') return;
+  if (url.pathname.startsWith('/api/')) return;
+  if (url.pathname.endsWith('.pdf')) return;
+  if (event.request.headers.has('range')) return;
 
   event.respondWith((async () => {
     let isEn = url.pathname.startsWith('/books-en/');
-
     if (!isEn) {
       try {
         if (event.clientId && clientLang[event.clientId] !== undefined) {
@@ -26,48 +30,53 @@ self.addEventListener('fetch', (event) => {
         } else {
           const client = await self.clients.get(event.clientId);
           if (client && client.url) {
-            isEn = client.url.includes('/en');
+            isEn = client.url.indexOf('/en') !== -1;
             if (event.clientId) clientLang[event.clientId] = isEn;
           }
         }
       } catch (e) {}
     }
 
-    const rewrite = (u) => (isEn && u.pathname.startsWith('/books/'))
-      ? new URL(u.origin + '/books-en/' + u.pathname.slice('/books/'.length) + u.search)
-      : u;
+    const target = (isEn && url.pathname.startsWith('/books/'))
+      ? new URL(url.origin + '/books-en/' + url.pathname.slice('/books/'.length) + url.search)
+      : url;
 
-    const target = rewrite(url);
-    const req = new Request(target.href, event.request);
+    const isNav = event.request.mode === 'navigate';
     const isWebp = /\.webp$/i.test(target.pathname);
-    const isBookJson = /\/books(?:-en)?\/(book-data|audio-map)\.json$/.test(target.pathname);
+    const fetchUrl = isNav ? url.href : target.href;
 
-    // Static page images / cover: cache-first (keyed by per-platform rewritten URL)
     if (isWebp) {
-      const hit = await caches.match(req);
+      const hit = await caches.match(target.href);
       if (hit) return hit;
     }
 
     try {
-      const response = await fetch(req);
+      const response = await fetch(fetchUrl);
       if (response.ok) {
         const copy = response.clone();
-        caches.open(VERSION).then((c) => c.put(req, copy));
+        caches.open(VERSION).then((c) => c.put(fetchUrl, copy));
         return response;
       }
       if (isWebp) {
         const blank = new Response(atob(BLANK_WEBP), { status: 200, headers: { 'Content-Type': 'image/webp' } });
-        caches.open(VERSION).then((c) => c.put(req, blank.clone()));
+        caches.open(VERSION).then((c) => c.put(target.href, blank.clone()));
         return blank;
       }
-      // Non-webp book JSON: network-first, fall back to cached copy
-      const cached = await caches.match(req);
+      const cached = await caches.match(fetchUrl);
       if (cached) return cached;
       return response;
     } catch (err) {
-      const cached = await caches.match(req);
+      const cached = await caches.match(fetchUrl);
       if (cached) return cached;
-      return (await caches.match('/')) || new Response('', { status: 503 });
+      if (isNav) {
+        const hub = await caches.match(self.location.origin + '/');
+        if (hub) return hub;
+        const en = await caches.match(self.location.origin + '/en/');
+        if (en) return en;
+        const ar = await caches.match(self.location.origin + '/ar/');
+        if (ar) return ar;
+      }
+      return new Response('', { status: 503 });
     }
   })());
 });
