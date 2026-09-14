@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "front": {
+    "en": "Welcome to your English book! This book will take you on a wonderful journey where you will learn new words about your school, your family, your body, colors, shapes, farm animals and wild animals. Yumo the fox is here to read and play with you, one page at a time.",
+    "ar": "أهلًا بك في كتابك الإنجليزي! هذا الكتاب سيأخذك في رحلة رائعة ستتعلم فيها كلمات جديدة عن مدرستك وعائلتك وجسمك والألوان والأشكال وحيوانات المزرعة وحيوانات الغابة. يومو الثعلب هنا ليقرأ ويلعب معك صفحة صفحة."
+  },
+  "units": [
+    {
+      "title": "Welcome to My School",
+      "ar_title": "أهلاً بمدرستي",
+      "start": 6,
+      "end": 23,
+      "intro": {
+        "en": "This unit is all about school. We will learn how to greet our teacher and friends, we will meet the letters T and I, and we will look around our classroom. After this unit you can say hello, introduce yourself, and name things in your classroom. Let's start with a big, friendly Hello!",
+        "ar": "هذه الوحدة تتحدث عن المدرسة. سنتعلم كيف نُلقي التحية على معلمنا وأصدقائنا، وسنتعرف على حرفي T و I، وسنستكشف الفصل الدراسي. بعد هذه الوحدة ستستطيع أن تقول مرحبًا، وتُعرّف عن نفسك، وتسمّي الأشياء الموجودة في فصلّك. لنبدأ بترحيب كبير وودود!"
+      },
+      "start_page": 7,
+      "lessons": [
+        {
+          "page": 7,
+          "title": "Lesson 1: Greetings",
+          "en": "In this lesson we learn how English-speaking people greet each other. When we meet someone in the morning we say: Good morning! When we meet our teacher we say: Hello! What is your name? And we answer: My name is ... When we finish our day, we say: Goodbye! Try to say these greetings with a big smile, just like Yumo the fox.",
+          "ar": "في هذا الدرس نتعلم كيف يتبادل الناس التحية بالإنجليزية. عندما نلتقي بشخص في الصباح نقول: Good morning صباح الخير. عندما نلتقي بمعلمنا نقول: Hello ما اسمك؟ ونجيب: My name is اسمي... وعند نهاية اليوم نقول: Goodbye وداعًا. جرّب أن تقول هذه التحيات بابتسامة كبيرة، تمامًا مثل الثعلب يومو!"
+        },
+        {
+          "page": 14,
+          "title": "Lesson 2: Phonics – Tt & Ii",
+          "en": "Today we meet two new friends: the letter T and the letter I. T makes the sound tuh, like in Turtle. Can you say tuh like a turtle? I has two sounds: ee like in Ink, and ih like in Igloo. Many English words begin with these sounds. Listen: Ten, Tiger, Ice cream, Insect. Now point to the letters Tt and Ii in your book and say their sounds with Yumo.",
+          "ar": "اليوم نتعرف على صديقين جديدين: حرف T وحرف I. ألف T يصدر صوتًا كأنه تاء خفيفة، كما في Turtle سلحفاة. أما حرف I فله صوتان: طول مثل Ice cream آيس كريم، وقصير مثل Igloo منزل الثلج. هناك كلمات كثيرة تبدأ بهذين الحرفين. استمع: Ten عشرة، Tiger نمر، Ice cream آيس كريم، Insect حشرة. أشر إلى الحرفين Tt و Ii في كتابك وردّد أصواتهما مع يومو."
+        },
+        {
+          "page": 16,
+          "title": "Lesson 3: Around My Classroom",
+          "en": "Let's go on a tour around the classroom! We will name the things we see every day. We have a board on the wall where the teacher writes, and a book where we read. We sit on a chair at our desk. We open the window to let the light in, and the door opens to welcome our friends. Can you point to the board, the desk, the chair and the door in your classroom? Say each word after Yumo.",
+          "ar": "هيا نقوم بجولة في الفصل الدراسي! سنسمّي الأشياء التي نراها كل يوم. لدينا سبورة على الحائط يكتب عليها المعلم، وكتاب نقرأ فيه. نجلس على كرسي أمام مكتبنا. نفتح النافذة ليدخل الضوء، والباب يفتح ليرحب بأصدقائنا. هل تستطيع أن تشير إلى السبورة والمكتب والكرسي والباب في فصلك؟ ردد كل كلمة بعد يومو."
+        },
+        {
+          "page": 20,
+          "title": "Lesson 4: Phonics – Ii",
+          "en": "The letter I is back for another visit! Today we listen for the short sound of I, like in: igloo, ink, insect, and in. Say them slowly: i-igloo, i-ink. When you see the letter I in a word, remember: sometimes it says ee, and sometimes it says ih. Can you find the words in your book that have the sound ih? Point to them and say them with Yumo.",
+          "ar": "عاد حرف I لزيارة أخرى! اليوم نستمع إلى صوت I القصير، كما في الكلمات: igloo منزل الثلج، ink حبر، insect حشرة، in في. رددها ببطء: i-igloo، i-ink. عندما ترى حرف I في كلمة تذكر: أحيانًا ينطق ee طويل وأحيانًا ih قصير. هل تستطيع أن تجد الكلمات في كتابك التي تحتوي على الصوت ih؟ أشر إليها ورددها مع يومو."
+        }
+      ]
+    },
+    {
+      "title": "The Garden of Colors and Shapes",
+      "ar_title": "حديقة الألوان والأشكال",
+      "start": 24,
+      "end": 40,
+      "intro": {
+        "en": "We are going to a beautiful garden where flowers bloom in every color! We will learn the names of colors like red, blue and yellow, and shapes like circle, square and triangle. We will also meet the letter S and the letter A. After this unit, the world around you will look full of colors and shapes, and you can name them all in English.",
+        "ar": "سنتوجه إلى حديقة جميلة تتفتح فيها الأزهار بكل الألوان! سنتعلم أسماء الألوان مثل الأحمر والأزرق والأصفر، والأشكال مثل الدائرة والمربع والمثلث. سنتعرف أيضًا على حرفي S و A. بعد هذه الوحدة سيبدو العالم حولك مليئًا بالألوان والأشكال، وستستطيع تسميتها كلها بالإنجليزية."
+      },
+      "start_page": 25,
+      "lessons": [
+        {
+          "page": 25,
+          "title": "Lesson 1: In the Garden",
+          "en": "Come and see the garden! There are so many beautiful things growing here. We see a big green tree, colorful flowers, and soft green grass. Insects and butterflies fly between the flowers. In the garden, everything is alive and full of color. Look at the picture in your book: what color is the tree? What color are the flowers? Say: The tree is green. The flowers are pink!",
+          "ar": "تعال وانظر إلى الحديقة! هناك أشياء جميلة كثيرة تنمو هنا. نرى شجرة كبيرة خضراء، وأزهارًا ملونة، وعشبًا أخضر ناعمًا. تطير الحشرات والفراشات بين الأزهار. في الحديقة كل شيء حي ومليء بالألوان. انظر إلى الصورة في كتابك: ما لون الشجرة؟ ما لون الأزهار؟ قل: The tree is green الشجرة خضراء. The flowers are pink الأزهار وردية!"
+        },
+        {
+          "page": 30,
+          "title": "Lesson 2: Phonics – Ss",
+          "en": "Here comes the letter S, and its sound is like a gentle snake: ssss! Can you whisper ssss like a snake? Many words start with S. We will meet a Snake, the Sun, a Star, and we will see things that make this sound in the middle too, like in Bus. Make the ssss sound with your hand moving like a snake, and say: snake, sun, star, bus. Good job!",
+          "ar": "ها هو حرف S يأتي إلينا، وصوته مثل أفعى لطيفة: عصصصص! هل تستطيع أن تهمس بصوت سسسس مثل الأفعى؟ كلمات كثيرة تبدأ بحرف S. سنلتقي بـ Snake أفعى، Sun شمس، Star نجمة، وسنرى أشياء لها هذا الصوت في المنتصف أيضًا مثل Bus حافلة. اصنع صوت سسسس وحرّك يدك مثل الأفعى، وقل: أفعى، شمس، نجمة، حافلة. عمل رائع!"
+        },
+        {
+          "page": 33,
+          "title": "Lesson 3: Shapes and Colors",
+          "en": "Shapes and colors are every where around us! A ball is a circle, a window can be a square, and a roof can be a triangle. Now let's mix them with colors: a red circle, a blue square, a yellow triangle. Can you find a circle at home? What color is it? Point to a square, then a triangle, and name their colors in English like a little artist.",
+          "ar": "الأشكال والألوان في كل مكان حولنا! الكرة دائرة، والنافذة قد تكون مربعًا، والسقف قد يكون مثلثًا. الآن لنمزجها مع الألوان: دائرة حمراء، مربع أزرق، مثلث أصفر. هل تستطيع أن تجد دائرة في بيتك؟ ما لونها؟ أشر إلى مربع ثم مثلث، وسمِّ ألوانهما بالإنجليزية مثل فنان صغير."
+        },
+        {
+          "page": 37,
+          "title": "Lesson 4: Phonics – Aa",
+          "en": "The letter A is our new friend today. A has different sounds. Listen for the short sound like in Apple, Ant, and Alligator. Can you say 'aaaa' with a big open mouth? Some words begin with the long sound of A, like Apron. In the book, point to the picture of the apple and say: a-apple. Now point to the ant: a-ant. You are learning to read English letters!",
+          "ar": "حرف A هو صديقنا الجديد اليوم. لحرف A أصوات مختلفة. استمع إلى الصوت القصير مثل Apple تفاحة، Ant نملة، Alligator تمساح. هل تستطيع أن تقول آآآه بفم مفتوح كبير؟ بعض الكلمات تبدأ بصوت A الطويل مثل Apron مئزر. في الكتاب، أشر إلى صورة التفاحة وقل: a-apple. الآن أشر إلى النملة: a-ant. أنت تتعلم قراءة حروف الإنجليزية!"
+        }
+      ]
+    },
+    {
+      "title": "I Love My Family",
+      "ar_title": "أحب عائلتي",
+      "start": 41,
+      "end": 63,
+      "intro": {
+        "en": "Family is the most precious treasure we have. In this unit we learn to talk about the people we love: mother, father, sister, brother and baby. We will meet the letters N, P, H and D, and we will also learn to count from one to five. After this unit you can tell Yumo all about your family and even count them!",
+        "ar": "العائلة هي أثمن كنز نملكه. في هذه الوحدة نتعلم أن نتحدث عن الأشخاص الذين نحبهم: الأم والأب والأخت والأخ والرضيع. سنتعرف على الحروف N و P و H و D، وسنتعلم أيضًا العد من واحد إلى خمسة. بعد هذه الوحدة ستستطيع أن تحكي ليومو عن عائلتك كلها بل وحتى أن تعدّهم!"
+      },
+      "start_page": 42,
+      "lessons": [
+        {
+          "page": 42,
+          "title": "Lesson 1: Who's in My Family?",
+          "en": "Let's meet the family! In every family, there is a Mother who takes care of us, and a Father who helps and protects us. We also have a Sister and a Brother to play with. Sometimes there is a Baby who is very small and cute. Look at your own family: who is in your house? Say each word: mother, father, sister, brother, baby. Family is love, and Yumo loves his family too!",
+          "ar": "هيا نتعرف على العائلة! في كل عائلة توجد Mother أم تعتني بنا، وFather أب يساعدنا ويحمينا. لدينا أيضًا Sister أخت وBrother أخ نلعب معهما. وأحيانًا يوجد Baby رضيع صغير ولطيف. انظر إلى عائلتك أنت: من في بيتك؟ ردد كل كلمة: أم، أب، أخت، أخ، رضيع. العائلة حب، ويومو يحب عائلته هو أيضًا!"
+        },
+        {
+          "page": 46,
+          "title": "Lesson 2: Phonics – Nn & Pp",
+          "en": "Two new letters are knocking on our door! The letter N says nnn, like in Nose and Net. Feel your nose: nnn-nose! The letter P is a poppy sound: puh, like in Pen and Pig. You can even feel a little puff of air when you say puh. Say them after Yumo: nose, net, pen, pig. Look in the book and point to something that starts with N, then something that starts with P.",
+          "ar": "حرفان جديدان يطرقان بابنا! حرف N ينطق nn مثل Nose أنف و Net شبكة. المس أنفك: nn-nose أنف! حرف P صوت منفوش: puh مثل Pen قلم و Pig خنزير. يمكنك أن تشعر بنفخة هواء صغيرة عندما تقول puh. ردد بعد يومو: أنف، شبكة، قلم، خنزير. انظر في الكتاب وأشر إلى شيء يبدأ بحرف N ثم إلى شيء يبدأ بحرف P."
+        },
+        {
+          "page": 51,
+          "title": "Lesson 3: Numbers From 1 to 5",
+          "en": "Let's count together! Can you hold up one finger? That is number one. Now two fingers… that is number two! Three, four, five! Count everything around you: one nose, two eyes, five fingers on your hand. In English they sound like this: one, two, three, four, five. Sing them with Yumo: one, two, three, four, five! You are a little counter now.",
+          "ar": "هيا نعدّ معًا! هل تستطيع أن ترفع إصبعًا واحدًا؟ هذا هو العدد واحد. الآن إصبعان... هذا اثنان! ثلاثة، أربعة، خمسة! عُدّ كل شيء حولك: أنف واحد، عينان، خمسة أصابع في يدك. بالإنجليزية تُلفظ هكذا: one واحد، two اثنان، three ثلاثة، four أربعة، five خمسة. غنِّها مع يومو: واحد، اثنان، ثلاثة، أربعة، خمسة! أنت الآن صغير يعدّ ببراعة."
+        },
+        {
+          "page": 55,
+          "title": "Lesson 4: Phonics – Hh & Dd",
+          "en": "Today we meet the letter H and the letter D. H is the sound of breathing on a cold window: hhh! Like in Hat and Horse. D says duh, and your tongue taps softly behind your teeth, like in Dog and Duck. Say them: hhh-hat, hhh-horse, duh-dog, duh-duck. Can you find a letter H and a letter D in your book? Tap your mouth for D and breathe for H, just like Yumo shows you.",
+          "ar": "اليوم نتعرف على حرف H وحرف D. حرف H هو صوت التنفّس على نافذة باردة: ههه! كما في Hat قبعة و Horse حصان. حرف D ينطق duh، ويرتجّ لسانك برقة خلف أسنانك، كما في Dog كلب و Duck بطة. ردهما: hhh-hat قبعة، hhh-horse حصان، duh-dog كلب، duh-duck بطة. هل تستطيع أن تجد حرف H وحرف D في كتابك؟ انقر بلسانك من أجل D وتنفّس من أجل H، تمامًا كما يريك يومو."
+        },
+        {
+          "page": 60,
+          "title": "Review 1",
+          "en": "This is a review page, a chance to play and remember everything we learned! Can you greet your teacher? Can you say the sound of T, I, S, A, N, P, H and D? Can you count from one to five, and name your family in English? Stop, look at each picture, and say its name out loud. Yumo is proud of how much you have learned. You are doing so well!",
+          "ar": "هذه صفحة مراجعة، فرصة للعب وتذكر كل ما تعلمناه! هل تستطيع أن تلقي التحية على معلمك؟ هل تستطيع أن تنطق أصوات الحروف T و I و S و A و N و P و H و D؟ هل تستطيع أن تعدّ من واحد إلى خمسة، وأن تسمّي عائلتك بالإنجليزية؟ توقف، وانظر إلى كل صورة، وقل اسمها بصوت عالٍ. يومو فخور جدًا بمدى ما تعلمته. أنت ممتاز!"
+        }
+      ]
+    },
+    {
+      "title": "My Body and My Senses",
+      "ar_title": "جسمي وحواسي",
+      "start": 64,
+      "end": 82,
+      "intro": {
+        "en": "Our body is a magical machine, and our senses are its superpowers! In this unit we will name the parts of our body: head, eyes, ears, nose, mouth, hands and feet. We will discover the five senses: seeing, hearing, smelling, tasting and touching. We will also meet the letters R, E, C and K. Get ready for a big body adventure!",
+        "ar": "جسمنا آلة سحرية، وحواسنا قواه الخارقة! في هذه الوحدة سنسمي أجزاء الجسم: الرأس والعينين والأذنين والأنف والفم واليدين والقدمين. سنكتشف الحواس الخمس: البصر والسمع والشم والذوق واللمس. سنتعرف أيضًا على الحروف R و E و C و K. استعد لمغامرة جسمية كبيرة!"
+      },
+      "start_page": 65,
+      "lessons": [
+        {
+          "page": 65,
+          "title": "My Body Parts",
+          "en": "Our body has many parts, and each one has an important job! Our Head carries our brain, our Eyes help us see the world, our Ears help us hear music and sounds, our Nose helps us smell flowers, and our Mouth helps us speak and eat. Touch each part as you say it: head, eyes, ears, nose, mouth. Our Hands and Feet help us play and run. Point to each part on yourself and say its name in English!",
+          "ar": "لجسمنا أجزاء كثيرة، ولكل جزء عمل مهم! رأسنا يحمل دماغنا، وعيوننا تساعدنا على رؤية العالم، وآذاننا تساعدنا على سماع الموسيقى والأصوات، وأنفنا يساعدنا على شم الأزهار، وفمنا يساعدنا على الكلام والأكل. المس كل جزء وأنت تقوله: رأس، عيون، آذان، أنف، فم. أيدينا وأقدامنا تساعدنا على اللعب والجري. أشر إلى كل جزء من جسمك وقل اسمه بالإنجليزية!"
+        },
+        {
+          "page": 70,
+          "title": "The Five Senses",
+          "en": "Do you know our five superpowers? They are called the five senses. Our Eyes give us the sense of Sight, our Ears give us the sense of Hearing, our Nose gives us the sense of Smell, our Tongue gives us the sense of Taste, and our Skin gives us the sense of Touch. Close your eyes and listen… what can you hear? Smell a flower… what can you smell? You are using your senses like a scientist!",
+          "ar": "هل تعرف قوانا الخارقة الخمس؟ تُسمى الحواس الخمس. أعيننا تعطينا حاسة البصر، وآذاننا حاسة السمع، وأنفنا حاسة الشم، ولساننا حاسة التذوق، وجلدنا حاسة اللمس. أغمض عينيك واستمع... ماذا تسمع؟ شمّ زهرة... ماذا تشم؟ أنت تستخدم حواسك مثل عالم!"
+        },
+        {
+          "page": 75,
+          "title": "Phonics – Rr & Ee",
+          "en": "Let's meet the letter R and the letter E. R makes a rolling sound: rrr, like a surprised dog! Say it: r-r-red, r-r-rose. The letter E has the sound eh, like in Egg, and the long sound ee, like in Eagle. Listen carefully: egg, elephant, bed. Can you flap your arms like a bird and say: red, rose, egg, eagle? You are growing into a super reader!",
+          "ar": "هيا نتعرف على حرف R وحرف E. حرف R يصدر صوتًا متدحرجًا: rrr، مثل كلب مندهش! قل: r-r-red أحمر، r-r-rose وردة. حرف E له صوت eh مثل Egg بيضة، وصوت طويل ee مثل Eagle نسر. استمع جيدًا: بيضة، فيل، سرير. هل تستطيع أن ترفرف بذراعيك مثل الطائر وتقول: أحمر، وردة، بيضة، نسر؟ أنت تنمو لتصبح قارئًا خارقًا!"
+        },
+        {
+          "page": 79,
+          "title": "Phonics – Cc & Kk",
+          "en": "The letter C and the letter K often make the same sound: kuh! Can you say it strongly: kuh, kuh! Like in Cat, Cup, and also in King and Kite. Sometimes C also has a soft sound, like in Circle, but today we practice the strong sound. Point to the cat in your book and say: c-c-cat. Now the king: k-k-king. Well done, phonetics hero!",
+          "ar": "حرف C وحرف K ينتجان غالبًا الصوت نفسه: kuh! هل تستطيع أن تقوله بقوة: كه، كه! مثل Cat قط، Cup كوب، وأيضًا King ملك و Kite طائرة ورقية. أحيانًا ينطق C صوتًا ناعمًا أيضًا، مثل Circle دائرة، لكن اليوم نتدرب على الصوت القوي. أشر إلى القطة في كتابك وقل: c-c-cat قط. الآن الملك: k-k-king ملك. أحسنت أيها البطل الصوتي!"
+        }
+      ]
+    },
+    {
+      "title": "On the Farm",
+      "ar_title": "في المزرعة",
+      "start": 83,
+      "end": 101,
+      "intro": {
+        "en": "Moo-oo! Welcome to the farm, where animals and nature live together! In this unit we will meet the animals of the farm and discover their sounds. We will learn the letters M, G, O and F, and we will count big numbers from six to ten. Pack your boots, put on your hat, and come to the farm with Yumo!",
+        "ar": "مموو! أهلاً بك في المزرعة، حيث تعيش الحيوانات والطبيعة معًا! في هذه الوحدة سنلتقي بحيوانات المزرعة ونكتشف أصواتها. سنتعلم الحروف M و G و O و F، وسنعُدّ أعدادًا كبيرة من ستة إلى عشرة. احزم حذاءك، وارتدِ قبعاتك، وتعالَ إلى المزرعة مع يومو!"
+      },
+      "start_page": 84,
+      "lessons": [
+        {
+          "page": 84,
+          "title": "Welcome to the Farm",
+          "en": "Look, the farm gate is open! Here live the animals that give us food and help us every day. The Cow gives us milk and says moo! The Hen lays eggs and says cluck-cluck! The Sheep gives us wool and says baa! And the Horse runs fast and says neigh! Listen to each animal in your book and try to make its sound too. Which animal is your favorite?",
+          "ar": "انظر، بوابة المزرعة مفتوحة! هنا تعيش الحيوانات التي تمنحنا الطعام وتساعدنا كل يوم. البقرة تعطينا الحليب وتقول موو! والدجاجة تبيض وتقول قاق-قاق! والخرافة تعطينا الصوف وتقول ماء! والحصان يجري بسرعة ويقول صهيل! استمع إلى كل حيوان في كتابك وحاول أن تصنع صوته أنت أيضًا. ما هو حيوانك المفضل؟"
+        },
+        {
+          "page": 88,
+          "title": "Farm Phonics – Mm & Gg",
+          "en": "Two farm friends are calling us: the letter M and the letter G. M says mmm, like when something tastes delicious: mmm! Think of Milk and Mouse. The letter G says the sound of a sweet drink going down: g-g-g! Like in Goat and Gate. Say them: mmm-milk, mmm-mouse, g-goat, g-gate. The goat is waiting at the gate! Can you say that quickly?",
+          "ar": "صديقان من المزرعة ينادياننا: حرف M وحرف G. حرف M ينطق mmm، مثلما نقول عندما يكون طعامنا لذيذًا: ممم! فكّر في Milk حليب و Mouse فأر. حرف G ينطق مثل صوت مشروب حلو ينزل: غ-غ-غ! مثل Goat عنز و Gate بوابة. ردهما: ممم-حليب، ممم-فأر، عنز، بوابة. العنز ينتظر عند البوابة! هل تستطيع أن تقولها بسرعة؟"
+        },
+        {
+          "page": 93,
+          "title": "Numbers From 6 to 10",
+          "en": "Our numbers are growing up! After one, two, three, four and five, come the numbers six, seven, eight, nine and ten. Count with Yumo on your fingers: six, seven, eight, nine, ten! How many cows do you see on the farm? How many eggs in the basket? Point and count out loud. Soon you will count everything around you up to ten!",
+          "ar": "أعدادنا تكبر! بعد واحد واثنين وثلاثة وأربعة وخمسة، تأتي الأعداد ستة وسبعة وثمانية وتسعة وعشرة. عُدّ مع يومو على أصابعك: ستة، سبعة، ثمانية، تسعة، عشرة! كم بقرة ترى في المزرعة؟ كم بيضة في السلة؟ أشر وعُدّ بصوت عالٍ. قريبًا ستعدّ كل ما حولك حتى عشرة!"
+        },
+        {
+          "page": 97,
+          "title": "Farm Phonics – Oo & Ff",
+          "en": "The letter O looks like a round mouth, and it says ooo! Like in Orange and Octopus. Open your mouth round like the letter O: ooo! The letter F is soft and peaceful, like a feather floating: fff! Like in Farm and Fish. Say them softly: fff-farm, fff-fish, ooo-orange, ooo-octopus. A fish on the farm? Maybe not, but it is fun to say!",
+          "ar": "حرف O يشبه فمًا مستديرًا، وينطق واو! مثل Orange برتقال و Octopus أخطبوط. افتح فمك مستديرًا مثل حرف O: ووو! حرف F ناعم وهادئ، مثل ريشة تطفو في الهواء: ففف! مثل Farm مزرعة و Fish سمكة. قلهما بهدوء: ففف-مزرعة، ففف-سمكة، ووو-برتقال، ووو-أخطبوط. سمكة في المزرعة؟ ربما لا، لكن من الممتع أن نقولها!"
+        }
+      ]
+    },
+    {
+      "title": "Animals Around Me",
+      "ar_title": "الحيوانات حولي",
+      "start": 102,
+      "end": 127,
+      "intro": {
+        "en": "The jungle is calling, and the animals are waiting for us! In this last unit we will travel to the jungle to meet wild animals, and we will also visit our pets at home. We will learn the letters B, L, U and J. By the end of this book, you will be a real English explorer who knows greetings, colors, shapes, numbers, body parts, and animals. Let's go, brave explorer!",
+        "ar": "الغابة تنادينا، والحيوانات تنتظرنا! في هذه الوحدة الأخيرة سنسافر إلى الغابة لنلتقي بالحيوانات البرية، وسنزور أيضًا حيواناتنا الأليفة في البيت. سنتعلم الحروف B و L و U و J. في نهاية هذا الكتاب، ستكون مستكشفًا إنجليزيًا حقيقيًا يعرف التحيات والألوان والأشكال والأعداد وأجزاء الجسم والحيوانات. هيا بنا أيها المستكشف الشجاع!"
+      },
+      "start_page": 103,
+      "lessons": [
+        {
+          "page": 103,
+          "title": "Welcome to the Jungle",
+          "en": "Shhh, listen! The jungle is full of sounds. Here live the wild animals: the Lion, king of the jungle, the big Elephant, the tall Giraffe, the playful Monkey, and the green Crocodile. Look at each animal in your book and say its name. Which one is the biggest? Which one is the tallest? The jungle is an amazing place, and Yumo is right there with you!",
+          "ar": "صه، استمع! الغابة مليئة بالأصوات. هنا تعيش الحيوانات البرية: الأسد ملك الغابة، والفيل الكبير، والزرافة الطويلة، والقرد المدلّل، والتمساح الأخضر. انظر إلى كل حيوان في كتابك وقل اسمه. أيٌّ منهم الأكبر؟ أيٌّ منهم الأطول؟ الغابة مكان رائع، ويومو معك في كل خطوة!"
+        },
+        {
+          "page": 108,
+          "title": "Jungle Phonics – Bb & Ll",
+          "en": "In the jungle, we meet the letter B and the letter L. B makes a popping sound: buh, like a balloon popping! Say: buh-buh-ball, buh-buh-bear. The letter L makes a happy sliding sound: lll! Say it with your tongue: lll-l-ion, lll-leaf. The lion is in the jungle, and the bear is coming too! Say after Yumo: ball, bear, lion, leaf.",
+          "ar": "في الغابة، نلتقي بحرف B وحرف L. حرف B يصدر صوتًا فاقعًا: buh، مثل فقاعة بالون تنفجر! قل: buh-buh-ball كرة، buh-buh-bear دب. حرف L يصدر صوتًا سعيدًا منزلقًا: لالالا! قُله بلسانك: lll-lion أسد، lll-leaf ورقة. الأسد في الغابة، والدب قادم أيضًا! ردد بعد يومو: كرة، دب، أسد، ورقة."
+        },
+        {
+          "page": 113,
+          "title": "My Pets",
+          "en": "Pets are our best animal friends at home! A Dog barks and plays fetch, a Cat purrs and says meow, a Rabbit hops with big ears, and a friendly Bird sings in its cage. Do you have a pet at home? If you do, tell Yumo: 'My pet is a Dog!' Cuddle your pet gently and say its name in English: dog, cat, rabbit, bird.",
+          "ar": "الحيوانات الأليفة أفضل أصدقائنا من الحيوانات في البيت! الكلب ينبح ويجلب الكرة، والقطة تخرخر وتقول ميو، والأرنب يقفز بآذان كبيرة، والطائر الودود يغني في قفصه. هل لديك حيوان أليف في البيت؟ إذا كان لديك، قل ليومو: حيواني الأليف كلب! دلّل حيوانك بلطف وقل اسمه بالإنجليزية: كلب، قطة، أرنب، طائر."
+        },
+        {
+          "page": 117,
+          "title": "Pet Phonics – Uu & Jj",
+          "en": "Two new letters complete our journey: U and J. U says the sound uh, like in Umbrella, and long like in Uniform. The letter J says the sound of jumping: juh, like in Jump and Jam. Let's say them: u-umbrella, j-jump, j-jam. Can you jump while you say jump? One, two, three… jump! You did it, and now you know almost every letter of the English alphabet!",
+          "ar": "حرفان جديدان يكملان رحلتنا: U و J. حرف U ينطق uh كما في Umbrella مظلة، وطويلًا كما في Uniform زي رسمي. حرف J ينطق صوت القفز: juh، كما في Jump قفزة و Jam مربى. لنقلهما معًا: u-مظلة، j-قفزة، j-مربى. هل تستطيع أن تقفز وأنت تقول Jump؟ واحد، اثنان، ثلاثة... اقفز! فعلتها، والآن تعرف تقريبًا كل حروف الأبجدية الإنجليزية!"
+        },
+        {
+          "page": 121,
+          "title": "Review 2",
+          "en": "Bravo, you reached the last review of your book! This page is a treasure: it reminds us of everything we loved. Can you name the wild animals and your pets? Can you count to ten? Can you say the sounds of B, L, U and J? Look at each picture slowly and say its name with a big voice. You finished a whole English book. Yumo is cheering for you: Hip, hip, hooray!",
+          "ar": "برافو، وصلت إلى آخر مراجعة في كتابك! هذه الصفحة كنز: إنها تذكّرنا بكل ما أحببناه. هل تستطيع أن تسمّي الحيوانات البرية وحيواناتك الأليفة؟ هل تستطيع أن تعدّ حتى عشرة؟ هل تستطيع أن تنطق أصوات الحروف B و L و U و J؟ انظر إلى كل صورة ببطء وقل اسمها بصوت كبير. لقد أنهيت كتابًا إنجليزيًا كاملًا. يومو يهتف لك: هيب، هيب، هوراي!"
+        }
+      ]
+    }
+  ]
+}

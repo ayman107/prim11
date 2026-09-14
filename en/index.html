@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/fonts/fonts.css" />
+    <style>
+    @keyframes yumoTalk {
+      0%, 100% { transform: scale(1) rotate(0); }
+      25% { transform: scale(1.08) rotate(-4deg); }
+      75% { transform: scale(1.08) rotate(4deg); }
+    }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f8f2" />
     <meta name="description" content="Yumo - Interactive English Language Learning for Primary 1" />
@@ -213,6 +220,166 @@
       setTimeout(run,600);setTimeout(run,1500);setTimeout(run,3000);
       ob.observe(document.body,{childList:true,subtree:true});
     }
+    })();
+    </script>
+    <script>
+    /* Yumo EN: AI-generated lesson explanations — Explain button + text reader */
+    (function () {
+      var DATA = null, LANG = 'en';
+
+      function byTitle(t) {
+        if (!DATA) return null;
+        t = (t || '').trim();
+        for (var i = 0; i < DATA.units.length; i++) {
+          var ls = DATA.units[i].lessons || [];
+          for (var j = 0; j < ls.length; j++) {
+            if (ls[j].title === t) return ls[j];
+          }
+        }
+        return null;
+      }
+      function unitByTitle(t) {
+        if (!DATA) return null;
+        t = (t || '').trim();
+        for (var i = 0; i < DATA.units.length; i++) {
+          if (DATA.units[i].title === t || DATA.units[i].ar_title === t) return DATA.units[i];
+        }
+        return null;
+      }
+      function resolve() {
+        var el = document.querySelector('.reader-breadcrumb strong');
+        var t = el ? el.textContent.trim() : '';
+        if (t) {
+          var l = byTitle(t); if (l) return { title: t, en: l.en, ar: l.ar };
+          var u = unitByTitle(t); if (u) return { title: t, en: u.intro.en, ar: u.intro.ar };
+        }
+        return { title: 'Welcome to Your Book', en: DATA.front.en, ar: DATA.front.ar };
+      }
+
+      function speak(text, done) {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(text);
+        u.lang = LANG === 'en' ? 'en-US' : 'ar-EG';
+        u.rate = 0.92; u.pitch = 1.05;
+        var vs = window.speechSynthesis.getVoices().filter(function (x) { return x.lang.indexOf(LANG) === 0; });
+        if (vs[0]) u.voice = vs[0];
+        if (done) { u.onend = done; u.onerror = done; }
+        window.speechSynthesis.speak(u);
+      }
+      function stopSpeak() { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+
+      var modalEl = null;
+      var speaking = false;
+      function closeModal() {
+        stopSpeak();
+        speaking = false;
+        if (modalEl) { document.body.removeChild(modalEl); modalEl = null; }
+      }
+      function openModal() {
+        stopSpeak();
+        speaking = false;
+        var info = resolve();
+        var wrap = document.createElement('div');
+        wrap.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(57,54,45,.55);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(2px)';
+        var card = document.createElement('div');
+        card.style.cssText = 'background:#fffdf8;border-radius:22px;max-width:560px;width:100%;max-height:82vh;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.22);padding:26px 26px 22px;font-family:inherit';
+        var h = document.createElement('h2');
+        h.style.cssText = 'margin:0 0 4px;font-size:20px;color:#2d2a22;display:flex;align-items:center;gap:8px';
+        h.textContent = info.title;
+        var yumoRow = document.createElement('div');
+        yumoRow.style.cssText = 'display:flex;gap:12px;align-items:flex-start;background:#fdf3dd;border:1.5px solid #f5cf7f;border-radius:16px;padding:12px 14px;margin:10px 0 14px';
+        var fox = document.createElement('img');
+        fox.src = '/images/yomo.webp';
+        fox.alt = 'Yumo the fox';
+        fox.style.cssText = 'width:52px;height:52px;object-fit:contain;flex:none;border-radius:12px;background:#fff;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,.12);transition:transform .3s ease';
+        var bubble = document.createElement('div');
+        bubble.style.cssText = 'flex:1;font-size:15.5px;line-height:1.6;color:#5a4a22';
+        bubble.textContent = LANG === 'en' ? 'Hi! I am Yumo. Press the yellow Listen button and I will read this lesson out loud to you. You can follow along and repeat after me!' : 'مرحبًا! أنا يومو. اضغط على زر الاستمع وسأقرأ لك هذا الدرس بصوت عالٍ. اتبعني وكرر بعدي!';
+        yumoRow.appendChild(fox); yumoRow.appendChild(bubble);
+        var body = document.createElement('p');
+        body.style.cssText = 'font-size:16.5px;line-height:1.75;color:#3d3a31;white-space:pre-line;margin:0 0 16px';
+        body.textContent = LANG === 'en' ? info.en : info.ar;
+        var row = document.createElement('div');
+        row.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;align-items:center';
+        function mkBtn(txt, pri, cb) {
+          var b = document.createElement('button');
+          b.textContent = txt;
+          b.style.cssText = 'border:0;border-radius:14px;padding:11px 18px;font-size:14.5px;cursor:pointer;font-family:inherit' + (pri ? ';background:#f5b942;color:#2d2a22;font-weight:700' : ';background:#efece2;color:#4a4638');
+          b.onclick = cb;
+          return b;
+        }
+        var play = mkBtn(LANG === 'en' ? '🔊 Listen' : '🔊 استمع', true, function () {
+          speaking = true;
+          fox.style.animation = 'yumoTalk .8s ease-in-out 3';
+          play.textContent = '▶ ' + (LANG === 'en' ? 'Playing' : 'يُقرأ الآن');
+          speak(LANG === 'en' ? info.en : info.ar, function () {
+            speaking = false;
+            fox.style.animation = '';
+            play.textContent = LANG === 'en' ? '🔊 Listen' : '🔊 استمع';
+          });
+          if (!('speechSynthesis' in window)) {
+            speaking = false; fox.style.animation = '';
+            play.textContent = LANG === 'en' ? '🔊 Listen' : '🔊 استمع';
+          }
+        });
+        var stopB = mkBtn('⏹ Stop', false, function () { stopSpeak(); speaking = false; fox.style.animation = ''; });
+        var langB = mkBtn(LANG === 'en' ? 'العربية' : 'English', false, function () {
+          LANG = LANG === 'en' ? 'ar' : 'en';
+          bubble.textContent = LANG === 'en' ? 'Hi! I am Yumo. Press the yellow Listen button and I will read this lesson out loud to you. You can follow along and repeat after me!' : 'مرحبًا! أنا يومو. اضغط على زر الاستمع وسأقرأ لك هذا الدرس بصوت عالٍ. اتبعني وكرر بعدي!';
+          stopSpeak(); speaking = false;
+          body.textContent = LANG === 'en' ? info.en : info.ar;
+          play.textContent = LANG === 'en' ? '🔊 Listen' : '🔊 استمع';
+          langB.textContent = LANG === 'en' ? 'العربية' : 'English';
+        });
+        var closeB = mkBtn(LANG === 'en' ? '✕ Close' : '✕ إغلاق', false, closeModal);
+        row.appendChild(play); row.appendChild(stopB); row.appendChild(langB); row.appendChild(closeB);
+        card.appendChild(h); card.appendChild(yumoRow); card.appendChild(body); card.appendChild(row);
+        wrap.appendChild(card);
+        wrap.onclick = function (e) { if (e.target === wrap) closeModal(); };
+        modalEl = wrap;
+        document.body.appendChild(wrap);
+      }
+
+      var btn = null;
+      function ensureButton() {
+        var host = document.querySelector('.reader-top-actions');
+        if (!host) return;
+        if (btn && document.body.contains(btn)) return;
+        btn = mkExplainButton();
+        host.insertBefore(btn, host.firstChild);
+      }
+      function mkExplainButton() {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = '✨ Explain';
+        b.style.cssText = 'border:0;border-radius:12px;padding:8px 13px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;background:linear-gradient(135deg,#ffd98a,#f5b942);color:#2d2a22;box-shadow:0 3px 10px rgba(245,185,66,.35)';
+        b.onclick = function () {
+          if (DATA) { openModal(); return; }
+          fetch('/books-en/lessons.json').then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
+            DATA = d; openModal();
+          }).catch(function () { alert('Explanation not available. Check your connection and try again.'); });
+        };
+        return b;
+      }
+
+      function load() {
+        try {
+          fetch('/books-en/lessons.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) { DATA = d; }).catch(function () {});
+        } catch (e) {}
+      }
+      load();
+
+      var ob = new MutationObserver(function (ms) {
+        for (var i = 0; i < ms.length; i++) {
+          var ns = ms[i].addedNodes;
+          for (var j = 0; j < ns.length; j++) if (ns[j] && ns[j].nodeType === 1) ensureButton();
+        }
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(ensureButton, 700); setTimeout(ensureButton, 1600); setTimeout(ensureButton, 3000);
+        ob.observe(document.body, { childList: true, subtree: true });
+      });
     })();
     </script>
   </head>
