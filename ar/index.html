@@ -70,18 +70,21 @@
         return { title: 'فهرس الكتاب', en: DATA.front.en, ar: DATA.front.ar, quiz: null };
       }
 
-      var curAudio = null;
+      var audioEl = document.createElement('audio');
+      audioEl.__yumoOwn = 1;
+      var curAudio = null, curGen = 0;
       function speak(text, done, forceLang) {
         stopSpeak();
         var lng = forceLang || LANG;
         var voice = lng === 'ar' ? 'ar-SA-ZariyahNeural' : 'en-US-AriaNeural';
-        var a = new Audio('/api/tts?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
-        curAudio = a;
-        a.__yumoOwn = 1;
-        a.playbackRate = 0.92;
-        a.onended = function () { if (curAudio === a) curAudio = null; if (done) done(); };
-        a.onerror = function () {
-          if (curAudio === a) curAudio = null;
+        var my = ++curGen;
+        curAudio = audioEl;
+        try { audioEl.src = '/api/tts?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice); } catch (e) {}
+        audioEl.playbackRate = 0.92;
+        audioEl.onended = function () { if (curGen === my) { curAudio = null; if (done) done(); } };
+        audioEl.onerror = function () {
+          if (curGen !== my) return;
+          curAudio = null;
           if ('speechSynthesis' in window) {
             try {
               var u = new SpeechSynthesisUtterance(text);
@@ -96,10 +99,13 @@
             } catch (e) { if (done) done(); }
           } else if (done) done();
         };
-        a.play().catch(function () { if (curAudio === a) curAudio = null; if (done) done(); });
+        var pr = audioEl.play();
+        if (pr && pr.catch) pr.catch(function () { if (curGen === my) { curAudio = null; if (done) done(); } });
       }
       function stopSpeak() {
-        if (curAudio) { try { curAudio.pause(); curAudio.src = ''; } catch (e) {} curAudio = null; }
+        curGen++;
+        if (curAudio) { try { curAudio.pause(); curAudio.currentTime = 0; } catch (e) {} }
+        curAudio = null;
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
       }
 
@@ -189,7 +195,7 @@
             play.textContent = t().listen;
           });
         });
-        var stopB = mkBtn(t().stop, false, function () { stopSpeak(); fox.style.animation = ''; });
+        var stopB = mkBtn(t().stop, false, function () { stopSpeak(); fox.style.animation = ''; play.textContent = t().listen; });
         var langB = mkBtn(t().other, false, function () { LANG = LANG === 'ar' ? 'en' : 'ar'; render(); });
         var closeB = mkBtn(t().close, false, closeModal);
         controls.appendChild(play); controls.appendChild(stopB); controls.appendChild(langB); controls.appendChild(closeB);
