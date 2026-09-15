@@ -1,0 +1,388 @@
+{
+ "version": 1,
+ "lang": "ar",
+ "front": {
+  "ar": "أهلًا بك يا صديقي في كتاب اللغة العربية مع الثعلب يومو! هذا الكتاب صديقك في رحلة تعلّم القراءة، وسنسير معًا صفحةً بعد صفحة. سنتعرف على الحروف العربية من الألف إلى الياء، ونقرأ القصص والأناشيد، ونتعلم كلمات جديدة نستخدمها في حياتنا اليومية. خذ وقتك، واستمتع بكل خطوة، فكل كلمة تقرؤها تفتح لك عالمًا جديدًا.",
+  "en": "Welcome, my friend, to the Arabic Language book with Yumo the fox! This book is your companion on a reading journey, and we will walk through it together page by page. We will learn the Arabic letters from Alif to Yaa, read stories and songs, and discover new words we use every day. Take your time and enjoy every step: every word you read opens a new world."
+ },
+ "specials": {
+  "غلاف الكتاب": {
+   "ar": "هذه هي غلاف كتابنا الجميل يا صديقي. انظر إلى صورته واقرأ اسمها: كتاب اللغة العربية، الصف الأول الابتدائي. الغلاف يخبرنا بما بداخل الكتاب، وعندما نفتحه نبدأ رحلة التعلّم معًا. تذكّر أن تقلّب صفحاته بلطف، فستجد فيه كنوزًا كثيرة!",
+   "en": "This is the beautiful cover of our book, my friend. Look at its picture and read its title: Arabic Language, Grade 1. The cover tells us what is inside the book, and when we open it our learning journey begins together. Remember to turn its pages gently — you will find many treasures inside!"
+  },
+  "فهرس الكتاب": {
+   "ar": "هذا هو فهرس الكتاب يا صديقي، وهو خريطة كتابنا. الفهرس يخبرنا بمواضيع الكتاب وأرقام الصفحات حتى نعرف أين نجد كل درس. صفحات الفهرس تأخذنا إلى: أسرتي، ثم حيواناتي، ثم أجزاء جسمي، ثم مدرستي. ابحث معي عن صفحتك المفضلة واذهب إليها بسرعة!",
+   "en": "This is the table of contents, my friend — the map of our book. It tells us the book's topics and page numbers so we know where to find every lesson. The pages take us to: My Family, then My Pets, then My Body, then My School. Look with me for your favorite page and jump to it quickly!"
+  },
+  "آداب الفصل": {
+   "ar": "لنتعلم اليوم آداب الفصل يا صديقي! آداب الفصل سلوكيات جميلة تجعل التعلّم متعة: نرفع يدنا قبل أن نتكلم، ونستمع إلى معلمنا وأصدقائنا، ونحافظ على نظافة مكاننا، ونتشارك بكل حب. من يحترم آداب الفصل يستفيد من درسه أكثر. جرّب أن تكون طفلًا مهذبًا اليوم!",
+   "en": "Today let's learn classroom manners, my friend! Classroom manners are kind behaviors that make learning fun: we raise our hand before speaking, listen to our teacher and friends, keep our place clean, and share with love. A child who follows classroom manners learns more. Try to be a polite child today!"
+  },
+  "هيا نستعد للتعلم": {
+   "ar": "هيا نستعد للتعلّم يا بطل! قبل أن نبدأ القراءة، لنجهّز أنفسنا جيدًا: نأخذ نفسًا عميقًا، ونجلس جلوسًا صحيحًا، ونضع الكتاب أمامنا بنظافة. التعلّم يحتاج انتباهًا وتركيزًا، فجهّز عينيك وأذنيك وقلبك لمغامرة جديدة. تذكّر دائمًا: كل خطوة صغيرة في التعلّم تجعلك أذكى وأقوى.",
+   "en": "Let's get ready to learn, hero! Before we start reading, let's prepare ourselves well: take a deep breath, sit properly, and place the book neatly in front of us. Learning needs attention and focus, so get your eyes, ears and heart ready for a new adventure. Remember: every small step in learning makes you smarter and stronger."
+  },
+  "قصص الاستماع": {
+   "ar": "هذا القسم خاص بقصص الاستماع يا صديقي. في قصص الاستماع نستمع جيدًا بأذنينا إلى قصة مشوقة، ثم نتحدث عنها معًا. الاستماع الجيد مهارة مهمة: اجلس بهدوء، وانظر إلى المتحدث، وحاول أن تتذكر الأحداث والشخصيات. بعد الاستماع سنطرح أسئلة عن القصة ونكتشف كلمات جديدة.",
+   "en": "This section is for listening stories, my friend. In listening stories, we listen carefully with our ears to an exciting tale, then talk about it together. Good listening is an important skill: sit quietly, look at the speaker, and try to remember the events and characters. After listening we will ask questions and discover new words."
+  },
+  "قصص الحروف": {
+   "ar": "أهلاً بك في قصص الحروف يا بطل! هنا نلتقي بحروف اللغة العربية واحدًا تلو الآخر، ولكل حرف قصة جميلة تجعل شكله وصوته سهلَي التذكّر. انظر بعينيك إلى شكل الحرف واستمع بأذنيك إلى صوته، ثم كوّن معنا كلمات تبدأ به. القصص تساعدنا على تذكّر الحروف بسرعة ودون نسيان.",
+   "en": "Welcome to Letter Stories, hero! Here we meet the Arabic letters one by one, and every letter has a lovely story that makes its shape and sound easy to remember. Look at the letter's shape with your eyes, listen to its sound with your ears, then make words that begin with it together. Stories help us remember letters quickly and never forget them."
+  }
+ },
+ "units": [
+  {
+   "title": "أسرتي",
+   "subtitle": "الوحدة الأولى",
+   "start": 14,
+   "end": 44,
+   "intro": {
+    "ar": "أهلاً بك في الوحدة الأولى يا صديقي: أسرتي! في هذه الوحدة نتعرف على حروف مهمة وهي: الألف والباء والميم والحاء والجيم والدال والخاء والتاء، ونقرأ قصة أميرة وأسرتها السعيدة ونشيد أسرتي. أسرتنا هي أحب الناس إلينا، فسنتعلم كلمات نسمّي بها أفراد العائلة ونعبّر عن حبنا لهم. هيا بنا نكتشف حكاية أسرتنا معًا!",
+    "en": "Welcome to Unit One, my friend: My Family! In this unit we learn important letters: Alif, Baa, Meem, Haa, Jeem, Dal, Khaa and Taa, and we read the story of Amira and her happy family and the song My Family. Our family is the dearest people to us, so we will learn words to name its members and express our love for them. Let's discover our family's story together!"
+   },
+   "lessons": [
+    {
+     "page": 15,
+     "title": "أميرة وأسرتها السعيدة",
+     "ar": "هذه قصة أميرة التي تعيش مع أسرتها السعيدة. انظر إلى الصورة: من هم أفراد أسرة أميرة؟ إنها تقدم لنا أباها وأمها وأخواتها. أثناء القراءة، نبحث عن الكلمات التي تدل على أفراد العائلة وننطقها بوضوح. بعد القراءة، احكِ القصة لأهلك بكلماتك، وقُل لهم: أحبكم!",
+     "en": "This is the story of Amira, who lives with her happy family. Look at the picture: who are the members of Amira's family? She introduces us to her father, mother and sisters. While reading, we look for words that name family members and pronounce them clearly. After reading, retell the story in your own words and tell your family: I love you!"
+    },
+    {
+     "page": 16,
+     "title": "نشيد أسرتي",
+     "ar": "حان وقت الأناشيد يا بطل! نشيد أسرتي كلمات جميلة تحكي عن حب الأسرة ودفء البيت. اقرأ كلمات النشيد ببطء، ثم كررها مع معلمك بإيقاع مبهج. استمع جيدًا وحرّك يديك مع اللحن، فالإيقاع يساعدنا على حفظ الكلمات بسهولة. في النهاية، حاول أن تنشد النشيد لأهلك في المنزل!",
+     "en": "It's song time, hero! The song My Family has lovely words about the love of family and the warmth of home. Read the words slowly, then repeat them with your teacher in a cheerful rhythm. Listen carefully and move your hands with the melody, because rhythm helps us memorize words easily. At the end, try to sing the song for your family at home!"
+    },
+    {
+     "page": 17,
+     "title": "حرف الألف",
+     "letter": "أ",
+     "ar": "لنتعرف على حرف الألف يا صديقي! الألف أول حروف الأبجدية العربية، وهو حرف مميز يشبه الصارية الطويلة. ننطقه بوضوح: أَ أنا، أُ أم، إِ إبرة. في كتابنا نرى الألف في كلمات مثل: أرنب، أسد، أنف. ارسم الحرف في الهواء بإصبعك، ثم تتبع شكله في الكتاب وفكّر: ما الكلمات التي تبدأ بحرف الألف؟",
+     "en": "Let's meet the letter Alif, my friend! Alif is the first letter of the Arabic alphabet, a special letter that looks like a tall pole. We pronounce it clearly: A as in Ana (I), U as in Umm (mother), I as in Ibra (needle). In our book we see Alif in words like: rabbit (Arnab), lion (Asad), nose (Anf). Draw the letter in the air with your finger, then trace it in the book and think: which words begin with Alif?"
+    },
+    {
+     "page": 20,
+     "title": "حرف الباء",
+     "letter": "ب",
+     "ar": "حرف الباء من الحروف الجميلة السهلة يا بطل! الباء نشبه الطبق الصغير الذي تحته نقطة. ننطقها: بَ باب، بُ بومة، بِ بيضة. في القصة كلمات كثيرة بها الباء مثل: باب، بيت، بطة. الباء تتصل بالحروف التي حولها، فهي حرف صديق للجميع. ابحث في الكتاب عن ثلاث كلمات تبدأ بحرف الباء واقرأها بصوت عالٍ.",
+     "en": "The letter Baa is one of the beautiful, easy letters, hero! Baa looks like a small dish with a dot under it. We pronounce it: Ba as in door (Bab), Bu as in owl (Buma), Bi as in egg (Bayda). In the story there are many words with Baa like: door, house, duck. Baa connects to the letters around it, so it is a friendly letter. Find three words beginning with Baa in the book and read them aloud."
+    },
+    {
+     "page": 23,
+     "title": "حرف الميم",
+     "letter": "م",
+     "ar": "التقينا الآن بحرف الميم يا صديقي، وهو من أحب الحروف لأنه يبدأ به اسمي (يومو) وكثر كلمات الأسرة! الميم نشبه القوسين المتقابلين، وتكتب في أول الكلمة ووسطها وآخرها. ننطقها: مَ منزل، مِ مكتب، مُ معلّم. كلمات على الأسرة تحتوي الميم: أم، أمير، ماما. قل معي بوضوح: أمي تحبني وأنا أحبها!",
+     "en": "Now we meet the letter Meem, my friend — one of the dearest letters because it begins my own name (Yumo) and many family words! Meem looks like two facing arcs, and it is written at the beginning, middle and end of words. We pronounce it: Ma as in home (Manzil), Mi as in desk (Maktab), Mu as in teacher (Mual-lim). Family words with Meem: Umm (mother), Ameer (prince), Mama. Say clearly with me: My mother loves me and I love her!"
+    },
+    {
+     "page": 26,
+     "title": "حرف الحاء",
+     "letter": "ح",
+     "ar": "حرف الحاء حرف عائلي جميل يا بطل، تجده في كلمة أحب التي نقولها لأهلنا! الحاء ليس له نقطة، ويتصل بالحروف التي قبله وبعده. ننطقه: حَ حمد، حُ حُب، حِ حكاية. في قصة أسرتنا نجد كلمات بها الحاء مثل: أحب، حبيبي. خذ نفسًا عميقًا ثم انطق الحاء بوضوح: أحب أسرتي! حاول الآن أن ترسم الحاء في أول الكلمة وفي وسطها وقارن بين الشكلين.",
+     "en": "The letter Haa is a lovely family letter, hero — you find it in the word I love (Uhibb) that we say to our family! Haa has no dot, and it connects to the letters before and after it. We pronounce it: Ha as in Hamd, Hu as in love (Hub), Hi as in story (Hikaya). In our family story we find words with Haa like: love, my dear. Take a deep breath and say Haa clearly: I love my family! Try to draw Haa at the start of a word and in the middle, and compare the two shapes."
+    },
+    {
+     "page": 29,
+     "title": "حرف الجيم",
+     "letter": "ج",
+     "ar": "حرفنا الجديد اليوم هو حرف الجيم يا صديقي! الجيم له نقطة تحته، ويأتي في أول الكلمة ووسطها وآخرها. ننطقه: جَ جمل، جُ جُبّ، جِ جسر. من كلماتنا عن الأهل: جدّ وجدّة، فهما معنا في أسرتنا. الجيم حرف متصل يحب مصاحبة أصدقائه من الحروف. اضغط بإصبعك على شكل الجيم في الكتاب وتتبّعه، ثم فكّر في كلمات تبدأ بحرف الجيم.",
+     "en": "Our new letter today is Jeem, my friend! Jeem has a dot underneath it, and it comes at the beginning, middle and end of words. We pronounce it: Ja as in camel (Jamal), Ju, Ji as in bridge (Jisr). From our family words: Jadd (grandfather) and Jadda (grandmother), they are part of our family. Jeem is a connecting letter that loves being with its letter friends. Press your finger on the shape of Jeem in the book and trace it, then think of words that begin with Jeem."
+    },
+    {
+     "page": 32,
+     "title": "حرف الدال",
+     "letter": "د",
+     "ar": "حرف الدال حرف سهل وواضح يا بطل! الدال يشبه القوس الصغير، ولا يتصل بالحرف الذي بعده، فإذا جاء في وسط الكلمة نقف ثم نبدأ من جديد. ننطقه: دَ دار، دُ عروس، دِ ديك. من كلماتنا عن أفراد العائلة: دَايْ (النقطة في الوجه). ابحث في الكتاب عن الدال في كلمة دار، وانطقها معي بوضوح تام.",
+     "en": "The letter Dal is easy and clear, hero! Dal looks like a small arc, and it does not connect to the letter after it, so when it comes in the middle of a word we stop and start again. We pronounce it: Da as in house (Dar), Du as in bride (Aroos), Di as in rooster (Deek). Find Dal in the word Dar (house) in the book and pronounce it clearly with me."
+    },
+    {
+     "page": 35,
+     "title": "حرف الخاء",
+     "letter": "خ",
+     "ar": "حرف الخاء حرف مميز له نقطة فوقه يا صديقي! الخاء ننطقه من الحلق، وقد يظنه البعض الحاء، لكن الخاء أقوى صوتًا وأعمق. ننطقه: خَ خبز، خُ خروف، خِ خريف. الخاء حرف متصل يحب اللعب مع الحروف من حوله. تدرّب على نطق الخاء بوضوح أمام المرآة، وقل: خَ خَ خبز! ثم ابحث في الكتاب عن كلمات تحتوي على حرف الخاء.",
+     "en": "The letter Khaa is special with a dot on top, my friend! We pronounce Khaa from deep in the throat; some may confuse it with Haa, but Khaa is stronger and deeper in sound. We pronounce it: Kha as in bread (Khubz), Khu as in lamb (Kharouf), Khi as in autumn (Kharif). Khaa is a connecting letter that loves to play with the letters around it. Practice saying Khaa clearly in front of the mirror: Kha Kha bread! Then find words containing Khaa in the book."
+    },
+    {
+     "page": 38,
+     "title": "حرف التاء",
+     "letter": "ت",
+     "ar": "وصلنا اليوم إلى حرف التاء يا بطل، وهو حرف له نقطتان فوقه! التاء يبدو مثل الباء لكن برأسه نقطتان. ننطقه: تَ تمر، تِ تين، تُ توت. من كلماتنا المحبوبة: تمر وبلح، فهي ثمار جميلة ولذيذة. التاء كلمة توت تبدأ بها، وهي حرف متصل يحب أصدقاءه. ابحث عن التاء في كلمات الدرس، وعدّ الكلمات التي تحتوي على حرف التاء وحدها بصوت عالٍ.",
+     "en": "Today we reach the letter Taa, hero — a letter with two dots on top! Taa looks like Baa but with two dots on its head. We pronounce it: Ta as in date (Tamr), Ti as in fig (Teen), Tu as in berry (Toot). Dates and figs are loved fruits beginning with Taa. Taa is a connecting letter that loves its friends. Find Taa in the lesson words and count the words that contain one Taa aloud."
+    },
+    {
+     "page": 42,
+     "title": "أحب أسرتي",
+     "ar": "هذه الصفحة تحمل جملة جميلة: أحب أسرتي! اقضِ وقتًا طويلًا في النظر إلى الصورة، وفكّر في أسرتك أنت وعائلتك المبهجة. اقرأ الجملة معي بوضوح عدة مرات، واربطها بكل مشاعر الحب التي تجمعك بعائلتك. قُل بكل حب: أحب أمي وأبي وأخواتي! ثم ارسم صورة لعائلتك أو اكتب أسماء أفرادها تحت عنوان: أحب أسرتي.",
+     "en": "This page carries a lovely sentence: I love my family! Spend a long time looking at the picture and think about your own happy family. Read the sentence clearly with me several times, and connect it to all the love you feel for your family. Say with all your heart: I love my mother, father and siblings! Then draw a picture of your family or write their names under the title: I love my family."
+    },
+    {
+     "page": 43,
+     "title": "تقييم الوحدة الأولى",
+     "ar": "حان وقت تقييم الوحدة الأولى يا بطل! لقد تعلمنا في أسرتي حروفًا كثيرة: الألف والباء والميم والحاء والجيم والدال والخاء والتاء، وقرأنا قصة أميرة ونشيد أسرتي. الآن نجيب عن الأسئلة بهدوء؛ وإن أخطأنا فليس مشكلة، فكل محاولة تعلّم. تذكّر: القراءة الجيدة والمراجعة تجعلان الإجابات سهلة. أنت تستحق نجمة كبيرة على هذا التقدّم!",
+     "en": "It's time to review Unit One, hero! In My Family we learned many letters: Alif, Baa, Meem, Haa, Jeem, Dal, Khaa and Taa, and read Amira's story and the song My Family. Now we answer the questions calmly; if we make a mistake it's no problem, every try is learning. Remember: good reading and review make answers easy. You deserve a big star for this progress!"
+    }
+   ]
+  },
+  {
+   "title": "حيواناتي",
+   "subtitle": "الوحدة الثانية",
+   "start": 45,
+   "end": 81,
+   "intro": {
+    "ar": "أهلاً بك في الوحدة الثانية يا صديقي: حيواناتي! في هذه الوحدة نتعرف على حروف جديدة هي: اللام والسين والنون والراء والفاء والكاف والقاف، ونقرأ عن عالم الحيوان ونشيد لوحتي الجديدة. الحيوانات أصدقاء محبوبون في حياتنا، فسنتعلم كيف نسمّيها ونتحدث عنها. لنكتشف معًا عالم الحيوانات المدهش؟",
+    "en": "Welcome to Unit Two, my friend: My Pets! In this unit we learn new letters: Laam, Seen, Noon, Raa, Faa, Kaaf and Qaaf, and we read about the animal world and the song My New Board. Animals are loved friends in our lives, so we will learn to name them and talk about them. Let's discover the amazing world of animals together!"
+   },
+   "lessons": [
+    {
+     "page": 46,
+     "title": "عالم الحيوان",
+     "ar": "هذا درسنا عن عالم الحيوان يا بطل! هناك حيوانات أليفة نربيها في بيوتنا مثل القطة والكلب، وحيوانات تعيش في المزرعة مثل البقرة والدجاجة، وحيوانات تعيش في البرية. انظر إلى الصور وسمِّ كل حيوان، وحاول أن تقلّد صوته. أثناء القراءة، نبحث عن أسماء الحيوانات ونقلّب الصفحة لنرى حيوانًا جديدًا. أي حيوان أعجبك أكثر؟",
+     "en": "This is our lesson about the animal world, hero! There are pets we keep at home like cats and dogs, farm animals like cows and hens, and wild animals. Look at the pictures, name each animal and try to imitate its voice. While reading, we look for animal names and turn the page to see a new animal. Which animal did you like most?"
+    },
+    {
+     "page": 47,
+     "title": "نشيد لوحتي الجديدة",
+     "ar": "حان وقت النشيد يا صديقي! نشيد لوحتي الجديدة يحكي عن لوحة جميلة نكتب عليها ونرسم ونلون. اقرأ كلمات النشيد ببطء، ثم كررها مع معلمك بإيقاع سعيد. حرّك يدك كما لو كنت تكتب على سبورة جديدة. الأناشيد تساعدنا على حفظ الكلمات الجديدة بلهفة وفرح. في النهاية، أنشد اللوحة الجديدة لعائلتك في البيت!",
+     "en": "It's song time, my friend! The song My New Board tells about a beautiful board on which we write, draw and color. Read the words slowly, then repeat them with your teacher in a happy rhythm. Move your hand as if writing on a new board. Songs help us memorize new words with joy and enthusiasm. At the end, sing about the new board for your family at home!"
+    },
+    {
+     "page": 48,
+     "title": "حرف اللام",
+     "letter": "ل",
+     "ar": "لنتعرف على حرف اللام يا صديقي! اللام يشبه العصا المستقيمة، وهو حرف متصل يصل بين أصدقائه في الكلمة. ننطقه: لَ ليمون، لُ لب، لِ لسان. من كلمات عالم الحيوان: لبوة، ليث، لقلق. اللام حرف مهم في كلمة لِلّه الجميلة. ارسم اللام في الهواء بإصبعك ثم ابحث عن كلمة تبدأ بحرف اللام في الكتاب واقرأها بصوت عالٍ.",
+     "en": "Let's meet the letter Laam, my friend! Laam looks like a straight pole, and it is a connecting letter that joins its friends inside a word. We pronounce it: La as in lemon (Laymoon), Lu, Li as in tongue (Lisaan). From the animal world: lioness (Labuwa), lion (Layth), stork (Laqlaq). Laam is important in the beautiful word Allah. Draw Laam in the air with your finger, then find a word beginning with Laam in the book and read it aloud."
+    },
+    {
+     "page": 52,
+     "title": "حرف السين",
+     "letter": "س",
+     "ar": "حرف السين يشبه ثلاثة أسنان صغيرة يا بطل! السين حرف متصل نكتبه في أول الكلمة ووسطها وآخرها. ننطقه: سَ سمكة، سُ سُكر، سِ سكين. من كلمات عالم الحيوان والماء: سمكة، سلحفاة، سنجاب. السين أخو الشين لكن بدون النقط الثلاث. ارسم السين على شكل أسنان صغيرة، ثم ابحث في الكتاب عن حيوان يبدأ اسمه بحرف السين.",
+     "en": "The letter Seen looks like three small teeth, hero! Seen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sa as in fish (Samaka), Su as in sugar (Sukkar), Si as in knife (Sikkin). From the animal and water world: fish, turtle (Sulahfaa), squirrel (Sinjaab). Seen is the brother of Sheen but without three dots. Draw Seen like small teeth, then find an animal whose name begins with Seen."
+    },
+    {
+     "page": 56,
+     "title": "حرف النون",
+     "letter": "ن",
+     "ar": "حرف النون من الحروف الجميلة يا صديقي، له نقطة واحدة فوق القوس الصغير! النون نشبه طبقًا فوقه نقطة. ننطقه: نَ نملة، نُ نور، نِ نمر. من كلماتنا: نملة، نمر، نعامة — كلها حيوانات! النون حرف متصل يحب أصدقاءه. جرّب أن تكتب النون بثلاث وضعيات: في أول الكلمة ووسطها وآخرها، ثم ابقِ عينيك مفتوحتين لتبحث عن النون في صفحات الكتاب.",
+     "en": "The letter Noon is one of the beautiful letters, my friend — it has one dot above its small arc! Noon looks like a dish with a dot on top. We pronounce it: Na as in ant (Namla), Nu as in light (Noor), Ni as in tiger (Nimr). From our words: ant, tiger, ostrich (Naama) — all animals! Noon is a connecting letter that loves its friends. Try to write Noon in three positions: start, middle and end of a word, then keep your eyes open looking for Noon across the book pages."
+    },
+    {
+     "page": 60,
+     "title": "حرف الراء",
+     "letter": "ر",
+     "ar": "حرف الراء حرف سهل جميل يا بطل، يبدو مثل قوس صغير! الراء لا يتصل بالحرف الذي بعده، مثل أخوته الدال والذال. ننطقه: رَ رأس، رُ روز، رِ ريح. من كلماتنا: أرنب، ريشة، رجل. الراء حرف متكرر في كلامنا اليومي. ابحث في الكتاب عن أرنب يبدأ اسمه بحرف الراء، وانطق اسمه مع حركة اليد: رَ رَ رَ أرنب!",
+     "en": "The letter Raa is easy and beautiful, hero — it looks like a small arc! Raa does not connect to the letter after it, like its brothers Dal and Dhal. We pronounce it: Ra as in head (Raas), Ru, Ri as in wind (Reeh). From our words: rabbit (Arnab), feather (Reesha), leg (Rijl). Raa is repeated in our daily speech. Find a rabbit whose name begins with Raa in the book and say its name with a hand movement: Ra Ra Ra rabbit!"
+    },
+    {
+     "page": 64,
+     "title": "حرف الفاء",
+     "letter": "ف",
+     "ar": "حرف الفاء له نقطة فوقه يا صديقي، ويشبه الكأس المقلوب! الفاء حرف متصل نكتبه في مواضع مختلفة من الكلمة. ننطقه: فَ فيل، فُ فروشة، فِ فم. من كلمات عالم الحيوان: فيل، فراشة، فأر. الفاء تشبه القاف في الشكل، لكن القاف تحتها نقطتان. لاحظ الفرق بينهما في الكتاب، ثم ارسم فيلًا يحمل الحرف ف على ظهره!",
+     "en": "The letter Faa has a dot on top, my friend, and looks like an upside-down cup! Faa is a connecting letter written in different positions in the word. We pronounce it: Fa as in elephant (Feel), Fu, Fi as in mouth (Famm). From the animal world: elephant, butterfly (Farasha), mouse (Faar). Faa looks like Qaaf in shape, but Qaaf has two dots underneath. Notice the difference in the book, then draw an elephant carrying the letter Faa on its back!"
+    },
+    {
+     "page": 68,
+     "title": "حرف الكاف",
+     "letter": "ك",
+     "ar": "حرف الكاف حرف مميز يشبه العصا المفتوحة أو القوس الممتد يا بطل! الكاف حرف متصل، ونرسم له ذيلًا صغيرًا في بعض الوضعيات. ننطقه: كَ كلب، كُ كتاب، كِ كيس. من كلماتنا: كلب، قرد، كنغر. الكاف حرف كثير الظهور في كلمات الكتاب مثل: كتاب، كريم. ابحث في صفحتك عن الكلمات التي تحتوي على حرف الكاف، وربط كل كلمة بما يدل عليها في الصورة.",
+     "en": "The letter Kaaf is special, looking like an open stick or a long arc, hero! Kaaf is a connecting letter with a small tail in some positions. We pronounce it: Ka as in dog (Kalb), Ku as in book (Kitaab), Ki as in bag (Keis). From our words: dog, monkey (Qird), kangaroo (Kanghar). Kaaf appears often in the book's words like book and cream. Find the words containing Kaaf on your page and connect each word to what it shows in the picture."
+    },
+    {
+     "page": 72,
+     "title": "حرف القاف",
+     "letter": "ق",
+     "ar": "حرف القاف حرف له نقطتان فوقه يا صديقي، ويشبه الحرف ف لكن بنقطتين! القاف ننطقه من أعلى الحلق، فصوته عميق ومميز. ننطقه: قَ قلم، قُ قمر، قِ قصة. من كلمات عالم الحيوان: قطة، قرد، قنفذ. القاف حرف متصل يحب أصدقاءه من الحروف. ابحث عن القط في الكتاب، وانطق كلمة قطة معي ببطء، ثم عدّ القافات التي تراها في الجملة.",
+     "en": "The letter Qaaf has two dots on top, my friend, and looks like Faa but with two dots! We pronounce Qaaf from the top of the throat, so its sound is deep and special. We pronounce it: Qa as in pen (Qalam), Qu as in moon (Qamar), Qi as in story (Qissa). From the animal world: cat (Qitta), monkey (Qird), hedgehog (Qunfudh). Qaaf is a connecting letter that loves its letter friends. Find the cat in the book and say the word Qitta (cat) slowly, then count the Qaafs you see in the sentence."
+    },
+    {
+     "page": 77,
+     "title": "ماذا تأكل؟",
+     "ar": "درسٌ مسلٍّ عن الطعام يا بطل! ماذا تأكل القطة؟ وماذا تأكل البقرة؟ وماذا ياكل الأرنب؟ سنتعرف على طعام الحيوانات، وكيف تحصل عليه. البقرة تأكل العشب، والقطة تأكل السمك، والأرنب يأكل الجزر. اقرأ الأسئلة معي، وركّب الإجابات من الصور. ثم اسأل أصدقاءك: ماذا تأكلُ يا صديقي؟ أجب وأنت مبتسم: أنا آكل طعامي الصحي!",
+     "en": "A fun lesson about food, hero! What does the cat eat? What does the cow eat? And what does the rabbit eat? We will learn about animal food and how they get it. The cow eats grass, the cat eats fish, the rabbit eats carrots. Read the questions with me and compose the answers from the pictures. Then ask your friends: What do you eat? Answer with a smile: I eat my healthy food!"
+    },
+    {
+     "page": 78,
+     "title": "تقييم الوحدة الثانية",
+     "ar": "حان وقت تقييم الوحدة الثانية يا بطل! لقد تعلمنا في حيواناتي حروفًا جديدة: اللام والسين والنون والراء والفاء والكاف والقاف، وقرأنا عن عالم الحيوان ونشيد لوحتي. الآن نجيب عن أسئلة الحروف والكلمات بهدوء وفرح. تذكّر: كل إجابة تزيدنا علمًا، وكل خطأ يعطينا فرصة جديدة. أنت الآن قارئ ماهر، وستتقن أسئلة هذه الوحدة بثقة كبيرة!",
+     "en": "It's time to review Unit Two, hero! In My Pets we learned new letters: Laam, Seen, Noon, Raa, Faa, Kaaf and Qaaf, and read about the animal world and the board song. Now we answer the letters and words questions calmly and happily. Remember: every answer increases our knowledge, and every mistake is a new chance. You are now a skilled reader, and you will master this unit's questions with great confidence!"
+    },
+    {
+     "page": 80,
+     "title": "التعاون سر النجاح",
+     "ar": "قصة جميلة عن التعاون يا صديقي! عندما نعمل معًا نساعد بعضنا، ننجح في كل شيء. الحيوانات في قصتنا نتعاون لبناء بيت أو جمع الطعام. اقرأ القصة، وفكّر: كيف ساعد كل حيوان صديقه؟ ثم جرب أن تتعاون أنت في الفصل: شارك أصدقاءك التلوين أو اللعب أو الترتيب. التعاون يجعل المهمة أسهل والفرح أكبر. قُل معي: يدا بيد نصبح أقوى!",
+     "en": "A lovely story about cooperation, my friend! When we work together and help each other, we succeed in everything. The animals in our story cooperate to build a house or gather food. Read the story and think: how did each animal help its friend? Then try cooperating in class: share coloring, playing or tidying with your friends. Cooperation makes the task easier and the joy bigger. Say with me: hand in hand we become stronger!"
+    }
+   ]
+  },
+  {
+   "title": "أجزاء جسمي",
+   "subtitle": "الوحدة الثالثة",
+   "start": 82,
+   "end": 116,
+   "intro": {
+    "ar": "أهلاً بك في الوحدة الثالثة يا صديقي: أجزاء جسمي! في هذه الوحدة نتعرف على حروف جديدة هي: الياء والعين والشين والواو والهاء والذال والظاء، ونقرأ قصة صندوق جدتي ونشيد أحب جسمي. كل واحد منا له جسم جميل، وسنتعلم أسماء أجزائه: الرأس والعين والأنف والأذنان واليد والرجل. لنكتشف جسمنا الرائع معًا ونحافظ عليه!",
+    "en": "Welcome to Unit Three, my friend: My Body! In this unit we learn new letters: Yaa, Ain, Sheen, Waaw, Haa, Dhal and Thaa, and read the story of my grandmother's box and the song I Love My Body. Every one of us has a beautiful body, and we will learn the names of its parts: head, eye, nose, ears, hand and leg. Let's discover our wonderful body and take care of it together!"
+   },
+   "lessons": [
+    {
+     "page": 83,
+     "title": "صندوق جدتي",
+     "ar": "هذه قصة صندوق جدتي يا بطل! جدتنا لها صندوق قديم يملؤه الذكريات: صور قديمة، وعملات، وأشياء جميلة من الماضي. اقرأ القصة معي، وفكّر: ماذا يوجد في صندوق جدتكم أنتم؟ أثناء القراءة، نتعرف على صفات الأشياء وأسماء أجزاء الجسم عندما تشير الجدة إليها. بعد القراءة، احكِ لأصدقائك عن صندوق عائلتك وكنوزه الغالية.",
+     "en": "This is the story of my grandmother's box, hero! Our grandmother has an old box full of memories: old photos, coins, and beautiful things from the past. Read the story with me and think: what is in your grandmother's box? While reading, we learn the names of body parts when grandmother points to them. After reading, tell your friends about your family's box and its precious treasures."
+    },
+    {
+     "page": 84,
+     "title": "نشيد أحب جسمي",
+     "ar": "حان وقت النشيد يا صديقي! نشيد أحب جسمي يقول كلمات جميلة عن كل جزء من أجسامنا: رأسي وأذناي وعينايّ وأنفي ويدي وقدمي. اقرأ النشيد ببطء مع إيقاع سعيد، وأشِر إلى كل جزء من جسمك عندما يذكره النشيد. الغناء مع الحركة يساعدنا على حفظ الأسماء بسهولة وسرعة. لوّح بيدك مع النشيد، ولاحظ كيف يتحرك جسمك وهو يحب نفسه!",
+     "en": "It's song time, my friend! The song I Love My Body says lovely words about every part of our body: my head, ears, eyes, nose, hands and feet. Read the song slowly with a happy rhythm and point to each body part when the song mentions it. Singing with movement helps us memorize names easily and quickly. Wave your hand with the song and notice how your body moves while loving itself!"
+    },
+    {
+     "page": 85,
+     "title": "حرف الياء",
+     "letter": "ي",
+     "ar": "حرف الياء حرف له نقطتان تحته يا صديقي، ويشبه حرف النون لكن به نقطتين! الياء من أسهل الحروف في الكتابة لأنه يستخدم كثيرًا في آخر الكلمات. ننطقه: يَ يد، يُ يوسف، يِ يين. من كلمات أجزاء الجسم: يد، أذن، يافطة. الياء حرف متصل يحب أصدقاءه، ولها شكل مميز في آخر الكلمة. ارفع يدك معي، وانطق كلمة يد، وارسم الحرف في الهواء!",
+     "en": "The letter Yaa has two dots under it, my friend, and looks like Noon but with two dots! Yaa is one of the easiest letters to write because it is used a lot at the end of words. We pronounce it: Ya as in hand (Yad), Yu as in Yousef, Yi as in Yeen. From body-part words: hand (Yad), ear (Udhun), signpost (Yafita). Yaa is a connecting letter that loves its friends, with a special shape at the end of the word. Raise your hand with me, say the word Yad (hand), and draw the letter in the air!"
+    },
+    {
+     "page": 89,
+     "title": "حرف العين",
+     "letter": "ع",
+     "ar": "حرف العين حرف عجيب من الحروف الحلقية يا بطل، يشبه شكل العين نفسها! العين لا نقطة لها، وهو حرف متصل. ننطقه: عَ عين، عُ عود، عِ علم. من كلمات أجزاء الجسم: عين، عنق، أذن — وكلها تبدأ بحرف العين أو تقترب منه! العين تذكرنا بأن ننظر بعيوننا الجميلة ونبصر بها كل شيء. انظر إلى عينيك في المرآة، وارسم كلمة عين في الهواء فووق خدّك بلطف.",
+     "en": "The letter Ain is a wonderful throaty letter, hero — it looks like the shape of an eye itself! Ain has no dot and is a connecting letter. We pronounce it: A as in eye (Ain), U as in wood (Uud), I as in flag (Alam). From body-part words: eye (Ain), neck (Unuq), ear (Udhun). Ain reminds us to look with our beautiful eyes and see everything. Look at your eyes in the mirror and gently trace the word Ain in the air."
+    },
+    {
+     "page": 93,
+     "title": "حرف الشين",
+     "letter": "ش",
+     "ar": "حرف الشين حرف له ثلاثة نقاط فوقه يا صديقي، وهو مثل حرف السين لكن عليه ثلاث نقاط! الشين حرف متصل نكتبه في أول الكلمة ووسطها وآخرها. ننطقه: شَ شمس، شُ شجرة، شِ شمعة. من كلمات أجزاء الجسم: شفة، شارب، شوكة (في الوجه واليد). انظر إلى حروف الشين الثلاث نقاط، وتأكد أنها دائمًا ثلاثًا! ارسم الشمس شمسًا جميلة، واكتب تحتها حرف الشين.",
+     "en": "The letter Sheen has three dots on top, my friend, and it is like Seen but with three dots! Sheen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sha as in sun (Shams), Shu as in tree (Shajara), Shi as in candle (Shama). From body-part words: lip (Shaffa), mustache (Shaarib), spine (Shawka). Look at the three dots of Sheen and always make sure they are three! Draw a beautiful sun and write the letter Sheen under it."
+    },
+    {
+     "page": 97,
+     "title": "حرف الواو",
+     "letter": "و",
+     "ar": "حرف الواو حرف جميل يشبه الدائرة الصغيرة بذيل يا صديقي! الواو لا يتصل بالحرف الذي بعده، فيقف منفردًا أحيانًا. ننطقه: وَ وجه، وُ وزة، وِ وردة (بضم). من كلمات أجزاء الجسم: وجه، ويد! الواو تظهر كثيرًا في كلمة وجه، فنضيف لها حرف الجيم وغيرها. الوجه مرآة المشاعر: عندما نفرح يبتسم، وعندما نحزن يتغير. ارسم وجهًا ضاحكًا في كتابك، واكتب تحته حرف الواو.",
+     "en": "The letter Waaw is beautiful, looking like a small circle with a tail, my friend! Waaw does not connect to the letter after it, so it sometimes stands alone. We pronounce it: Wa as in face (Wajh), Wu as in goose (Wazza), Wi. From body-part words: face (Wajh). Waaw appears often in the word Wajh (face), showing like a friend to other letters. The face mirrors our feelings: it smiles when we are happy. Draw a smiling face in your book and write the letter Waaw under it."
+    },
+    {
+     "page": 101,
+     "title": "حرف الهاء",
+     "letter": "ه",
+     "ar": "حرف الهاء حرف خفيف متصل يا صديقي، ننطقه من الصدر! الهاء تشبه شكل العين الحلقية لكنها منفردة. ننطقه: هَ هواء، هُ هُدُد، هِ هدية. من كلمات أجزاء الجسم: هامة (رأس الجمل)، وأسنان! الهاء حرف أحب أن ألتقيه كثيرًا في كلمة مرحبا. ابحث في الكتاب عن كلمة فيها الهاء في وسطها، وانطقها معي ببطء: مَرْحَبًا. هل سمعت الهاء من السماء في آخر الكلمة؟",
+     "en": "The letter Haa is light and connecting, my friend, spoken from the chest! Haa looks like a small open shape. We pronounce it: Ha as in air (Hawa), Hu, Hi as in gift (Hadiyya). From body-part words and greetings: the word Marhaba (Hello)! Haa appears in Marhaba which means welcome. Find a word in the book that has Haa in its middle and say it slowly: Mar-ha-ba. Did you hear the Haa in the last letter?"
+    },
+    {
+     "page": 105,
+     "title": "حرف الذال",
+     "letter": "ذ",
+     "ar": "حرف الذال حرف له نقطة فوقه يا صديقي، ويشبه حرف الدال لكن بنقطة! الذال لا يتصل بالحرف الذي بعده، مثل الدال والراء. ننطقه: ذَ ذراع، ذُ ذهب، ذِ ذرّ. من كلمات أجزاء الجسم: ذراع، ذقن! ابحث في المنتصف عن الذال في وسط الكلمة واأو في أولها. الذال حرف ذكي يُذكرنا بكلمة ذكي نفسها! امسك ذراعك الجميل وارسم الحرف على الهواء وكأنك تكتب اسمك الذكي.",
+     "en": "The letter Dhal has a dot on top, my friend, and looks like Dal but with a dot! Dhal does not connect to the letter after it, like Dal and Raa. We pronounce it: Dha as in arm (Dhira), Dhu as in gold (Dhabab), Dhi. From body-part words: arm (Dhira), chin (Dhaqan)! Dhal is a smart letter that reminds us of the word smart (Dhakii) itself! Hold your beautiful arm and draw the letter in the air as if writing your smart name."
+    },
+    {
+     "page": 109,
+     "title": "حرف الظاء",
+     "letter": "ظ",
+     "ar": "حرف الظاء حرف له نقطة فوقه لكنه فوق وليس مثل الذال يا بطل! الظاء ننطقه من الحلق، وهو حرف قوي وعميق. ننطقه: ظَ ظبي، ظُ ظل، ظِ ظرف. من كلمات أجزاء الجسم: ظهر! الظاء حرف يستخدم في كلمات مهمة مثل: نظيف، ظرف، مظلة. انظر إلى ظهرك وارسم شكل الظاء على الورق كما تراه عند الكتابة. الظاء حرف نظيف ومترف، ابحث عن مظلة في القصة الثانية التي تحمي من الشمس.",
+     "en": "The letter Thaa has a dot on top but it is deeper than Dhal, hero! We pronounce Thaa from the throat; it is strong and deep. We pronounce it: Tha as in gazelle (Thabi), Thu as in shade (Thill), Thi as in envelope (Tharf). From body-part words: back (Thahr)! Thaa is used in important words like: clean (Nathiif), envelope, umbrella (Mathalla). Look at your back and draw the shape of Thaa on paper as you see it in writing. Thaa is a clean, elegant letter — look for an umbrella that protects from the sun."
+    },
+    {
+     "page": 114,
+     "title": "هذا جسمي",
+     "ar": "هذه صفحة مميزة يا بطل: هذا جسمي! انظر إلى الصورة، وضع اسم كل جزء من أجزاء الجسم بجانبه: الرأس والعين والأنف والأذنان واليد والرجل. نقرأ هذه الصفحة بصوت عالٍ، ونشير إلى أجسامنا أثناء القراءة. ثم جرّب أن ترسم جسمك بنفسك على ورقة، وتكتب أسماء أجزائه بخط جميل. جسمك أمانة تحبها وتعتني بها: حافظ عليه بالأكل الصحي واللعب والنوم. قُل معي بكل فخر: هذا جسمي الجميل!",
+     "en": "This is a special page, hero: This is My Body! Look at the picture and place the name of each body part beside it: head, eye, nose, ears, hand and leg. We read this page aloud and point to our own bodies while reading. Then try to draw your own body on paper and write its parts' names in lovely handwriting. Your body is a trusted companion that you love and care for: keep it healthy with good food, play and sleep. Say proudly: This is my beautiful body!"
+    },
+    {
+     "page": 115,
+     "title": "تقييم الوحدة الثالثة",
+     "ar": "حان وقت تقييم الوحدة الثالثة يا صديقي: أجزاء جسمي! لقد تعلمنا حروفًا جديدة: الياء والعين والشين والواو والهاء والذال والظاء، وقرأنا صندوق جدتي ونشيد أحب جسمي، وتعلمنا أسماء أجزاء الجسم. الآن أسئلة الحروف والكلمات تنتظرنا بفرح. اجلس جلوسًا صحيحًا، وراجع حروفك بهدوء، وأجب بثقة. تذكر: جسمك ذكي وأنت ذكي، والإجابة الصحيحة ستأتي. أنت تستحق نجمة ذهبية على اجتهادك!",
+     "en": "It's time to review Unit Three, my friend: My Body! We learned new letters: Yaa, Ain, Sheen, Waaw, Haa, Dhal and Thaa, read grandmother's box and the song I Love My Body, and learned the names of body parts. Now letter and word questions await us joyfully. Sit properly, review your letters calmly, and answer confidently. Remember: your body is smart and you are smart, the right answer will come. You deserve a golden star for your effort!"
+    }
+   ]
+  },
+  {
+   "title": "مدرستي",
+   "subtitle": "الوحدة الرابعة",
+   "start": 117,
+   "end": 143,
+   "intro": {
+    "ar": "أهلاً بك في الوحدة الرابعة يا صديقي: مدرستي! في هذه الوحدة نتعرف على حروف جديدة هي: الزاي والطاء والصاد والضاد والثاء والغين، ونقرأ قصة يوم في المدرسة ونشيد أحب مدرستي. المدرسة بيتنا الثاني، وسنتعلم عن فناء المدرسة ومعلمينا وزملائنا وحصصنا. لنستعد معًا لرحلة موفق إلى مدرستنا الجميلة؟",
+    "en": "Welcome to Unit Four, my friend: My School! In this unit we learn new letters: Zay, Taa, Saad, Daad, Thaa and Ghayn, and read the story A Day at School and the song I Love My School. School is our second home, and we will learn about the schoolyard, our teachers, classmates and lessons. Let's get ready for a successful journey to our beautiful school!"
+   },
+   "lessons": [
+    {
+     "page": 118,
+     "title": "يوم في المدرسة",
+     "ar": "هذه قصة يوم في المدرسة يا بطل! نبدأ يومنا بالتحية مع معلمنا، ثم نذهب إلى الفصل ونتعلم القراءة والكتابة والحساب، ونلعب في الفسحة مع الأصدقاء. اقرأ القصة معي، وفكر: ماذا تفعل في المدرسة كل يوم؟ أثناء القراءة، نتذكر آداب الحديث والتعاون مع زملائنا. بعد القراءة، احكِ لأهلك عن أجمل لحظة في يومك المدرسي.",
+     "en": "This is the story A Day at School, hero! We start our day greeting our teacher, then go to class to learn reading, writing and math, and play in the break with friends. Read the story with me and think: what do you do at school every day? While reading, we remember how to speak politely and cooperate with classmates. After reading, tell your family about the nicest moment of your school day."
+    },
+    {
+     "page": 119,
+     "title": "نشيد أحب مدرستي",
+     "ar": "حان وقت النشيد يا صديقي! نشيد أحب مدرستي يعبر عن حبنا للمدرسة ومعلمينا وزملائنا. اقرأ كلمات النشيد ببطء مع إيقاع مبهج، وابتسم وأنت تنشد. المدرسة مكان يتعلم فيه كل منا ويكبر ويصبح أجمل. كرر النشيد عدة مرات لتحفظ كلماته الجميلة عن ظهر قلب. في النهاية، أنشد أحب مدرستي أمام معلمك وابتسم بفخر!",
+     "en": "It's song time, my friend! The song I Love My School expresses our love for school, teachers and classmates. Read the words slowly with a cheerful rhythm and smile while singing. School is a place where everyone learns, grows and becomes better. Repeat the song several times to memorize its lovely words by heart. At the end, sing I Love My School in front of your teacher and smile proudly!"
+    },
+    {
+     "page": 120,
+     "title": "حرف الزاي",
+     "letter": "ز",
+     "ar": "حرف الزاي حرف خفيف ومميز يا بطل، يشبه حرف الراء لكن فوقه نقطة! الزاي لا يتصل بالحرف الذي بعده، مثل الراء والدال والذال. ننطقه: زَ زهرة، زُ زنبقة، زِ زرّ. من كلمات المدرسة: زهر، زميل! ابحث في صفحتك عن زهرة وزميل، وانطق كل كلمة معي. الزاي حرف مرح يحب الفرح، فلوّح بيدك عند نطقه: زَ زَ زهرة!",
+     "en": "The letter Zay is light and special, hero — it looks like Raa but with a dot on top! Zay does not connect to the letter after it, like Raa, Dal and Dhal. We pronounce it: Za as in flower (Zahra), Zu as in lily (Zanbaqa), Zi as in button (Zirr). From school words: flower, classmate (Zamil)! Find a flower and a classmate in your page and say each word with me. Zay is a joyful letter, so wave your hand when you pronounce it: Za Za flower!"
+    },
+    {
+     "page": 123,
+     "title": "حرف الطاء",
+     "letter": "ط",
+     "ar": "حرف الطاء حرف مهم له ثلاثة نقاط تحت الأسنان يا صديقي! الطاء يشبه التفاحة مع ثلاث نقاط فوقه؟ لا، الطاء مثل شكل القوس مع ثلاث نقاط تعلوه. ننطقه: طَ طائر، طُ طوب، طِ طير. من كلمات المدرسة: طلاب، علم، أطفال! الطاء حرف متصل والنطق به قوي. ابحث في صفحتك عن كلمة تبدأ بالطاء مثل طالب، وانطقها بصوت مسموع مع الحركة الصحيحة للوحة الحروف.",
+     "en": "The letter Taa (Tah) is important with three dots above its teeth shape, hero! Actually Taa looks like an arc with three dots on top. We pronounce it: Ta as in bird (Tair), Tu as in brick (Toob), Ti. From school words: students (Tullaab), knowledge, children! Taa is strong and connecting. Find in your page a word beginning with Taa like Taalib (student) and pronounce it out loud with the correct movement on the letter board."
+    },
+    {
+     "page": 126,
+     "title": "حرف الصاد",
+     "letter": "ص",
+     "ar": "حرف الصاد حرف له صوت قوي وواضح يا بطل، يشبه العين المغلقة التي تنطق بصمت! الصاد لها أسنانه مشدودة، وهي حرف متصل. ننطقه: صَ صورة، صُ صعود، صِ صيد. من كلمات المدرسة: صف، صحيفة! الصاد أخو الضاد، فهما حرفان جوهريان في اللغة العربية يسمونها لغة الضاد. تلفظ الصاد مع ضم الشفتين قليلًا وانظر إلى صورة صُنعتها. ارسم صورة جميلة واكتب تحت حرف الصاد اسم الصورة.",
+     "en": "The letter Saad has a strong and clear sound, hero — it looks like a closed eye that speaks silently! Saad has firm teeth and is a connecting letter. We pronounce it: Sa as in picture (Soura), Su as in ascend, Si as in hunt (Said). From school words: class (Saff), newspaper! Saad is the brother of Daad, they are two essential letters of the Arabic language called the language of Daad. Say Saad slightly pressing your lips and look at the picture you made. Draw a lovely picture and write the letter Saad and its name under it."
+    },
+    {
+     "page": 129,
+     "title": "حرف الضاد",
+     "letter": "ض",
+     "ar": "حرف الضاد حرف مميز جدًا يا بطل، وهو ما يميز اللغة العربية عن باقي اللغات فتسمى لغة الضاد! الضاد له نقطة فوقه وهو حرف قوي وعميق. ننطقه: ضَ ضلع، ضُ قمر ضوء، ضِ ضرب. من كلمات المدرسة والجسم: ضلع، ضيف، مستقيم! انطق الضاد معي بحذر: ضَ ضَ ضلع؟ تذكر أن الضاد من الحروف التي تحتاج تمرينًا، فتدرب عليها عدة مرات حتى تخرج منك بسهولة ووضوح.",
+     "en": "The letter Daad is very special, hero — it is what makes Arabic distinct from other languages, so Arabic is called the language of Daad! Daad has a dot on top and is a strong, deep letter. We pronounce it: Da as in rib (Dila), Du, Di. From school and body words: name, guest, straight! Pronounce Daad with me carefully: Da Da rib? Remember that Daad needs practice, so train it several times until it comes out easily and clearly."
+    },
+    {
+     "page": 132,
+     "title": "حرف الثاء",
+     "letter": "ث",
+     "ar": "حرف الثاء له ثلاثة نقاط فوقه يا صديقي، ويشبه حرف الباء لكن بثلاث نقاط بدل واحدة! الثاء حرف ننطقه من طرف اللسان. ننطقه: ثَ ثعلب، ثُ ثور، ثِ ثلج. من كلمات المدرسة: ثالث، مثقاب! الثاء هي وحدها لها ثلاث نقط مثل الشين، لكن فوق الباء. ابحث عن كلمة فيها الثاء مثل ثعلب، وأعد ثلاث نقط فوقها بيدك: واحد، اثنان، ثلاثة!",
+     "en": "The letter Thaa has three dots on top, my friend, and looks like Baa but with three dots instead of one! Thaa is pronounced from the tip of the tongue. We pronounce it: Tha as in fox (Thalab), Thu as in bull (Thawr), Thi as in snow (Thalj). From school words: third, hole-puncher! Thaa is the only one with three dots like Sheen, but on top of Baa. Find a word containing Thaa like fox (Thalab) and count its three dots with your hand: one, two, three!"
+    },
+    {
+     "page": 135,
+     "title": "حرف الغين",
+     "letter": "غ",
+     "ar": "حرف الغين حرف له نقطة فوقه يا بطل، ويشبه حرف العين لكن بنقطة فوقه! الغين ننطقه من أعلى الحلق، وهو حرف قوي وعميق. ننطقه: غَ غزال، غُ غابة، غِ غيوم. من كلمات المدرسة: غرفة، غياب! الغين حرف متصل يحب أصدقاءه. ابحث في صفحتك عن غزال وغابة، وانطق كل كلمة ببطء ووضوح. الغين قريب جدًا من العين، فتدرب على الفرق بينهما: ع ع ع، غ غ غ!",
+     "en": "The letter Ghayn has a dot on top, hero, and looks like Ain but with a dot on it! We pronounce Ghayn from the top of the throat; it is a strong and deep letter. We pronounce it: Gha as in gazelle (Ghazal), Ghu as in forest (Ghaba), Ghi as in clouds (Ghiyum). From school words: room (Ghurfa), absence! Ghayn is a connecting letter that loves its friends. Find a gazelle and a forest in your page and say each word slowly and clearly. Ghayn is close to Ain, so practice their difference: AA AA AA, Gha Gha Gha!"
+    },
+    {
+     "page": 139,
+     "title": "هذه مدرستي",
+     "ar": "هذه صفحة جميلة يا بطل: هذه مدرستي! انظر إلى صورة المدرسة وسمِّ ما فيها: الفناء، الفصل، السبورة، المعلم، الزملاء. نقرأ هذه الصفحة بصوت واضح، ونشير إلى أجزاء الصورة أثناء القراءة. ثم جرّب أن ترسم مدرستك على ورقة وتكتب أسماء أماكنها. مدرستك بيتك الثاني الذي تتعلم فيه وتكبر. قُل معي بكل حب: أحب مدرستي ومعلمي وزملائي!",
+     "en": "This is a lovely page, hero: This is My School! Look at the school picture and name what is in it: the yard, class, board, teacher, classmates. We read this page aloud and point to its parts while reading. Then try to draw your school on paper and write the names of its places. Your school is your second home where you learn and grow. Say with love: I love my school, my teacher and my friends!"
+    },
+    {
+     "page": 140,
+     "title": "تقييم الوحدة الرابعة",
+     "ar": "حان وقت تقييم الوحدة الرابعة يا بطل: مدرستي! لقد تعلمنا حروفًا جديدة: الزاي والطاء والصاد والضاد والثاء والغين، وقرأنا قصة يوم في المدرسة ونشيد أحب مدرستي. الآن نجيب عن أسئلة الحروف والكلمات بثقة وهدوء. راجع حروفك بشكل جيد، وتذكر حكاية الضاد وتميزها. أنت الآن في نهاية الوحدة، وكل إجابة تصيب قلبك فرحًا. أنت بطل قراءة عظيم، وأنت تستحق التاج!",
+     "en": "It's time to review Unit Four, hero: My School! We learned new letters: Zay, Taa, Saad, Daad, Thaa and Ghayn, read the story A Day at School and the song I Love My School. Now we answer the letters and words questions with confidence and calm. Review your letters well and remember the story of Daad. You are now at the end of the unit, and every answer fills your heart with joy. You are a great reading hero, and you deserve the crown!"
+    },
+    {
+     "page": 142,
+     "title": "السلحفاة الحكيمة",
+     "ar": "قصة رائعة في نهاية كتابنا يا بطل: السلحفاة الحكيمة! السلحفاة بطيئة لكنها صبورة، وتعلم الأصدقاء درسًا جميلًا: الهدوء والصبر يصلان بنا إلى الهدف. اقرأ القصة، وفكر: كيف ساعدت السلحفاة أصدقاءها؟ ثم اسأل نفسك: هل أصبر على التعلم مثلي؟ في كل يوم نتعلم شيئًا جديدًا، والصبر يجعله أجمل. قُل معي: أنا صبور مثل السلحفاة الحكيمة!",
+     "en": "A wonderful story at the end of our book, hero: The Wise Turtle! The turtle is slow but patient, and teaches friends a lovely lesson: calmness and patience get us to our goal. Read the story and think: how did the turtle help its friends? Then ask yourself: do I have patience for learning like the turtle? Every day we learn something new, and patience makes it more beautiful. Say with me: I am patient like the wise turtle!"
+    }
+   ]
+  }
+ ]
+}
