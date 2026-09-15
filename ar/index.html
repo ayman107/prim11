@@ -15,6 +15,32 @@
     (function () {
       var DATA = null, LANG = 'ar';
 
+      /* Pause the app's page narration while the explain modal is open (prevents overlapping voices) */
+      window.__yumoExplain = 0;
+      if (!window.__yumoMediaPatched) {
+        window.__yumoMediaPatched = 1;
+        var __yumoOP = HTMLMediaElement.prototype.play;
+        HTMLMediaElement.prototype.play = function () {
+          if (window.__yumoExplain && !this.__yumoOwn) {
+            try { this.pause(); } catch (e) {}
+            return Promise.resolve();
+          }
+          return __yumoOP.apply(this, arguments);
+        };
+      }
+      var __yumoMuteInt = null;
+      function yumoMuteOn() {
+        window.__yumoExplain = 1;
+        try { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); } catch (e) {}
+        if (!__yumoMuteInt) __yumoMuteInt = setInterval(function () {
+          try { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); } catch (e) {}
+        }, 600);
+      }
+      function yumoMuteOff() {
+        window.__yumoExplain = 0;
+        if (__yumoMuteInt) { clearInterval(__yumoMuteInt); __yumoMuteInt = null; }
+      }
+
       function byTitle(t) {
         if (!DATA) return null;
         t = (t || '').trim();
@@ -51,6 +77,7 @@
         var voice = lng === 'ar' ? 'ar-SA-ZariyahNeural' : 'en-US-AriaNeural';
         var a = new Audio('/api/tts?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
         curAudio = a;
+        a.__yumoOwn = 1;
         a.playbackRate = 0.92;
         a.onended = function () { if (curAudio === a) curAudio = null; if (done) done(); };
         a.onerror = function () {
@@ -63,7 +90,9 @@
               var vs = window.speechSynthesis.getVoices();
               for (var k = 0; k < vs.length; k++) { if (vs[k].lang.indexOf(lng) === 0) { u.voice = vs[k]; break; } }
               if (done) { u.onend = done; u.onerror = done; }
+              window.__yumoExplain = 0;
               window.speechSynthesis.speak(u);
+              window.__yumoExplain = 1;
             } catch (e) { if (done) done(); }
           } else if (done) done();
         };
@@ -104,6 +133,7 @@
 
       function closeModal() {
         stopSpeak();
+        yumoMuteOff();
         if (modalEl) { document.body.removeChild(modalEl); modalEl = null; }
         state = null; renderRef = null;
       }
@@ -120,6 +150,7 @@
 
       function openModal() {
         stopSpeak();
+        yumoMuteOn();
         state = { info: resolve(), stars: 0, qi: 0, done: 0 };
         stage = 'listen';
 
