@@ -59,56 +59,560 @@
      "title": "حرف الألف",
      "letter": "أ",
      "ar": "لنتعرف على حرف الألف يا صديقي! الألف أول حروف الأبجدية العربية، وهو حرف مميز يشبه الصارية الطويلة. ننطقه بوضوح: أَ أنا، أُ أم، إِ إبرة. في كتابنا نرى الألف في كلمات مثل: أرنب، أسد، أنف. ارسم الحرف في الهواء بإصبعك، ثم تتبع شكله في الكتاب وفكّر: ما الكلمات التي تبدأ بحرف الألف؟",
-     "en": "Let's meet the letter Alif, my friend! Alif is the first letter of the Arabic alphabet, a special letter that looks like a tall pole. We pronounce it clearly: A as in Ana (I), U as in Umm (mother), I as in Ibra (needle). In our book we see Alif in words like: rabbit (Arnab), lion (Asad), nose (Anf). Draw the letter in the air with your finger, then trace it in the book and think: which words begin with Alif?"
+     "en": "Let's meet the letter Alif, my friend! Alif is the first letter of the Arabic alphabet, a special letter that looks like a tall pole. We pronounce it clearly: A as in Ana (I), U as in Umm (mother), I as in Ibra (needle). In our book we see Alif in words like: rabbit (Arnab), lion (Asad), nose (Anf). Draw the letter in the air with your finger, then trace it in the book and think: which words begin with Alif?",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الألف؟",
+        "q_en": "Where is the letter Alif?",
+        "answer": "أ",
+        "options": [
+         {
+          "t": "أ"
+         },
+         {
+          "t": "ع"
+         },
+         {
+          "t": "ل"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الألف؟",
+        "q_en": "Which word begins with Alif?",
+        "answer": "أرنب",
+        "options": [
+         {
+          "t": "أرنب",
+          "e": "🐰",
+          "tr": "Arnab"
+         },
+         {
+          "t": "ليمون",
+          "e": "🍋",
+          "tr": "Laymun"
+         },
+         {
+          "t": "عين",
+          "e": "👁️",
+          "tr": "Ain"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "أرنب",
+        "tr": "Arnab",
+        "answer": "أ",
+        "options": [
+         {
+          "t": "ل"
+         },
+         {
+          "t": "ع"
+         },
+         {
+          "t": "أ"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 20,
      "title": "حرف الباء",
      "letter": "ب",
      "ar": "حرف الباء من الحروف الجميلة السهلة يا بطل! الباء نشبه الطبق الصغير الذي تحته نقطة. ننطقها: بَ باب، بُ بومة، بِ بِيض. في القصة كلمات كثيرة بها الباء مثل: باب، بيت، بطة. الباء تتصل بالحروف التي حولها، فهي حرف صديق للجميع. ابحث في الكتاب عن ثلاث كلمات تبدأ بحرف الباء واقرأها بصوت عالٍ.",
-     "en": "The letter Baa is one of the beautiful, easy letters, hero! Baa looks like a small dish with a dot under it. We pronounce it: Ba as in door (Bab), Bu as in owl (Buma), Bi as in eggs (Bid). In the story there are many words with Baa like: door, house, duck. Baa connects to the letters around it, so it is a friendly letter. Find three words beginning with Baa in the book and read them aloud."
+     "en": "The letter Baa is one of the beautiful, easy letters, hero! Baa looks like a small dish with a dot under it. We pronounce it: Ba as in door (Bab), Bu as in owl (Buma), Bi as in eggs (Bid). In the story there are many words with Baa like: door, house, duck. Baa connects to the letters around it, so it is a friendly letter. Find three words beginning with Baa in the book and read them aloud.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الباء؟",
+        "q_en": "Where is the letter Baa?",
+        "answer": "ب",
+        "options": [
+         {
+          "t": "ث"
+         },
+         {
+          "t": "ت"
+         },
+         {
+          "t": "ب"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الباء؟",
+        "q_en": "Which word begins with Baa?",
+        "answer": "بطة",
+        "options": [
+         {
+          "t": "تمر",
+          "e": "🌴",
+          "tr": "Tamr"
+         },
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         },
+         {
+          "t": "ثعلب",
+          "e": "🦊",
+          "tr": "Thalab"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "بطة",
+        "tr": "Batta",
+        "answer": "ب",
+        "options": [
+         {
+          "t": "ث"
+         },
+         {
+          "t": "ب"
+         },
+         {
+          "t": "ت"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 23,
      "title": "حرف الميم",
      "letter": "م",
      "ar": "التقينا الآن بحرف الميم يا صديقي، وهو حرف جميل موجود في كثير من كلمات الأسرة! الميم يشبه القوسين المتقابلين، وتُكتب في أول الكلمة ووسطها وآخرها. ننطقها: مَ منزل، مِ مكتب، مُ معلّم. من كلمات الأسرة التي تحتوي الميم: أم، أمير، ماما. قل معي بوضوح: أمي تحبني وأنا أحبها!",
-     "en": "Now we meet the letter Meem, my friend — a lovely letter found in many family words! Meem looks like two facing arcs, and it is written at the beginning, middle and end of words. We pronounce it: Ma as in home (Manzil), Mi as in desk (Maktab), Mu as in teacher (Mual-lim). Family words that contain Meem: Umm (mother), Ameer (prince), Mama. Say clearly with me: My mother loves me and I love her!"
+     "en": "Now we meet the letter Meem, my friend — a lovely letter found in many family words! Meem looks like two facing arcs, and it is written at the beginning, middle and end of words. We pronounce it: Ma as in home (Manzil), Mi as in desk (Maktab), Mu as in teacher (Mual-lim). Family words that contain Meem: Umm (mother), Ameer (prince), Mama. Say clearly with me: My mother loves me and I love her!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الميم؟",
+        "q_en": "Where is the letter Meem?",
+        "answer": "م",
+        "options": [
+         {
+          "t": "ب"
+         },
+         {
+          "t": "م"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الميم؟",
+        "q_en": "Which word begins with Meem?",
+        "answer": "ماما",
+        "options": [
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         },
+         {
+          "t": "ماما",
+          "e": "👩",
+          "tr": "Mama"
+         },
+         {
+          "t": "نملة",
+          "e": "🐜",
+          "tr": "Namla"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ماما",
+        "tr": "Mama",
+        "answer": "م",
+        "options": [
+         {
+          "t": "ن"
+         },
+         {
+          "t": "ب"
+         },
+         {
+          "t": "م"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 26,
      "title": "حرف الحاء",
      "letter": "ح",
      "ar": "حرف الحاء حرف عائلي جميل يا بطل، تجده في كلمة أحب التي نقولها لأهلنا! الحاء ليس له نقطة، ويتصل بالحروف التي قبله وبعده. ننطقه: حَ حمد، حُ حُب، حِ حكاية. في قصة أسرتنا نجد كلمات بها الحاء مثل: أحب، حبيبي. خذ نفسًا عميقًا ثم انطق الحاء بوضوح: أحب أسرتي! حاول الآن أن ترسم الحاء في أول الكلمة وفي وسطها وقارن بين الشكلين.",
-     "en": "The letter Haa is a lovely family letter, hero — you find it in the word I love (Uhibb) that we say to our family! Haa has no dot, and it connects to the letters before and after it. We pronounce it: Ha as in Hamd, Hu as in love (Hub), Hi as in story (Hikaya). In our family story we find words with Haa like: love, my dear. Take a deep breath and say Haa clearly: I love my family! Try to draw Haa at the start of a word and in the middle, and compare the two shapes."
+     "en": "The letter Haa is a lovely family letter, hero — you find it in the word I love (Uhibb) that we say to our family! Haa has no dot, and it connects to the letters before and after it. We pronounce it: Ha as in Hamd, Hu as in love (Hub), Hi as in story (Hikaya). In our family story we find words with Haa like: love, my dear. Take a deep breath and say Haa clearly: I love my family! Try to draw Haa at the start of a word and in the middle, and compare the two shapes.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الحاء؟",
+        "q_en": "Where is the letter Haa?",
+        "answer": "ح",
+        "options": [
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ج"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الحاء؟",
+        "q_en": "Which word begins with Haa?",
+        "answer": "حصان",
+        "options": [
+         {
+          "t": "خروف",
+          "e": "🐑",
+          "tr": "Kharuf"
+         },
+         {
+          "t": "جمل",
+          "e": "🐪",
+          "tr": "Jamal"
+         },
+         {
+          "t": "حصان",
+          "e": "🐴",
+          "tr": "Hisan"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "حصان",
+        "tr": "Hisan",
+        "answer": "ح",
+        "options": [
+         {
+          "t": "ج"
+         },
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 29,
      "title": "حرف الجيم",
      "letter": "ج",
      "ar": "حرفنا الجديد اليوم هو حرف الجيم يا صديقي! الجيم له نقطة تحته، ويأتي في أول الكلمة ووسطها وآخرها. ننطقه: جَ جمل، جُ جبن، جِ جسر. من كلماتنا عن الأهل: جدّ وجدّة، فهما معنا في أسرتنا. الجيم حرف متصل يحب مصاحبة أصدقائه من الحروف. اضغط بإصبعك على شكل الجيم في الكتاب وتتبّعه، ثم فكّر في كلمات تبدأ بحرف الجيم.",
-     "en": "Our new letter today is Jeem, my friend! Jeem has a dot underneath it, and it comes at the beginning, middle and end of words. We pronounce it: Ja as in camel (Jamal), Ju as in cheese (Jubn), Ji as in bridge (Jisr). From our family words: Jadd (grandfather) and Jadda (grandmother), they are part of our family. Jeem is a connecting letter that loves being with its letter friends. Press your finger on the shape of Jeem in the book and trace it, then think of words that begin with Jeem."
+     "en": "Our new letter today is Jeem, my friend! Jeem has a dot underneath it, and it comes at the beginning, middle and end of words. We pronounce it: Ja as in camel (Jamal), Ju as in cheese (Jubn), Ji as in bridge (Jisr). From our family words: Jadd (grandfather) and Jadda (grandmother), they are part of our family. Jeem is a connecting letter that loves being with its letter friends. Press your finger on the shape of Jeem in the book and trace it, then think of words that begin with Jeem.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الجيم؟",
+        "q_en": "Where is the letter Jeem?",
+        "answer": "ج",
+        "options": [
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ح"
+         },
+         {
+          "t": "ج"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الجيم؟",
+        "q_en": "Which word begins with Jeem?",
+        "answer": "جمل",
+        "options": [
+         {
+          "t": "جمل",
+          "e": "🐪",
+          "tr": "Jamal"
+         },
+         {
+          "t": "خروف",
+          "e": "🐑",
+          "tr": "Kharuf"
+         },
+         {
+          "t": "حصان",
+          "e": "🐴",
+          "tr": "Hisan"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "جمل",
+        "tr": "Jamal",
+        "answer": "ج",
+        "options": [
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ج"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 32,
      "title": "حرف الدال",
      "letter": "د",
      "ar": "حرف الدال حرف سهل وواضح يا بطل! الدال يشبه القوس الصغير، ولا يتصل بالحرف الذي بعده، فإذا جاء في وسط الكلمة نقف ثم نبدأ من جديد. ننطقه: دَ دار، دُ دُبّ، دِ دِين. الدال نسمعه كثيرًا في كلمة دار التي تعني البيت. ابحث في الكتاب عن الدال في كلمة دار، وانطقها معي بوضوح تام.",
-     "en": "The letter Dal is easy and clear, hero! Dal looks like a small arc, and it does not connect to the letter after it, so when it comes in the middle of a word we stop and start again. We pronounce it: Da as in Dar (house), Du as in Dub (bear), Di as in Deen (faith). We often hear Dal in the word Dar, which means house. Look for Dal in the word Dar in the book and pronounce it clearly with me."
+     "en": "The letter Dal is easy and clear, hero! Dal looks like a small arc, and it does not connect to the letter after it, so when it comes in the middle of a word we stop and start again. We pronounce it: Da as in Dar (house), Du as in Dub (bear), Di as in Deen (faith). We often hear Dal in the word Dar, which means house. Look for Dal in the word Dar in the book and pronounce it clearly with me.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الدال؟",
+        "q_en": "Where is the letter Dal?",
+        "answer": "د",
+        "options": [
+         {
+          "t": "ر"
+         },
+         {
+          "t": "د"
+         },
+         {
+          "t": "ذ"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الدال؟",
+        "q_en": "Which word begins with Dal?",
+        "answer": "دبّ",
+        "options": [
+         {
+          "t": "ريشة",
+          "e": "🪶",
+          "tr": "Risha"
+         },
+         {
+          "t": "دبّ",
+          "e": "🐻",
+          "tr": "Dubb"
+         },
+         {
+          "t": "ذئب",
+          "e": "🐺",
+          "tr": "Dhib"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "دبّ",
+        "tr": "Dubb",
+        "answer": "د",
+        "options": [
+         {
+          "t": "ر"
+         },
+         {
+          "t": "د"
+         },
+         {
+          "t": "ذ"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 35,
      "title": "حرف الخاء",
      "letter": "خ",
      "ar": "حرف الخاء حرف مميز له نقطة فوقه يا صديقي! الخاء ننطقه من الحلق، وقد يظنه البعض الحاء، لكن الخاء أقوى صوتًا وأعمق. ننطقه: خَ خروف، خُ خبز، خِ خيار. الخاء حرف متصل يحب اللعب مع الحروف من حوله. تدرّب على نطق الخاء بوضوح أمام المرآة، وقل: خَ خَ خبز! ثم ابحث في الكتاب عن كلمات تحتوي على حرف الخاء.",
-     "en": "The letter Khaa is special with a dot on top, my friend! We pronounce Khaa from deep in the throat; some may confuse it with Haa, but Khaa is stronger and deeper in sound. We pronounce it: Kha as in lamb (Kharouf), Khu as in bread (Khubz), Khi as in cucumber (Khiyaar). Khaa is a connecting letter that loves to play with the letters around it. Practice saying Khaa clearly in front of the mirror: Kha Kha bread! Then find words containing Khaa in the book."
+     "en": "The letter Khaa is special with a dot on top, my friend! We pronounce Khaa from deep in the throat; some may confuse it with Haa, but Khaa is stronger and deeper in sound. We pronounce it: Kha as in lamb (Kharouf), Khu as in bread (Khubz), Khi as in cucumber (Khiyaar). Khaa is a connecting letter that loves to play with the letters around it. Practice saying Khaa clearly in front of the mirror: Kha Kha bread! Then find words containing Khaa in the book.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الخاء؟",
+        "q_en": "Where is the letter Khaa?",
+        "answer": "خ",
+        "options": [
+         {
+          "t": "ج"
+         },
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الخاء؟",
+        "q_en": "Which word begins with Khaa?",
+        "answer": "خروف",
+        "options": [
+         {
+          "t": "خروف",
+          "e": "🐑",
+          "tr": "Kharuf"
+         },
+         {
+          "t": "حصان",
+          "e": "🐴",
+          "tr": "Hisan"
+         },
+         {
+          "t": "جمل",
+          "e": "🐪",
+          "tr": "Jamal"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "خروف",
+        "tr": "Kharuf",
+        "answer": "خ",
+        "options": [
+         {
+          "t": "ج"
+         },
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 38,
      "title": "حرف التاء",
      "letter": "ت",
      "ar": "وصلنا اليوم إلى حرف التاء يا بطل، وهو حرف له نقطتان فوقه! التاء يبدو مثل الباء لكن برأسه نقطتان. ننطقه: تَ تمر، تِ تين، تُ توت. من كلماتنا المحبوبة: تمر وبلح، فهي ثمار جميلة ولذيذة. كلمة توت تبدأ بحرف التاء وهي فاكهة لذيذة أيضًا. التاء حرف متصل يحب أصدقاءه. ابحث عن التاء في كلمات الدرس، وعدّ الكلمات التي تحتوي على حرف التاء بصوت عالٍ.",
-     "en": "Today we reach the letter Taa, hero — a letter with two dots on top! Taa looks like Baa but with two dots on its head. We pronounce it: Ta as in date (Tamr), Ti as in fig (Teen), Tu as in berry (Toot). Dates and figs are loved fruits beginning with Taa, and the word Toot (berry) also starts with it. Taa is a connecting letter that loves its friends. Find Taa in the lesson words and count the words that contain a Taa aloud."
+     "en": "Today we reach the letter Taa, hero — a letter with two dots on top! Taa looks like Baa but with two dots on its head. We pronounce it: Ta as in date (Tamr), Ti as in fig (Teen), Tu as in berry (Toot). Dates and figs are loved fruits beginning with Taa, and the word Toot (berry) also starts with it. Taa is a connecting letter that loves its friends. Find Taa in the lesson words and count the words that contain a Taa aloud.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف التاء؟",
+        "q_en": "Where is the letter Taa?",
+        "answer": "ت",
+        "options": [
+         {
+          "t": "ث"
+         },
+         {
+          "t": "ب"
+         },
+         {
+          "t": "ت"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف التاء؟",
+        "q_en": "Which word begins with Taa?",
+        "answer": "تمر",
+        "options": [
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         },
+         {
+          "t": "تمر",
+          "e": "🌴",
+          "tr": "Tamr"
+         },
+         {
+          "t": "ثعلب",
+          "e": "🦊",
+          "tr": "Thalab"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "تمر",
+        "tr": "Tamr",
+        "answer": "ت",
+        "options": [
+         {
+          "t": "ت"
+         },
+         {
+          "t": "ث"
+         },
+         {
+          "t": "ب"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 42,
@@ -151,49 +655,490 @@
      "title": "حرف اللام",
      "letter": "ل",
      "ar": "لنتعرف على حرف اللام يا صديقي! اللام يشبه العصا المستقيمة، وهو حرف متصل يصل بين أصدقائه في الكلمة. ننطقه: لَ ليمون، لُ لب، لِ لسان. من كلمات عالم الحيوان: لبوة، ليث، لقلق. اللام حرف مهم نستخدمه كثيرًا في كلمة الله الجميلة. ارسم اللام في الهواء بإصبعك ثم ابحث عن كلمة تبدأ بحرف اللام في الكتاب واقرأها بصوت عالٍ.",
-     "en": "Let's meet the letter Laam, my friend! Laam looks like a straight pole, and it is a connecting letter that joins its friends inside a word. We pronounce it: La as in lemon (Laymoon), Lu, Li as in tongue (Lisaan). From the animal world: lioness (Labuwa), lion (Layth), stork (Laqlaq). Laam is important — we use it in the beautiful word Allah. Draw Laam in the air with your finger, then find a word beginning with Laam in the book and read it aloud."
+     "en": "Let's meet the letter Laam, my friend! Laam looks like a straight pole, and it is a connecting letter that joins its friends inside a word. We pronounce it: La as in lemon (Laymoon), Lu, Li as in tongue (Lisaan). From the animal world: lioness (Labuwa), lion (Layth), stork (Laqlaq). Laam is important — we use it in the beautiful word Allah. Draw Laam in the air with your finger, then find a word beginning with Laam in the book and read it aloud.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف اللام؟",
+        "q_en": "Where is the letter Lam?",
+        "answer": "ل",
+        "options": [
+         {
+          "t": "ن"
+         },
+         {
+          "t": "ل"
+         },
+         {
+          "t": "ك"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف اللام؟",
+        "q_en": "Which word begins with Lam?",
+        "answer": "ليمون",
+        "options": [
+         {
+          "t": "كلب",
+          "e": "🐶",
+          "tr": "Kalb"
+         },
+         {
+          "t": "ليمون",
+          "e": "🍋",
+          "tr": "Laymun"
+         },
+         {
+          "t": "نملة",
+          "e": "🐜",
+          "tr": "Namla"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ليمون",
+        "tr": "Laymun",
+        "answer": "ل",
+        "options": [
+         {
+          "t": "ك"
+         },
+         {
+          "t": "ل"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 52,
      "title": "حرف السين",
      "letter": "س",
      "ar": "حرف السين يشبه ثلاثة أسنان صغيرة يا بطل! السين حرف متصل نكتبه في أول الكلمة ووسطها وآخرها. ننطقه: سَ سمكة، سُ سُكر، سِ سكين. من كلمات عالم الحيوان والماء: سمكة، سلحفاة، سنجاب. السين أخو الشين لكن بدون النقط الثلاث. ارسم السين على شكل أسنان صغيرة، ثم ابحث في الكتاب عن حيوان يبدأ اسمه بحرف السين.",
-     "en": "The letter Seen looks like three small teeth, hero! Seen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sa as in fish (Samaka), Su as in sugar (Sukkar), Si as in knife (Sikkin). From the animal and water world: fish, turtle (Sulahfaa), squirrel (Sinjaab). Seen is the brother of Sheen but without three dots. Draw Seen like small teeth, then find an animal whose name begins with Seen."
+     "en": "The letter Seen looks like three small teeth, hero! Seen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sa as in fish (Samaka), Su as in sugar (Sukkar), Si as in knife (Sikkin). From the animal and water world: fish, turtle (Sulahfaa), squirrel (Sinjaab). Seen is the brother of Sheen but without three dots. Draw Seen like small teeth, then find an animal whose name begins with Seen.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف السين؟",
+        "q_en": "Where is the letter Seen?",
+        "answer": "س",
+        "options": [
+         {
+          "t": "س"
+         },
+         {
+          "t": "ش"
+         },
+         {
+          "t": "ص"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف السين؟",
+        "q_en": "Which word begins with Seen?",
+        "answer": "سمكة",
+        "options": [
+         {
+          "t": "سمكة",
+          "e": "🐟",
+          "tr": "Samaka"
+         },
+         {
+          "t": "شمس",
+          "e": "☀️",
+          "tr": "Shams"
+         },
+         {
+          "t": "صورة",
+          "e": "🖼️",
+          "tr": "Sura"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "سمكة",
+        "tr": "Samaka",
+        "answer": "س",
+        "options": [
+         {
+          "t": "س"
+         },
+         {
+          "t": "ش"
+         },
+         {
+          "t": "ص"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 56,
      "title": "حرف النون",
      "letter": "ن",
      "ar": "حرف النون من الحروف الجميلة يا صديقي، له نقطة واحدة فوق القوس الصغير! النون نشبه طبقًا فوقه نقطة. ننطقه: نَ نملة، نُ نور، نِ نيل. من كلماتنا: نملة، نمر، نعامة — كلها حيوانات! النون حرف متصل يحب أصدقاءه. جرّب أن تكتب النون في ثلاث وضعيات: في أول الكلمة ووسطها وآخرها، ثم ابقِ عينيك مفتوحتين لتبحث عن النون في صفحات الكتاب.",
-     "en": "The letter Noon is one of the beautiful letters, my friend — it has one dot above its small arc! Noon looks like a dish with a dot on top. We pronounce it: Na as in ant (Namla), Nu as in light (Noor), Ni as in the Nile (Neel). From our words: ant, tiger (Nimr), ostrich (Naama) — all animals! Noon is a connecting letter that loves its friends. Try to write Noon in three positions: start, middle and end of a word, then keep your eyes open looking for Noon across the book pages."
+     "en": "The letter Noon is one of the beautiful letters, my friend — it has one dot above its small arc! Noon looks like a dish with a dot on top. We pronounce it: Na as in ant (Namla), Nu as in light (Noor), Ni as in the Nile (Neel). From our words: ant, tiger (Nimr), ostrich (Naama) — all animals! Noon is a connecting letter that loves its friends. Try to write Noon in three positions: start, middle and end of a word, then keep your eyes open looking for Noon across the book pages.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف النون؟",
+        "q_en": "Where is the letter Noon?",
+        "answer": "ن",
+        "options": [
+         {
+          "t": "ي"
+         },
+         {
+          "t": "م"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف النون؟",
+        "q_en": "Which word begins with Noon?",
+        "answer": "نملة",
+        "options": [
+         {
+          "t": "يد",
+          "e": "✋",
+          "tr": "Yad"
+         },
+         {
+          "t": "نملة",
+          "e": "🐜",
+          "tr": "Namla"
+         },
+         {
+          "t": "ماما",
+          "e": "👩",
+          "tr": "Mama"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "نملة",
+        "tr": "Namla",
+        "answer": "ن",
+        "options": [
+         {
+          "t": "ي"
+         },
+         {
+          "t": "م"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 60,
      "title": "حرف الراء",
      "letter": "ر",
      "ar": "حرف الراء حرف سهل جميل يا بطل، يبدو مثل قوس صغير! الراء لا يتصل بالحرف الذي بعده، مثل أخوته الدال والذال. ننطقه: رَ رأس، رُ رمّان، رِ ريح. من كلماتنا: أرنب، ريشة، رجل. الراء حرف متكرر في كلامنا اليومي. ابحث في الكتاب عن أرنب يبدأ اسمه بحرف الراء، وانطق اسمه مع حركة اليد: رَ رَ رَ أرنب!",
-     "en": "The letter Raa is easy and beautiful, hero — it looks like a small arc! Raa does not connect to the letter after it, like its brothers Dal and Dhal. We pronounce it: Ra as in head (Raas), Ru as in pomegranate (Rummaan), Ri as in wind (Reeh). From our words: rabbit (Arnab), feather (Reesha), leg (Rijl). Raa appears often in our daily speech. Find a rabbit whose name begins with Raa in the book and say its name with a hand movement: Ra Ra Ra rabbit!"
+     "en": "The letter Raa is easy and beautiful, hero — it looks like a small arc! Raa does not connect to the letter after it, like its brothers Dal and Dhal. We pronounce it: Ra as in head (Raas), Ru as in pomegranate (Rummaan), Ri as in wind (Reeh). From our words: rabbit (Arnab), feather (Reesha), leg (Rijl). Raa appears often in our daily speech. Find a rabbit whose name begins with Raa in the book and say its name with a hand movement: Ra Ra Ra rabbit!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الراء؟",
+        "q_en": "Where is the letter Raa?",
+        "answer": "ر",
+        "options": [
+         {
+          "t": "ر"
+         },
+         {
+          "t": "ز"
+         },
+         {
+          "t": "د"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الراء؟",
+        "q_en": "Which word begins with Raa?",
+        "answer": "ريشة",
+        "options": [
+         {
+          "t": "زهرة",
+          "e": "🌸",
+          "tr": "Zahra"
+         },
+         {
+          "t": "ريشة",
+          "e": "🪶",
+          "tr": "Risha"
+         },
+         {
+          "t": "دبّ",
+          "e": "🐻",
+          "tr": "Dubb"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ريشة",
+        "tr": "Risha",
+        "answer": "ر",
+        "options": [
+         {
+          "t": "ز"
+         },
+         {
+          "t": "د"
+         },
+         {
+          "t": "ر"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 64,
      "title": "حرف الفاء",
      "letter": "ف",
      "ar": "حرف الفاء له نقطة فوقه يا صديقي، ويشبه الكأس المقلوب! الفاء حرف متصل نكتبه في مواضع مختلفة من الكلمة. ننطقه: فَ فأر، فُ فول، فِ فيل. من كلمات عالم الحيوان: فيل، فراشة، فأر. الفاء تشبه القاف في الشكل، لكن القاف فوقها نقطتان. لاحظ الفرق بينهما في الكتاب، ثم ارسم فيلًا يحمل الحرف ف على ظهره!",
-     "en": "The letter Faa has a dot on top, my friend, and looks like an upside-down cup! Faa is a connecting letter written in different positions in the word. We pronounce it: Fa as in mouse (Fa'r), Fu as in beans (Fool), Fi as in elephant (Feel). From the animal world: elephant, butterfly (Farasha), mouse (Faar). Faa looks like Qaaf in shape, but Qaaf has two dots on top. Notice the difference in the book, then draw an elephant carrying the letter Faa on its back!"
+     "en": "The letter Faa has a dot on top, my friend, and looks like an upside-down cup! Faa is a connecting letter written in different positions in the word. We pronounce it: Fa as in mouse (Fa'r), Fu as in beans (Fool), Fi as in elephant (Feel). From the animal world: elephant, butterfly (Farasha), mouse (Faar). Faa looks like Qaaf in shape, but Qaaf has two dots on top. Notice the difference in the book, then draw an elephant carrying the letter Faa on its back!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الفاء؟",
+        "q_en": "Where is the letter Faa?",
+        "answer": "ف",
+        "options": [
+         {
+          "t": "ق"
+         },
+         {
+          "t": "ف"
+         },
+         {
+          "t": "ب"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الفاء؟",
+        "q_en": "Which word begins with Faa?",
+        "answer": "فيل",
+        "options": [
+         {
+          "t": "قطة",
+          "e": "🐱",
+          "tr": "Qitta"
+         },
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         },
+         {
+          "t": "فيل",
+          "e": "🐘",
+          "tr": "Fil"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "فيل",
+        "tr": "Fil",
+        "answer": "ف",
+        "options": [
+         {
+          "t": "ق"
+         },
+         {
+          "t": "ف"
+         },
+         {
+          "t": "ب"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 68,
      "title": "حرف الكاف",
      "letter": "ك",
      "ar": "حرف الكاف حرف مميز يشبه العصا المفتوحة أو القوس الممتد يا بطل! الكاف حرف متصل، ونرسم له ذيلًا صغيرًا في بعض الوضعيات. ننطقه: كَ كلب، كُ كرسي، كِ كيس. من كلماتنا: كلب، كرة، كنغر. الكاف حرف كثير الظهور في كلمات الكتاب مثل: كتاب، كريم. ابحث في صفحتك عن الكلمات التي تحتوي على حرف الكاف، وربط كل كلمة بما يدل عليها في الصورة.",
-     "en": "The letter Kaaf is special, looking like an open stick or a long arc, hero! Kaaf is a connecting letter with a small tail in some positions. We pronounce it: Ka as in dog (Kalb), Ku as in chair (Kursi), Ki as in bag (Keis). From our words: dog, ball (Kura), kangaroo (Kanghar). Kaaf appears often in the book's words like book and cream. Find the words containing Kaaf on your page and connect each word to what it shows in the picture."
+     "en": "The letter Kaaf is special, looking like an open stick or a long arc, hero! Kaaf is a connecting letter with a small tail in some positions. We pronounce it: Ka as in dog (Kalb), Ku as in chair (Kursi), Ki as in bag (Keis). From our words: dog, ball (Kura), kangaroo (Kanghar). Kaaf appears often in the book's words like book and cream. Find the words containing Kaaf on your page and connect each word to what it shows in the picture.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الكاف؟",
+        "q_en": "Where is the letter Kaaf?",
+        "answer": "ك",
+        "options": [
+         {
+          "t": "ق"
+         },
+         {
+          "t": "ك"
+         },
+         {
+          "t": "ل"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الكاف؟",
+        "q_en": "Which word begins with Kaaf?",
+        "answer": "كلب",
+        "options": [
+         {
+          "t": "ليمون",
+          "e": "🍋",
+          "tr": "Laymun"
+         },
+         {
+          "t": "كلب",
+          "e": "🐶",
+          "tr": "Kalb"
+         },
+         {
+          "t": "قطة",
+          "e": "🐱",
+          "tr": "Qitta"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "كلب",
+        "tr": "Kalb",
+        "answer": "ك",
+        "options": [
+         {
+          "t": "ل"
+         },
+         {
+          "t": "ك"
+         },
+         {
+          "t": "ق"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 72,
      "title": "حرف القاف",
      "letter": "ق",
      "ar": "حرف القاف حرف له نقطتان فوقه يا صديقي، ويشبه الحرف ف لكن بنقطتين! القاف ننطقه من أقصى الحلق، فصوته عميق ومميز. ننطقه: قَ قلم، قُ قبة، قِ قصة. من كلمات عالم الحيوان: قطة، قرد، قنفذ. القاف حرف متصل يحب أصدقاءه من الحروف. ابحث عن القط في الكتاب، وانطق كلمة قطة معي ببطء، ثم عدّ القافات التي تراها في الجملة.",
-     "en": "The letter Qaaf has two dots on top, my friend, and looks like Faa but with two dots! We pronounce Qaaf from the back of the throat, so its sound is deep and special. We pronounce it: Qa as in pen (Qalam), Qu as in dome (Qubba), Qi as in story (Qissa). From the animal world: cat (Qitta), monkey (Qird), hedgehog (Qunfudh). Qaaf is a connecting letter that loves its letter friends. Find the cat in the book and say the word Qitta (cat) slowly, then count the Qaafs you see in the sentence."
+     "en": "The letter Qaaf has two dots on top, my friend, and looks like Faa but with two dots! We pronounce Qaaf from the back of the throat, so its sound is deep and special. We pronounce it: Qa as in pen (Qalam), Qu as in dome (Qubba), Qi as in story (Qissa). From the animal world: cat (Qitta), monkey (Qird), hedgehog (Qunfudh). Qaaf is a connecting letter that loves its letter friends. Find the cat in the book and say the word Qitta (cat) slowly, then count the Qaafs you see in the sentence.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف القاف؟",
+        "q_en": "Where is the letter Qaaf?",
+        "answer": "ق",
+        "options": [
+         {
+          "t": "ك"
+         },
+         {
+          "t": "ق"
+         },
+         {
+          "t": "ف"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف القاف؟",
+        "q_en": "Which word begins with Qaaf?",
+        "answer": "قطة",
+        "options": [
+         {
+          "t": "فيل",
+          "e": "🐘",
+          "tr": "Fil"
+         },
+         {
+          "t": "قطة",
+          "e": "🐱",
+          "tr": "Qitta"
+         },
+         {
+          "t": "كلب",
+          "e": "🐶",
+          "tr": "Kalb"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "قطة",
+        "tr": "Qitta",
+        "answer": "ق",
+        "options": [
+         {
+          "t": "ف"
+         },
+         {
+          "t": "ك"
+         },
+         {
+          "t": "ق"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 77,
@@ -242,49 +1187,490 @@
      "title": "حرف الياء",
      "letter": "ي",
      "ar": "حرف الياء حرف له نقطتان تحته يا صديقي، ويشبه حرف النون لكن به نقطتين! الياء تُكتب في أول الكلمة ووسطها وآخرها، وهي كثيرة الاستخدام في آخر الكلمات. ننطقها مع الحركات: يَا (مثل يد)، يُو (مثل يوسف)، يِي. من كلمات أجزاء الجسم: يد! الياء حرف متصل يحب أصدقاءه، ولها شكل مميز في آخر الكلمة. ارفع يدك معي، وانطق كلمة يد، وارسم الحرف في الهواء!",
-     "en": "The letter Yaa has two dots under it, my friend, and looks like Noon but with two dots! Yaa is written at the beginning, middle and end of words, and it is used a lot at the end of words. We pronounce it with vowels: Yaa (as in Yad - hand), Yuu (as in Yousef), Yii. From body-part words: hand (Yad)! Look for Yaa in the word Yad. Yaa is a connecting letter that loves its friends, with a special shape at the end of the word. Raise your hand with me, say the word Yad (hand), and draw the letter in the air!"
+     "en": "The letter Yaa has two dots under it, my friend, and looks like Noon but with two dots! Yaa is written at the beginning, middle and end of words, and it is used a lot at the end of words. We pronounce it with vowels: Yaa (as in Yad - hand), Yuu (as in Yousef), Yii. From body-part words: hand (Yad)! Look for Yaa in the word Yad. Yaa is a connecting letter that loves its friends, with a special shape at the end of the word. Raise your hand with me, say the word Yad (hand), and draw the letter in the air!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الياء؟",
+        "q_en": "Where is the letter Yaa?",
+        "answer": "ي",
+        "options": [
+         {
+          "t": "ب"
+         },
+         {
+          "t": "ي"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الياء؟",
+        "q_en": "Which word begins with Yaa?",
+        "answer": "يد",
+        "options": [
+         {
+          "t": "نملة",
+          "e": "🐜",
+          "tr": "Namla"
+         },
+         {
+          "t": "يد",
+          "e": "✋",
+          "tr": "Yad"
+         },
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "يد",
+        "tr": "Yad",
+        "answer": "ي",
+        "options": [
+         {
+          "t": "ب"
+         },
+         {
+          "t": "ي"
+         },
+         {
+          "t": "ن"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 89,
      "title": "حرف العين",
      "letter": "ع",
      "ar": "حرف العين حرف عجيب من الحروف الحلقية يا بطل، يشبه شكل العين نفسها! العين لا نقطة لها، وهو حرف متصل. ننطقه: عَ عين، عُ عود، عِ علم. من كلمات أجزاء الجسم: عين، عنق! العين تذكرنا بأن ننظر بعيوننا الجميلة ونبصر بها كل شيء. انظر إلى عينيك في المرآة، وارسم كلمة عين في الهواء فوق خدّك بلطف.",
-     "en": "The letter Ain is a wonderful throaty letter, hero — it looks like the shape of an eye itself! Ain has no dot and is a connecting letter. We pronounce it: A as in eye (Ain), U as in wood (Uud), I as in flag (Alam). From body-part words: eye (Ain), neck (Unuq)! Ain reminds us to look with our beautiful eyes and see everything. Look at your eyes in the mirror and gently trace the word Ain in the air."
+     "en": "The letter Ain is a wonderful throaty letter, hero — it looks like the shape of an eye itself! Ain has no dot and is a connecting letter. We pronounce it: A as in eye (Ain), U as in wood (Uud), I as in flag (Alam). From body-part words: eye (Ain), neck (Unuq)! Ain reminds us to look with our beautiful eyes and see everything. Look at your eyes in the mirror and gently trace the word Ain in the air.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف العين؟",
+        "q_en": "Where is the letter 'Ain?",
+        "answer": "ع",
+        "options": [
+         {
+          "t": "غ"
+         },
+         {
+          "t": "ع"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف العين؟",
+        "q_en": "Which word begins with 'Ain?",
+        "answer": "عين",
+        "options": [
+         {
+          "t": "غزال",
+          "e": "🦌",
+          "tr": "Ghazal"
+         },
+         {
+          "t": "عين",
+          "e": "👁️",
+          "tr": "Ain"
+         },
+         {
+          "t": "حصان",
+          "e": "🐴",
+          "tr": "Hisan"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "عين",
+        "tr": "Ain",
+        "answer": "ع",
+        "options": [
+         {
+          "t": "ح"
+         },
+         {
+          "t": "ع"
+         },
+         {
+          "t": "غ"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 93,
      "title": "حرف الشين",
      "letter": "ش",
      "ar": "حرف الشين حرف له ثلاثة نقاط فوقه يا صديقي، وهو مثل حرف السين لكن عليه ثلاث نقاط! الشين حرف متصل نكتبه في أول الكلمة ووسطها وآخرها. ننطقه: شَ شمس، شُ شجرة، شِ شِعْر (قصيدة). من كلمات أجزاء الجسم: شفة، شارب، شعر الرأس. انظر إلى نقاط الشين الثلاث، وتأكد أنها دائمًا ثلاثًا! ارسم شمسًا جميلة، واكتب تحتها حرف الشين.",
-     "en": "The letter Sheen has three dots on top, my friend, and it is like Seen but with three dots! Sheen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sha as in sun (Shams), Shu as in tree (Shajara), Shi as in poetry (Shi'r). From body-part words: lip (Shaffa), mustache (Shaarib), hair (Sha'r - on the head). Look at the three dots of Sheen and always make sure they are three! Draw a beautiful sun and write the letter Sheen under it."
+     "en": "The letter Sheen has three dots on top, my friend, and it is like Seen but with three dots! Sheen is a connecting letter written at the beginning, middle and end of words. We pronounce it: Sha as in sun (Shams), Shu as in tree (Shajara), Shi as in poetry (Shi'r). From body-part words: lip (Shaffa), mustache (Shaarib), hair (Sha'r - on the head). Look at the three dots of Sheen and always make sure they are three! Draw a beautiful sun and write the letter Sheen under it.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الشين؟",
+        "q_en": "Where is the letter Sheen?",
+        "answer": "ش",
+        "options": [
+         {
+          "t": "ش"
+         },
+         {
+          "t": "س"
+         },
+         {
+          "t": "ص"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الشين؟",
+        "q_en": "Which word begins with Sheen?",
+        "answer": "شمس",
+        "options": [
+         {
+          "t": "سمكة",
+          "e": "🐟",
+          "tr": "Samaka"
+         },
+         {
+          "t": "شمس",
+          "e": "☀️",
+          "tr": "Shams"
+         },
+         {
+          "t": "صورة",
+          "e": "🖼️",
+          "tr": "Sura"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "شمس",
+        "tr": "Shams",
+        "answer": "ش",
+        "options": [
+         {
+          "t": "س"
+         },
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ش"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 97,
      "title": "حرف الواو",
      "letter": "و",
      "ar": "حرف الواو حرف جميل يشبه الدائرة الصغيرة بذيل يا صديقي! الواو لا يتصل بالحرف الذي بعده، فيقف منفردًا أحيانًا. ننطقه: وَ وجه، وُ وزة، وِ وسادة. من كلمات أجزاء الجسم: وجه! الوجه مرآة المشاعر: عندما نفرح يبتسم، وعندما نحزن يتغير. ارسم وجهًا ضاحكًا في كتابك، واكتب تحته حرف الواو.",
-     "en": "The letter Waaw is beautiful, looking like a small circle with a tail, my friend! Waaw does not connect to the letter after it, so it sometimes stands alone. We pronounce it: Wa as in face (Wajh), Wu as in goose (Wazza), Wi as in pillow (Wisada). From body-part words: face (Wajh)! The face mirrors our feelings: it smiles when we are happy and changes when we are sad. Draw a smiling face in your book and write the letter Waaw under it."
+     "en": "The letter Waaw is beautiful, looking like a small circle with a tail, my friend! Waaw does not connect to the letter after it, so it sometimes stands alone. We pronounce it: Wa as in face (Wajh), Wu as in goose (Wazza), Wi as in pillow (Wisada). From body-part words: face (Wajh)! The face mirrors our feelings: it smiles when we are happy and changes when we are sad. Draw a smiling face in your book and write the letter Waaw under it.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الواو؟",
+        "q_en": "Where is the letter Waaw?",
+        "answer": "و",
+        "options": [
+         {
+          "t": "ر"
+         },
+         {
+          "t": "و"
+         },
+         {
+          "t": "ف"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الواو؟",
+        "q_en": "Which word begins with Waaw?",
+        "answer": "وردة",
+        "options": [
+         {
+          "t": "وردة",
+          "e": "🌹",
+          "tr": "Warda"
+         },
+         {
+          "t": "ريشة",
+          "e": "🪶",
+          "tr": "Risha"
+         },
+         {
+          "t": "فيل",
+          "e": "🐘",
+          "tr": "Fil"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "وردة",
+        "tr": "Warda",
+        "answer": "و",
+        "options": [
+         {
+          "t": "ف"
+         },
+         {
+          "t": "ر"
+         },
+         {
+          "t": "و"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 101,
      "title": "حرف الهاء",
      "letter": "ه",
      "ar": "حرف الهاء حرف خفيف متصل يا صديقي، ننطقه من الحلق بخفة! ننطقه: هَ هواء، هُ هُدهُد، هِ هدية. نلتقي بالهاء كثيرًا في كلمة مرحبا التي تعني التحية والترحيب. ابحث في الكتاب عن كلمة فيها الهاء في وسطها، وانطقها معي ببطء: مَرْحَبًا. هل سمعت الهاء في وسط الكلمة؟",
-     "en": "The letter Haa is light and connecting, my friend, spoken softly from the throat! We pronounce it: Ha as in air (Hawa), Hu as in hoopoe (Hud-hud), Hi as in gift (Hadiyya). We often meet Haa in the word Marhaba (Hello), the greeting word. Find a word in the book that has Haa in its middle and say it slowly: Mar-ha-ba. Did you hear the Haa in the middle of the word?"
+     "en": "The letter Haa is light and connecting, my friend, spoken softly from the throat! We pronounce it: Ha as in air (Hawa), Hu as in hoopoe (Hud-hud), Hi as in gift (Hadiyya). We often meet Haa in the word Marhaba (Hello), the greeting word. Find a word in the book that has Haa in its middle and say it slowly: Mar-ha-ba. Did you hear the Haa in the middle of the word?",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الهاء؟",
+        "q_en": "Where is the letter Haa?",
+        "answer": "ه",
+        "options": [
+         {
+          "t": "ح"
+         },
+         {
+          "t": "ع"
+         },
+         {
+          "t": "ه"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الهاء؟",
+        "q_en": "Which word begins with Haa?",
+        "answer": "هدية",
+        "options": [
+         {
+          "t": "هدية",
+          "e": "🎁",
+          "tr": "Hadiyya"
+         },
+         {
+          "t": "حصان",
+          "e": "🐴",
+          "tr": "Hisan"
+         },
+         {
+          "t": "عين",
+          "e": "👁️",
+          "tr": "Ain"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "هدية",
+        "tr": "Hadiyya",
+        "answer": "ه",
+        "options": [
+         {
+          "t": "ع"
+         },
+         {
+          "t": "ه"
+         },
+         {
+          "t": "ح"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 105,
      "title": "حرف الذال",
      "letter": "ذ",
      "ar": "حرف الذال حرف له نقطة فوقه يا صديقي، ويشبه حرف الدال لكن بنقطة! الذال لا يتصل بالحرف الذي بعده، مثل الدال والراء. ننطقه: ذَ ذراع، ذُ ذنب، ذِ ذئب. من كلمات أجزاء الجسم: ذراع، ذقن! ابحث عن الذال في أول الكلمة وفي وسطها. الذال حرف ذكي يُذكرنا بكلمة ذكي نفسها! ارفع ذراعك الجميل وارسم الحرف في الهواء وكأنك تكتب اسمك الذكي.",
-     "en": "The letter Dhal has a dot on top, my friend, and looks like Dal but with a dot! Dhal does not connect to the letter after it, like Dal and Raa. We pronounce it: Dha as in arm (Dhira), Dhu as in tail (Dhanab), Dhi as in wolf (Dhi'b). From body-part words: arm (Dhira), chin (Dhaqan)! Look for Dhal at the beginning and middle of words. Dhal is a smart letter that reminds us of the word smart (Dhakii) itself! Hold your beautiful arm and draw the letter in the air as if writing your smart name."
+     "en": "The letter Dhal has a dot on top, my friend, and looks like Dal but with a dot! Dhal does not connect to the letter after it, like Dal and Raa. We pronounce it: Dha as in arm (Dhira), Dhu as in tail (Dhanab), Dhi as in wolf (Dhi'b). From body-part words: arm (Dhira), chin (Dhaqan)! Look for Dhal at the beginning and middle of words. Dhal is a smart letter that reminds us of the word smart (Dhakii) itself! Hold your beautiful arm and draw the letter in the air as if writing your smart name.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الذال؟",
+        "q_en": "Where is the letter Dhal?",
+        "answer": "ذ",
+        "options": [
+         {
+          "t": "ذ"
+         },
+         {
+          "t": "ز"
+         },
+         {
+          "t": "د"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الذال؟",
+        "q_en": "Which word begins with Dhal?",
+        "answer": "ذئب",
+        "options": [
+         {
+          "t": "زهرة",
+          "e": "🌸",
+          "tr": "Zahra"
+         },
+         {
+          "t": "دبّ",
+          "e": "🐻",
+          "tr": "Dubb"
+         },
+         {
+          "t": "ذئب",
+          "e": "🐺",
+          "tr": "Dhib"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ذئب",
+        "tr": "Dhib",
+        "answer": "ذ",
+        "options": [
+         {
+          "t": "د"
+         },
+         {
+          "t": "ذ"
+         },
+         {
+          "t": "ز"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 109,
      "title": "حرف الظاء",
      "letter": "ظ",
      "ar": "حرف الظاء حرف له نقطة واحدة فوقه يا بطل، ويشبه حرف الطاء لكن بنقطة! الظاء ننطقه بقوة من أقصى الحلق، وهو حرف قوي وعميق. ننطقه: ظَ ظبي، ظُ ظفر، ظِ ظلّ. من كلمات أجزاء الجسم: ظهر! الظاء في كلمات مهمة مثل: نظيف، ظرف، مظلة. انظر إلى ظهرك وارسم شكل الظاء على الورق بلطف، وابحث في صفحات الكتاب عن مظلة تحمي من الشمس.",
-     "en": "The letter Dhaa has one dot on top, hero, and looks like Taa (Tah) but with a dot! We pronounce Dhaa strongly from the back of the throat; it is a strong and deep letter. We pronounce it: Dha as in gazelle (Dhabi), Dhu as in nail (Dhufr), Dhi as in shade (Dhill). From body-part words: back (Dhahr)! Dhaa appears in important words like: clean (Nadhiif), envelope (Dharf), umbrella (Madhalla). Look at your back and draw the shape of Dhaa happily on paper, then search the book's pages for an umbrella that protects from the sun."
+     "en": "The letter Dhaa has one dot on top, hero, and looks like Taa (Tah) but with a dot! We pronounce Dhaa strongly from the back of the throat; it is a strong and deep letter. We pronounce it: Dha as in gazelle (Dhabi), Dhu as in nail (Dhufr), Dhi as in shade (Dhill). From body-part words: back (Dhahr)! Dhaa appears in important words like: clean (Nadhiif), envelope (Dharf), umbrella (Madhalla). Look at your back and draw the shape of Dhaa happily on paper, then search the book's pages for an umbrella that protects from the sun.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الظاء؟",
+        "q_en": "Where is the letter Dhaa?",
+        "answer": "ظ",
+        "options": [
+         {
+          "t": "ط"
+         },
+         {
+          "t": "ض"
+         },
+         {
+          "t": "ظ"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الظاء؟",
+        "q_en": "Which word begins with Dhaa?",
+        "answer": "ظرف",
+        "options": [
+         {
+          "t": "ظرف",
+          "e": "✉️",
+          "tr": "Zarf"
+         },
+         {
+          "t": "ضفدع",
+          "e": "🐸",
+          "tr": "Difda"
+         },
+         {
+          "t": "طائر",
+          "e": "🐦",
+          "tr": "Tair"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ظرف",
+        "tr": "Zarf",
+        "answer": "ظ",
+        "options": [
+         {
+          "t": "ض"
+         },
+         {
+          "t": "ط"
+         },
+         {
+          "t": "ظ"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 114,
@@ -327,42 +1713,420 @@
      "title": "حرف الزاي",
      "letter": "ز",
      "ar": "حرف الزاي حرف خفيف ومميز يا بطل، يشبه حرف الراء لكن فوقه نقطة! الزاي لا يتصل بالحرف الذي بعده، مثل الراء والدال والذال. ننطقه: زَ زهرة، زُ زنبقة، زِ زرّ. من كلمات المدرسة: زهر، زميل! ابحث في صفحتك عن زهرة وزميل، وانطق كل كلمة معي. الزاي حرف مرح يحب الفرح، فلوّح بيدك عند نطقه: زَ زَ زهرة!",
-     "en": "The letter Zay is light and special, hero — it looks like Raa but with a dot on top! Zay does not connect to the letter after it, like Raa, Dal and Dhal. We pronounce it: Za as in flower (Zahra), Zu as in lily (Zanbaqa), Zi as in button (Zirr). From school words: flower, classmate (Zamil)! Find a flower and a classmate in your page and say each word with me. Zay is a joyful letter, so wave your hand when you pronounce it: Za Za flower!"
+     "en": "The letter Zay is light and special, hero — it looks like Raa but with a dot on top! Zay does not connect to the letter after it, like Raa, Dal and Dhal. We pronounce it: Za as in flower (Zahra), Zu as in lily (Zanbaqa), Zi as in button (Zirr). From school words: flower, classmate (Zamil)! Find a flower and a classmate in your page and say each word with me. Zay is a joyful letter, so wave your hand when you pronounce it: Za Za flower!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الزاي؟",
+        "q_en": "Where is the letter Zay?",
+        "answer": "ز",
+        "options": [
+         {
+          "t": "ذ"
+         },
+         {
+          "t": "ز"
+         },
+         {
+          "t": "ر"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الزاي؟",
+        "q_en": "Which word begins with Zay?",
+        "answer": "زهرة",
+        "options": [
+         {
+          "t": "ريشة",
+          "e": "🪶",
+          "tr": "Risha"
+         },
+         {
+          "t": "زهرة",
+          "e": "🌸",
+          "tr": "Zahra"
+         },
+         {
+          "t": "ذئب",
+          "e": "🐺",
+          "tr": "Dhib"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "زهرة",
+        "tr": "Zahra",
+        "answer": "ز",
+        "options": [
+         {
+          "t": "ذ"
+         },
+         {
+          "t": "ز"
+         },
+         {
+          "t": "ر"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 123,
      "title": "حرف الطاء",
      "letter": "ط",
      "ar": "حرف الطاء حرف قوي وواضح يا بطل، وليس له أي نقطة! الطاء يشبه القوس الممتد، وننطقه بقوة من الفم مع ارتفاع طرف اللسان قليلًا. ننطقه: طَ طائر، طُ طوب، طِ طين. من كلمات المدرسة: طلاب، طاولة، أطفال! الطاء حرف متصل والنطق به قوي. ابحث في صفحتك عن كلمة تبدأ بالطاء مثل طالب، وانطقها بصوت مسموع مع الحركة الصحيحة للوحة الحروف.",
-     "en": "The letter Taa (Tah) is strong and clear, hero, and it has no dots at all! Taa looks like a long arc, and we pronounce it strongly from the mouth, raising the tip of the tongue a little. We pronounce it: Ta as in bird (Tair), Tu as in brick (Toob), Ti as in mud (Teen). From school words: students (Tullaab), desk (Taawila), children! Taa is strong and connecting. Find in your page a word beginning with Taa like Taalib (student) and pronounce it out loud with the correct movement on the letter board."
+     "en": "The letter Taa (Tah) is strong and clear, hero, and it has no dots at all! Taa looks like a long arc, and we pronounce it strongly from the mouth, raising the tip of the tongue a little. We pronounce it: Ta as in bird (Tair), Tu as in brick (Toob), Ti as in mud (Teen). From school words: students (Tullaab), desk (Taawila), children! Taa is strong and connecting. Find in your page a word beginning with Taa like Taalib (student) and pronounce it out loud with the correct movement on the letter board.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الطاء؟",
+        "q_en": "Where is the letter Taa?",
+        "answer": "ط",
+        "options": [
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ظ"
+         },
+         {
+          "t": "ط"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الطاء؟",
+        "q_en": "Which word begins with Taa?",
+        "answer": "طائر",
+        "options": [
+         {
+          "t": "ظرف",
+          "e": "✉️",
+          "tr": "Zarf"
+         },
+         {
+          "t": "صورة",
+          "e": "🖼️",
+          "tr": "Sura"
+         },
+         {
+          "t": "طائر",
+          "e": "🐦",
+          "tr": "Tair"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "طائر",
+        "tr": "Tair",
+        "answer": "ط",
+        "options": [
+         {
+          "t": "ط"
+         },
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ظ"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 126,
      "title": "حرف الصاد",
      "letter": "ص",
      "ar": "حرف الصاد حرف له صوت قوي وواضح يا بطل، يشبه العين المغلقة التي تنطق بصمت! للصاد أسنان مشدودة، وهي حرف متصل. ننطقه: صَ صورة، صُ صعود، صِ صيد. من كلمات المدرسة: صف، صحيفة! الصاد أخو الضاد، وهما حرفان مهمان في اللغة العربية التي تسمى لغة الضاد. تلفظ الصاد مع ضم الشفتين قليلًا وانظر إلى الصورة التي رسمتها. ارسم صورة جميلة واكتب تحتها حرف الصاد واسمها.",
-     "en": "The letter Saad has a strong and clear sound, hero — it looks like a closed eye that speaks silently! Saad has firm teeth and is a connecting letter. We pronounce it: Sa as in picture (Soura), Su as in ascend, Si as in hunt (Said). From school words: class (Saff), newspaper! Saad is the brother of Daad, and they are two important letters of the Arabic language called the language of Daad. Say Saad slightly pressing your lips and look at the picture you made. Draw a lovely picture and write the letter Saad and its name under it."
+     "en": "The letter Saad has a strong and clear sound, hero — it looks like a closed eye that speaks silently! Saad has firm teeth and is a connecting letter. We pronounce it: Sa as in picture (Soura), Su as in ascend, Si as in hunt (Said). From school words: class (Saff), newspaper! Saad is the brother of Daad, and they are two important letters of the Arabic language called the language of Daad. Say Saad slightly pressing your lips and look at the picture you made. Draw a lovely picture and write the letter Saad and its name under it.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الصاد؟",
+        "q_en": "Where is the letter Saad?",
+        "answer": "ص",
+        "options": [
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ض"
+         },
+         {
+          "t": "س"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الصاد؟",
+        "q_en": "Which word begins with Saad?",
+        "answer": "صورة",
+        "options": [
+         {
+          "t": "ضفدع",
+          "e": "🐸",
+          "tr": "Difda"
+         },
+         {
+          "t": "سمكة",
+          "e": "🐟",
+          "tr": "Samaka"
+         },
+         {
+          "t": "صورة",
+          "e": "🖼️",
+          "tr": "Sura"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "صورة",
+        "tr": "Sura",
+        "answer": "ص",
+        "options": [
+         {
+          "t": "ض"
+         },
+         {
+          "t": "ص"
+         },
+         {
+          "t": "س"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 129,
      "title": "حرف الضاد",
      "letter": "ض",
      "ar": "حرف الضاد حرف مميز جدًا يا بطل، وهو ما يميز اللغة العربية عن باقي اللغات فتسمى لغة الضاد! الضاد له نقطة فوقه وهو حرف قوي وعميق. ننطقه: ضَ ضلع، ضُ ضوء، ضِ ضرس. من كلمات المدرسة والجسم: ضلع، ضرس، ضيف! انطق الضاد معي بحذر: ضَ ضَ ضلع؟ تذكر أن الضاد من الحروف التي تحتاج تمرينًا، فتدرب عليها عدة مرات حتى تخرج منك بسهولة ووضوح.",
-     "en": "The letter Daad is very special, hero — it is what makes Arabic distinct from other languages, so Arabic is called the language of Daad! Daad has a dot on top and is a strong, deep letter. We pronounce it: Da as in rib (Dil'), Du as in light (Dhaw'), Di as in molar (Dirs). From school and body words: rib, molar, guest! Pronounce Daad with me carefully: Da Da rib? Remember that Daad needs practice, so train it several times until it comes out easily and clearly."
+     "en": "The letter Daad is very special, hero — it is what makes Arabic distinct from other languages, so Arabic is called the language of Daad! Daad has a dot on top and is a strong, deep letter. We pronounce it: Da as in rib (Dil'), Du as in light (Dhaw'), Di as in molar (Dirs). From school and body words: rib, molar, guest! Pronounce Daad with me carefully: Da Da rib? Remember that Daad needs practice, so train it several times until it comes out easily and clearly.",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الضاد؟",
+        "q_en": "Where is the letter Daad?",
+        "answer": "ض",
+        "options": [
+         {
+          "t": "ط"
+         },
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ض"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الضاد؟",
+        "q_en": "Which word begins with Daad?",
+        "answer": "ضفدع",
+        "options": [
+         {
+          "t": "صورة",
+          "e": "🖼️",
+          "tr": "Sura"
+         },
+         {
+          "t": "ضفدع",
+          "e": "🐸",
+          "tr": "Difda"
+         },
+         {
+          "t": "طائر",
+          "e": "🐦",
+          "tr": "Tair"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ضفدع",
+        "tr": "Difda",
+        "answer": "ض",
+        "options": [
+         {
+          "t": "ط"
+         },
+         {
+          "t": "ص"
+         },
+         {
+          "t": "ض"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 132,
      "title": "حرف الثاء",
      "letter": "ث",
      "ar": "حرف الثاء له ثلاثة نقاط فوقه يا صديقي، ويشبه حرف الباء لكن بثلاث نقاط بدل واحدة! الثاء حرف ننطقه من طرف اللسان. ننطقه: ثَ ثعلب، ثُ ثوم، ثِ ثمار. من كلماتنا: ثالث، ثعلب، ثوم. لاحظ: الثاء مثل الباء بثلاث نقاط، أما الشين فهي مثل السين بثلاث نقاط. ابحث عن كلمة فيها الثاء مثل ثعلب، وأعدّ ثلاث نقط فوقها بيدك: واحد، اثنان، ثلاثة!",
-     "en": "The letter Thaa has three dots on top, my friend, and looks like Baa but with three dots instead of one! Thaa is pronounced from the tip of the tongue. We pronounce it: Tha as in fox (Thalab), Thu as in garlic (Thoom), Thi as in fruits (Thimaar). From our words: third, fox, garlic. Notice: Thaa is like Baa with three dots, while Sheen is like Seen with three dots. Find a word containing Thaa like fox (Thalab) and count its three dots with your hand: one, two, three!"
+     "en": "The letter Thaa has three dots on top, my friend, and looks like Baa but with three dots instead of one! Thaa is pronounced from the tip of the tongue. We pronounce it: Tha as in fox (Thalab), Thu as in garlic (Thoom), Thi as in fruits (Thimaar). From our words: third, fox, garlic. Notice: Thaa is like Baa with three dots, while Sheen is like Seen with three dots. Find a word containing Thaa like fox (Thalab) and count its three dots with your hand: one, two, three!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الثاء؟",
+        "q_en": "Where is the letter Thaa?",
+        "answer": "ث",
+        "options": [
+         {
+          "t": "ت"
+         },
+         {
+          "t": "ث"
+         },
+         {
+          "t": "ب"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الثاء؟",
+        "q_en": "Which word begins with Thaa?",
+        "answer": "ثعلب",
+        "options": [
+         {
+          "t": "تمر",
+          "e": "🌴",
+          "tr": "Tamr"
+         },
+         {
+          "t": "ثعلب",
+          "e": "🦊",
+          "tr": "Thalab"
+         },
+         {
+          "t": "بطة",
+          "e": "🦆",
+          "tr": "Batta"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "ثعلب",
+        "tr": "Thalab",
+        "answer": "ث",
+        "options": [
+         {
+          "t": "ب"
+         },
+         {
+          "t": "ت"
+         },
+         {
+          "t": "ث"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 135,
      "title": "حرف الغين",
      "letter": "غ",
      "ar": "حرف الغين حرف له نقطة فوقه يا بطل، ويشبه حرف العين لكن بنقطة فوقه! الغين ننطقه من أعلى الحلق، وهو حرف قوي وعميق. ننطقه: غَ غابة، غُ غرفة، غِ غذاء. من كلمات المدرسة: غرفة، غياب! الغين حرف متصل يحب أصدقاءه. ابحث في صفحتك عن غزال وغابة، وانطق كل كلمة ببطء ووضوح. الغين قريب جدًا من العين، فتدرب على الفرق بينهما: ع ع ع، غ غ غ!",
-     "en": "The letter Ghayn has a dot on top, hero, and looks like Ain but with a dot on it! We pronounce Ghayn from the top of the throat; it is a strong and deep letter. We pronounce it: Gha as in forest (Ghaba), Ghu as in room (Ghurfa), Ghi as in food (Ghidhaa). From school words: room (Ghurfa), absence (Ghiyab)! Ghayn is a connecting letter that loves its friends. Find a gazelle and a forest in your page and say each word slowly and clearly. Ghayn is close to Ain, so practice their difference: AA AA AA, Gha Gha Gha!"
+     "en": "The letter Ghayn has a dot on top, hero, and looks like Ain but with a dot on it! We pronounce Ghayn from the top of the throat; it is a strong and deep letter. We pronounce it: Gha as in forest (Ghaba), Ghu as in room (Ghurfa), Ghi as in food (Ghidhaa). From school words: room (Ghurfa), absence (Ghiyab)! Ghayn is a connecting letter that loves its friends. Find a gazelle and a forest in your page and say each word slowly and clearly. Ghayn is close to Ain, so practice their difference: AA AA AA, Gha Gha Gha!",
+     "quiz": {
+      "questions": [
+       {
+        "type": "letter",
+        "q_ar": "أين حرف الغين؟",
+        "q_en": "Where is the letter Ghayn?",
+        "answer": "غ",
+        "options": [
+         {
+          "t": "غ"
+         },
+         {
+          "t": "خ"
+         },
+         {
+          "t": "ع"
+         }
+        ]
+       },
+       {
+        "type": "word",
+        "q_ar": "أي كلمة تبدأ بحرف الغين؟",
+        "q_en": "Which word begins with Ghayn?",
+        "answer": "غزال",
+        "options": [
+         {
+          "t": "عين",
+          "e": "👁️",
+          "tr": "Ain"
+         },
+         {
+          "t": "غزال",
+          "e": "🦌",
+          "tr": "Ghazal"
+         },
+         {
+          "t": "خروف",
+          "e": "🐑",
+          "tr": "Kharuf"
+         }
+        ]
+       },
+       {
+        "type": "fill",
+        "q_ar": "أكمل الحرف الناقص في أول الكلمة",
+        "q_en": "Complete the missing first letter",
+        "word": "غزال",
+        "tr": "Ghazal",
+        "answer": "غ",
+        "options": [
+         {
+          "t": "خ"
+         },
+         {
+          "t": "غ"
+         },
+         {
+          "t": "ع"
+         }
+        ]
+       }
+      ]
+     }
     },
     {
      "page": 139,

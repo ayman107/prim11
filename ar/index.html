@@ -11,7 +11,7 @@
     <script type="module" crossorigin src="/assets/index-DVM_Cyny.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CEFcqToO.css">
     <script>
-    /* Yumo AR: AI-generated lesson explanations — شرح الدرس with Yumo */
+    /* Yumo AR: interactive lesson explanations — اسمع، العب، واكسب النجوم */
     (function () {
       var DATA = null, LANG = 'ar';
 
@@ -20,18 +20,14 @@
         t = (t || '').trim();
         for (var i = 0; i < DATA.units.length; i++) {
           var ls = DATA.units[i].lessons || [];
-          for (var j = 0; j < ls.length; j++) {
-            if (ls[j].title === t) return ls[j];
-          }
+          for (var j = 0; j < ls.length; j++) if (ls[j].title === t) return ls[j];
         }
         return null;
       }
       function unitByTitle(t) {
         if (!DATA) return null;
         t = (t || '').trim();
-        for (var i = 0; i < DATA.units.length; i++) {
-          if (DATA.units[i].title === t) return DATA.units[i];
-        }
+        for (var i = 0; i < DATA.units.length; i++) if (DATA.units[i].title === t) return DATA.units[i];
         return null;
       }
       function resolve() {
@@ -39,19 +35,20 @@
         var t = el ? el.textContent.trim() : '';
         if (t && DATA && DATA.specials && DATA.specials[t]) {
           var s = DATA.specials[t];
-          return { title: t, en: s.en, ar: s.ar };
+          return { title: t, en: s.en, ar: s.ar, quiz: null };
         }
         if (t) {
-          var l = byTitle(t); if (l) return { title: t, en: l.en, ar: l.ar };
-          var u = unitByTitle(t); if (u) return { title: t, en: u.intro.en, ar: u.intro.ar };
+          var l = byTitle(t); if (l) return { title: t, en: l.en, ar: l.ar, quiz: l.quiz || null };
+          var u = unitByTitle(t); if (u) return { title: t, en: u.intro.en, ar: u.intro.ar, quiz: null };
         }
-        return { title: 'فهرس الكتاب', en: DATA.front.en, ar: DATA.front.ar };
+        return { title: 'فهرس الكتاب', en: DATA.front.en, ar: DATA.front.ar, quiz: null };
       }
 
       var curAudio = null;
-      function speak(text, done) {
+      function speak(text, done, forceLang) {
         stopSpeak();
-        var voice = LANG === 'ar' ? 'ar-SA-ZariyahNeural' : 'en-US-AriaNeural';
+        var lng = forceLang || LANG;
+        var voice = lng === 'ar' ? 'ar-SA-ZariyahNeural' : 'en-US-AriaNeural';
         var a = new Audio('/api/tts?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
         curAudio = a;
         a.playbackRate = 0.92;
@@ -61,10 +58,10 @@
           if ('speechSynthesis' in window) {
             try {
               var u = new SpeechSynthesisUtterance(text);
-              u.lang = LANG === 'ar' ? 'ar-EG' : 'en-US';
+              u.lang = lng === 'ar' ? 'ar-EG' : 'en-US';
               u.rate = 0.92; u.pitch = 1.05;
               var vs = window.speechSynthesis.getVoices();
-              for (var k = 0; k < vs.length; k++) { if (vs[k].lang.indexOf(LANG) === 0) { u.voice = vs[k]; break; } }
+              for (var k = 0; k < vs.length; k++) { if (vs[k].lang.indexOf(lng) === 0) { u.voice = vs[k]; break; } }
               if (done) { u.onend = done; u.onerror = done; }
               window.speechSynthesis.speak(u);
             } catch (e) { if (done) done(); }
@@ -77,74 +74,252 @@
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
       }
 
-      var modalEl = null;
-      var speaking = false;
+      var T = {
+        ar: {
+          hi: 'مرحبًا! أنا يومو. اضغط «استمع» وسأقرأ لك هذا الدرس، ثم نلعب معًا!',
+          hint: 'المس أي كلمة لتسمعها 👆',
+          listen: '🔊 استمع', playing: '▶ يُقرأ الآن', stop: '⏹ إيقاف',
+          playG: '🎮 هيا نلعب!', other: 'English', close: '✕ إغلاق',
+          stars: 'نجومك', q: 'سؤال',
+          praise: ['أحسنت!', 'رائع يا بطل!', 'ممتاز!', 'برافو!'],
+          again: 'قاربت! جرّب مرة أخرى',
+          win: 'أنت بطل! 🏆', win2: 'أحسنت! 🌟', replay: '🔁 العب من جديد',
+          listenAgain: '🔊 استمع للدرس', comeOn: 'هيا نجمع النجوم!'
+        },
+        en: {
+          hi: 'Hi! I am Yumo. Press Listen and I will read this lesson, then we play together!',
+          hint: 'Tap any word to hear it 👆',
+          listen: '🔊 Listen', playing: '▶ Playing', stop: '⏹ Stop',
+          playG: '🎮 Let\u2019s play!', other: 'العربية', close: '✕ Close',
+          stars: 'Your stars', q: 'Question',
+          praise: ['Great job!', 'Awesome!', 'Excellent!', 'Bravo!'],
+          again: 'Almost! Try again',
+          win: 'You are a star! 🏆', win2: 'Well done! 🌟', replay: '🔁 Play again',
+          listenAgain: '🔊 Listen again', comeOn: 'Let us collect stars!'
+        }
+      };
+      function t() { return T[LANG]; }
+
+      var modalEl = null, state = null, stage = 'listen', renderRef = null;
+
       function closeModal() {
         stopSpeak();
-        speaking = false;
         if (modalEl) { document.body.removeChild(modalEl); modalEl = null; }
+        state = null; renderRef = null;
       }
+
+      function mkBtn(txt, pri, cb) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = txt;
+        b.style.cssText = 'border:0;border-radius:14px;padding:11px 18px;font-size:14.5px;cursor:pointer;font-family:inherit' +
+          (pri ? ';background:#f5b942;color:#2d2a22;font-weight:700' : ';background:#efece2;color:#4a4638');
+        b.onclick = cb;
+        return b;
+      }
+
       function openModal() {
         stopSpeak();
-        speaking = false;
-        var info = resolve();
+        state = { info: resolve(), stars: 0, qi: 0, done: 0 };
+        stage = 'listen';
+
         var wrap = document.createElement('div');
-        wrap.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(57,54,45,.55);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(2px)';
+        wrap.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(57,54,45,.55);display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(2px)';
         var card = document.createElement('div');
-        card.style.cssText = 'background:#fffdf8;border-radius:22px;max-width:560px;width:100%;max-height:82vh;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.22);padding:26px 26px 22px;font-family:inherit';
+        card.style.cssText = 'background:#fffdf8;border-radius:22px;max-width:600px;width:100%;max-height:88vh;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.22);padding:22px 22px 18px;font-family:inherit';
+
+        var head = document.createElement('div');
+        head.style.cssText = 'display:flex;align-items:center;gap:10px;margin:0 0 8px';
         var h = document.createElement('h2');
-        h.style.cssText = 'margin:0 0 4px;font-size:20px;color:#2d2a22;display:flex;align-items:center;gap:8px';
-        h.textContent = info.title;
+        h.style.cssText = 'margin:0;font-size:19px;color:#2d2a22;flex:1';
+        h.textContent = state.info.title;
+        var starsEl = document.createElement('div');
+        starsEl.style.cssText = 'font-size:19px;letter-spacing:2px;white-space:nowrap;color:#f5b942';
+        head.appendChild(h); head.appendChild(starsEl);
+
         var yumoRow = document.createElement('div');
-        yumoRow.style.cssText = 'display:flex;gap:12px;align-items:flex-start;background:#fdf3dd;border:1.5px solid #f5cf7f;border-radius:16px;padding:12px 14px;margin:10px 0 14px';
+        yumoRow.style.cssText = 'display:flex;gap:12px;align-items:flex-start;background:#fdf3dd;border:1.5px solid #f5cf7f;border-radius:16px;padding:12px 14px;margin:8px 0 14px';
         var fox = document.createElement('img');
-        fox.src = '/images/yomo.webp';
-        fox.alt = 'يومو الثعلب';
-        fox.style.cssText = 'width:52px;height:52px;object-fit:contain;flex:none;border-radius:12px;background:#fff;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,.12);transition:transform .3s ease';
+        fox.src = '/images/yomo.webp'; fox.alt = 'يومو الثعلب';
+        fox.style.cssText = 'width:54px;height:54px;object-fit:contain;flex:none;border-radius:12px;background:#fff;padding:4px;box-shadow:0 2px 8px rgba(0,0,0,.12)';
         var bubble = document.createElement('div');
-        bubble.style.cssText = 'flex:1;font-size:15.5px;line-height:1.6;color:#5a4a22';
-        bubble.textContent = LANG === 'ar' ? 'مرحبًا! أنا يومو. اضغط على زر الاستمع وسأقرأ لك هذا الدرس بصوت عالٍ. اتبعني وكرر بعدي!' : 'Hi! I am Yumo. Press Listen and I will read this lesson aloud to you. Follow along and repeat after me!';
+        bubble.style.cssText = 'flex:1;font-size:15.5px;line-height:1.6;color:#5a4a22;min-height:22px';
         yumoRow.appendChild(fox); yumoRow.appendChild(bubble);
-        var body = document.createElement('p');
-        body.style.cssText = 'font-size:16.5px;line-height:1.75;color:#3d3a31;white-space:pre-line;margin:0 0 16px';
-        body.textContent = LANG === 'ar' ? info.ar : info.en;
-        var row = document.createElement('div');
-        row.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;align-items:center';
-        function mkBtn(txt, pri, cb) {
-          var b = document.createElement('button');
-          b.textContent = txt;
-          b.style.cssText = 'border:0;border-radius:14px;padding:11px 18px;font-size:14.5px;cursor:pointer;font-family:inherit' + (pri ? ';background:#f5b942;color:#2d2a22;font-weight:700' : ';background:#efece2;color:#4a4638');
-          b.onclick = cb;
-          return b;
-        }
-        var play = mkBtn(LANG === 'ar' ? '🔊 استمع' : '🔊 Listen', true, function () {
-          speaking = true;
+
+        var host = document.createElement('div');
+        var controls = document.createElement('div');
+        controls.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px';
+
+        var play = mkBtn(t().listen, true, function () {
           fox.style.animation = 'yumoTalk .8s ease-in-out 3';
-          play.textContent = '▶ ' + (LANG === 'ar' ? 'يُقرأ الآن' : 'Playing');
-          speak(LANG === 'ar' ? info.ar : info.en, function () {
-            speaking = false;
+          play.textContent = t().playing;
+          speak(LANG === 'ar' ? state.info.ar : state.info.en, function () {
             fox.style.animation = '';
-            play.textContent = LANG === 'ar' ? '🔊 استمع' : '🔊 Listen';
+            play.textContent = t().listen;
           });
         });
-        var stopB = mkBtn(LANG === 'ar' ? '⏹ إيقاف' : '⏹ Stop', false, function () { stopSpeak(); speaking = false; fox.style.animation = ''; });
-        var langB = mkBtn(LANG === 'ar' ? 'English' : 'العربية', false, function () {
-          LANG = LANG === 'ar' ? 'en' : 'ar';
-          bubble.textContent = LANG === 'ar' ? 'مرحبًا! أنا يومو. اضغط على زر الاستمع وسأقرأ لك هذا الدرس بصوت عالٍ. اتبعني وكرر بعدي!' : 'Hi! I am Yumo. Press Listen and I will read this lesson aloud to you. Follow along and repeat after me!';
-          stopSpeak(); speaking = false;
-          body.textContent = LANG === 'ar' ? info.ar : info.en;
-          play.textContent = LANG === 'ar' ? '🔊 استمع' : '🔊 Listen';
-          stopB.textContent = LANG === 'ar' ? '⏹ إيقاف' : '⏹ Stop';
-          langB.textContent = LANG === 'ar' ? 'English' : 'العربية';
-          closeB.textContent = LANG === 'ar' ? '✕ إغلاق' : '✕ Close';
-        });
-        var closeB = mkBtn(LANG === 'ar' ? '✕ إغلاق' : '✕ Close', false, closeModal);
-        row.appendChild(play); row.appendChild(stopB); row.appendChild(langB); row.appendChild(closeB);
-        card.appendChild(h); card.appendChild(yumoRow); card.appendChild(body); card.appendChild(row);
+        var stopB = mkBtn(t().stop, false, function () { stopSpeak(); fox.style.animation = ''; });
+        var langB = mkBtn(t().other, false, function () { LANG = LANG === 'ar' ? 'en' : 'ar'; render(); });
+        var closeB = mkBtn(t().close, false, closeModal);
+        controls.appendChild(play); controls.appendChild(stopB); controls.appendChild(langB); controls.appendChild(closeB);
+
+        card.appendChild(head); card.appendChild(yumoRow); card.appendChild(host); card.appendChild(controls);
         wrap.appendChild(card);
         wrap.onclick = function (e) { if (e.target === wrap) closeModal(); };
         modalEl = wrap;
         document.body.appendChild(wrap);
+
+        function setBubble(txt) { bubble.textContent = txt; }
+        function paintStars() {
+          var s = '';
+          for (var i = 0; i < 3; i++) s += i < state.stars ? '★' : '☆';
+          starsEl.textContent = s;
+        }
+
+        function render() {
+          play.textContent = t().listen;
+          stopB.textContent = t().stop;
+          langB.textContent = t().other;
+          closeB.textContent = t().close;
+          paintStars();
+          host.innerHTML = '';
+          if (stage === 'listen') renderListen();
+          else if (stage === 'play') renderPlay();
+          else renderReward();
+        }
+        renderRef = render;
+
+        function renderListen() {
+          play.style.display = '';
+          setBubble(t().hi);
+          var p = document.createElement('p');
+          p.style.cssText = 'font-size:16.5px;line-height:1.9;color:#3d3a31;margin:0 0 6px';
+          addTappable(p, LANG === 'ar' ? state.info.ar : state.info.en);
+          host.appendChild(p);
+          var hint = document.createElement('div');
+          hint.style.cssText = 'font-size:13px;color:#9a8a5a;margin:2px 0 10px';
+          hint.textContent = t().hint;
+          host.appendChild(hint);
+          if (state.info.quiz && state.info.quiz.questions) {
+            var g = mkBtn(t().playG, true, function () { state.qi = 0; stage = 'play'; render(); });
+            host.appendChild(g);
+          }
+        }
+
+        function addTappable(el, text) {
+          var parts = (text || '').split(/(\s+)/);
+          parts.forEach(function (w) {
+            if (!w.trim()) { el.appendChild(document.createTextNode(w)); return; }
+            var s = document.createElement('span');
+            s.textContent = w;
+            s.style.cssText = 'cursor:pointer;border-radius:7px;padding:0 2px;transition:background .15s';
+            s.onclick = function () {
+              s.style.background = '#ffe9a8';
+              speak(w, function () { s.style.background = ''; });
+              setTimeout(function () { s.style.background = ''; }, 900);
+            };
+            el.appendChild(s);
+          });
+        }
+
+        function renderPlay() {
+          play.style.display = 'none';
+          var qs = state.info.quiz.questions;
+          var q = qs[state.qi];
+          setBubble(LANG === 'ar' ? q.q_ar : q.q_en);
+          speak(LANG === 'ar' ? q.q_ar : q.q_en);
+
+          var dots = document.createElement('div');
+          dots.style.cssText = 'font-size:13px;color:#b3a26a;letter-spacing:4px;margin:0 0 10px';
+          var ds = '';
+          for (var i = 0; i < qs.length; i++) ds += i < state.qi ? '● ' : (i === state.qi ? '◉ ' : '○ ');
+          dots.textContent = ds;
+          host.appendChild(dots);
+
+          var prompt = document.createElement('div');
+          prompt.style.cssText = 'font-size:18px;font-weight:700;color:#3d3a31;margin:0 0 14px';
+          prompt.textContent = LANG === 'ar' ? q.q_ar : q.q_en;
+          host.appendChild(prompt);
+
+          if (q.type === 'fill') {
+            var word = document.createElement('div');
+            word.dir = 'rtl';
+            word.style.cssText = 'font-size:44px;font-weight:800;color:#2d2a22;text-align:center;margin:0 0 6px;letter-spacing:2px';
+            word.textContent = '▢ ' + q.word.slice(1);
+            word.dataset.mask = '1';
+            host.appendChild(word);
+            var tr = document.createElement('div');
+            tr.style.cssText = 'font-size:13px;color:#9a8a5a;text-align:center;margin:0 0 12px';
+            tr.textContent = q.tr || '';
+            host.appendChild(tr);
+          }
+
+          var grid = document.createElement('div');
+          grid.style.cssText = 'display:flex;gap:12px;justify-content:center;flex-wrap:wrap';
+          q.options.forEach(function (opt) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            var big = q.type === 'word';
+            b.style.cssText = 'border:2.5px solid #f0d9a0;background:#fff;border-radius:18px;cursor:pointer;font-family:inherit;' +
+              (big ? 'min-width:120px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;gap:6px'
+                   : 'width:88px;height:88px;font-size:38px;font-weight:800;color:#2d2a22');
+            if (big) {
+              var em = document.createElement('div'); em.style.cssText = 'font-size:40px;line-height:1'; em.textContent = opt.e || '📘';
+              var tx = document.createElement('div'); tx.style.cssText = 'font-size:19px;font-weight:800;color:#2d2a22'; tx.textContent = opt.t;
+              b.appendChild(em); b.appendChild(tx);
+            } else {
+              b.textContent = opt.t;
+            }
+            b.onclick = function () {
+              if (b.dataset.locked) return;
+              if (opt.t === q.answer) {
+                b.dataset.locked = '1';
+                b.style.background = '#d8f5cf'; b.style.borderColor = '#6fc94b';
+                if (q.type === 'fill') {
+                  var m = host.querySelector('[data-mask]');
+                  if (m) m.textContent = q.answer + ' ' + q.word.slice(1);
+                }
+                state.stars++;
+                paintStars();
+                var praise = t().praise[Math.floor(Math.random() * t().praise.length)];
+                setBubble(praise + (q.type === 'word' ? ' ' + opt.t : ''));
+                speak(praise, function () {
+                  if (state.qi < qs.length - 1) { state.qi++; render(); }
+                  else { stage = 'reward'; render(); }
+                }, LANG);
+              } else {
+                b.style.background = '#ffe0e0'; b.style.borderColor = '#e88';
+                setBubble(t().again);
+                speak(t().again, function () {
+                  b.style.background = '#fff'; b.style.borderColor = '#f0d9a0';
+                }, LANG);
+                setTimeout(function () { b.style.background = '#fff'; b.style.borderColor = '#f0d9a0'; }, 900);
+              }
+            };
+            grid.appendChild(b);
+          });
+          host.appendChild(grid);
+        }
+
+        function renderReward() {
+          play.style.display = 'none';
+          var win = state.stars >= 3;
+          setBubble(win ? t().win : t().win2);
+          speak(win ? t().win : t().win2);
+          fox.style.animation = 'yumoTalk .7s ease-in-out 4';
+          var big = document.createElement('div');
+          big.style.cssText = 'text-align:center;font-size:52px;letter-spacing:6px;color:#f5b942;margin:6px 0 4px';
+          big.textContent = '★'.repeat(Math.min(state.stars, 3)) + '☆'.repeat(Math.max(0, 3 - state.stars));
+          var msg = document.createElement('div');
+          msg.style.cssText = 'text-align:center;font-size:20px;font-weight:800;color:#2d2a22;margin:0 0 16px';
+          msg.textContent = win ? t().win : t().win2;
+          host.appendChild(big); host.appendChild(msg);
+          var bar = document.createElement('div');
+          bar.style.cssText = 'display:flex;gap:10px;justify-content:center;flex-wrap:wrap';
+          bar.appendChild(mkBtn(t().replay, true, function () { state.stars = 0; state.qi = 0; stage = 'play'; render(); }));
+          bar.appendChild(mkBtn(t().listenAgain, false, function () { stage = 'listen'; render(); }));
+          host.appendChild(bar);
+        }
       }
 
       var btn = null;
