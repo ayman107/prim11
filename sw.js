@@ -1,4 +1,4 @@
-const VERSION = 'yomo-platform-v4';
+const VERSION = 'yomo-platform-v5';
 const BLANK_WEBP = 'UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAAFZQOCAYAAAAMAEAnQEqAQABAAFAJiWkAANwAP789AAA';
 
 self.addEventListener('install', (event) => { event.waitUntil(caches.delete(VERSION)); self.skipWaiting(); });
