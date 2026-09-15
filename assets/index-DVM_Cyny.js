@@ -212,8 +212,14 @@ Error generating stack: `+s.message+`
     var saved = currentSelection();
     var text = utt && utt.text ? utt.text : '';
     if (saved === WEB_VOICE || saved.indexOf('edge:') === 0) {
-      playWeb(text, utt, saved);
+      playWeb(text, utt, saved === WEB_VOICE ? saved : saved.slice(5));
       return;
+    }
+    var lzQ = window.location.pathname.indexOf('/en') === 0 ? 'en' : 'ar';
+    if (!saved && text) {
+      var lzV = getVoices(), lzHas = false;
+      for (var lzK = 0; lzK < lzV.length; lzK++) { if (lzV[lzK].lang && lzV[lzK].lang.indexOf(lzQ) === 0) { lzHas = true; break; } }
+      if (!lzHas) { playWeb(text, utt, lzQ === 'en' ? 'en-US-AriaNeural' : 'ar-SA-ZariyahNeural'); return; }
     }
     try {
       if (saved && utt) {

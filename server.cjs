@@ -116,8 +116,9 @@ function synthEdge(text, voice) {
         '\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n' +
         '{"context":{"synthesis":{"audio":{"metadataoptions":{"sentenceBoundaryEnabled":"false","wordBoundaryEnabled":"false"},"outputFormat":"audio-24khz-48kbitrate-mono-mp3"}}}}\r\n'
       );
+      const vlang = (voice || '').split('-').slice(0, 2).join('-') || 'en-US';
       const ssml =
-        "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" +
+        "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='" + vlang + "'>" +
         "<voice name='" + voice + "'>" +
         "<prosody pitch='+0Hz' rate='+0%' volume='+0%'>" + xmlEscape(text) + '</prosody>' +
         '</voice></speak>';
@@ -181,16 +182,32 @@ function httpsGet(url, { referer }) {
 
 function synthGoogle(text, lang) {
   const tl = lang || 'ar';
-  const url =
-    'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
-    encodeURIComponent(String(text).slice(0, 200));
-  return httpsGet(url, { referer: 'https://translate.google.com/' });
+  const parts = [];
+  let rest = String(text).replace(/\s+/g, ' ').trim();
+  while (rest.length > 190) {
+    let cut = rest.lastIndexOf(' ', 190);
+    if (cut < 60) cut = 190;
+    parts.push(rest.slice(0, cut));
+    rest = rest.slice(cut).trim();
+  }
+  if (rest) parts.push(rest);
+  return (async () => {
+    const bufs = [];
+    for (const part of parts) {
+      const url =
+        'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
+        encodeURIComponent(part);
+      bufs.push(await httpsGet(url, { referer: 'https://translate.google.com/' }));
+    }
+    return Buffer.concat(bufs);
+  })();
 }
 
 function handleTTS(req, res, u) {
   const q = u.searchParams;
   const text = (q.get('text') || '').slice(0, 4096);
   let voice = q.get('voice') || 'ar-SA-ZariyahNeural';
+  if (voice.startsWith('edge:')) voice = voice.slice(5);
 
   if (!text) {
     res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });

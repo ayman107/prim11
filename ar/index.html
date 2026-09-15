@@ -48,18 +48,34 @@
         return { title: 'فهرس الكتاب', en: DATA.front.en, ar: DATA.front.ar };
       }
 
+      var curAudio = null;
       function speak(text, done) {
-        if (!('speechSynthesis' in window)) return;
-        window.speechSynthesis.cancel();
-        var u = new SpeechSynthesisUtterance(text);
-        u.lang = LANG === 'ar' ? 'ar-EG' : 'en-US';
-        u.rate = 0.92; u.pitch = 1.05;
-        var vs = window.speechSynthesis.getVoices().filter(function (x) { return x.lang.indexOf(LANG) === 0; });
-        if (vs[0]) u.voice = vs[0];
-        if (done) { u.onend = done; u.onerror = done; }
-        window.speechSynthesis.speak(u);
+        stopSpeak();
+        var voice = LANG === 'ar' ? 'ar-SA-ZariyahNeural' : 'en-US-AriaNeural';
+        var a = new Audio('/api/tts?text=' + encodeURIComponent(text) + '&voice=' + encodeURIComponent(voice));
+        curAudio = a;
+        a.playbackRate = 0.92;
+        a.onended = function () { if (curAudio === a) curAudio = null; if (done) done(); };
+        a.onerror = function () {
+          if (curAudio === a) curAudio = null;
+          if ('speechSynthesis' in window) {
+            try {
+              var u = new SpeechSynthesisUtterance(text);
+              u.lang = LANG === 'ar' ? 'ar-EG' : 'en-US';
+              u.rate = 0.92; u.pitch = 1.05;
+              var vs = window.speechSynthesis.getVoices();
+              for (var k = 0; k < vs.length; k++) { if (vs[k].lang.indexOf(LANG) === 0) { u.voice = vs[k]; break; } }
+              if (done) { u.onend = done; u.onerror = done; }
+              window.speechSynthesis.speak(u);
+            } catch (e) { if (done) done(); }
+          } else if (done) done();
+        };
+        a.play().catch(function () { if (curAudio === a) curAudio = null; if (done) done(); });
       }
-      function stopSpeak() { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+      function stopSpeak() {
+        if (curAudio) { try { curAudio.pause(); curAudio.src = ''; } catch (e) {} curAudio = null; }
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      }
 
       var modalEl = null;
       var speaking = false;
@@ -110,10 +126,6 @@
             fox.style.animation = '';
             play.textContent = LANG === 'ar' ? '🔊 استمع' : '🔊 Listen';
           });
-          if (!('speechSynthesis' in window)) {
-            speaking = false; fox.style.animation = '';
-            play.textContent = LANG === 'ar' ? '🔊 استمع' : '🔊 Listen';
-          }
         });
         var stopB = mkBtn(LANG === 'ar' ? '⏹ إيقاف' : '⏹ Stop', false, function () { stopSpeak(); speaking = false; fox.style.animation = ''; });
         var langB = mkBtn(LANG === 'ar' ? 'English' : 'العربية', false, function () {

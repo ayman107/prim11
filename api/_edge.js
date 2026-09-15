@@ -93,8 +93,9 @@ function synthEdge(text, voice) {
         '\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n' +
         '{"context":{"synthesis":{"audio":{"metadataoptions":{"sentenceBoundaryEnabled":"false","wordBoundaryEnabled":"false"},"outputFormat":"audio-24khz-48kbitrate-mono-mp3"}}}}\r\n'
       );
+      const vlang = (voice || '').split('-').slice(0, 2).join('-') || 'en-US';
       const ssml =
-        "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>" +
+        "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='" + vlang + "'>" +
         "<voice name='" + voice + "'>" +
         "<prosody pitch='+0Hz' rate='+0%' volume='+0%'>" + xmlEscape(text) + '</prosody>' +
         '</voice></speak>';
@@ -156,12 +157,30 @@ function httpsGet(url, { referer }) {
   });
 }
 
-function synthGoogle(text, lang) {
+function chunkText(text) {
+  const max = 190;
+  const chunks = [];
+  let rest = String(text).replace(/\s+/g, ' ').trim();
+  while (rest.length > max) {
+    let cut = rest.lastIndexOf(' ', max);
+    if (cut < 60) cut = max;
+    chunks.push(rest.slice(0, cut));
+    rest = rest.slice(cut).trim();
+  }
+  if (rest) chunks.push(rest);
+  return chunks;
+}
+
+async function synthGoogle(text, lang) {
   const tl = lang || 'ar';
-  const url =
-    'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
-    encodeURIComponent(String(text).slice(0, 200));
-  return httpsGet(url, { referer: 'https://translate.google.com/' });
+  const bufs = [];
+  for (const part of chunkText(text)) {
+    const url =
+      'https://translate.google.com/translate_tts?ie=UTF-8&tl=' + tl + '&client=tw-ob&q=' +
+      encodeURIComponent(part);
+    bufs.push(await httpsGet(url, { referer: 'https://translate.google.com/' }));
+  }
+  return Buffer.concat(bufs);
 }
 
 module.exports = { EQ, EDGE_VOICES, synthEdge, synthGoogle };

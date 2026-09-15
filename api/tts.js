@@ -7,6 +7,8 @@ module.exports = async function handler(req, res) {
   let voice = q.get('voice') || 'ar-SA-ZariyahNeural';
   const headers = { 'Content-Type': 'audio/mpeg', 'Cache-Control': 'public, max-age=86400' };
 
+  if (voice.startsWith('edge:')) voice = voice.slice(5);
+
   if (!text) {
     res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify({ error: 'missing text' }));
