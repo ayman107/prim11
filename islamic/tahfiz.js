@@ -92,7 +92,7 @@
     '.yh-ayah .yh-at span{display:inline-block;min-width:30px;height:26px;line-height:26px;text-align:center;background:rgba(255,255,255,.16);border-radius:99px;margin-inline-end:6px;font-size:12.5px}',
     '.yh-text{font-size:clamp(17px,2.4vw,22px);line-height:2;margin:0;text-align:right}',
     '.yh-word{display:inline-block;margin-inline-end:6px;border-radius:8px;padding:0 4px;cursor:pointer}',
-    '.yh-word.mask{background:rgba(0,0,0,.38);color:transparent;border-radius:8px;min-width:34px;user-select:none}',
+    '.yh-word.mask{background:rgba(255,255,255,.12);color:transparent;border-radius:8px;min-width:34px;user-select:none;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.28)}',
     '.yh-word.on{background:rgba(245,185,66,.35)}',
     '.yh-flash{position:fixed;left:50%;top:26%;transform:translateX(-50%);background:#ffd98a;color:#0c3d30;font-size:20px;font-weight:900;padding:12px 26px;border-radius:99px;z-index:999999;box-shadow:0 8px 26px rgba(0,0,0,.35);display:none}',
     '.yh-list{display:grid;gap:10px}',
@@ -177,13 +177,20 @@
   }
 
   /* ---------- render: surah view ---------- */
-  function viewSurahEl(s) {
+function viewSurahEl(s) {
     nowView = 'surah';
     eng.surah = s; eng.idx = firstUnplayed(s); eng.rep = 0;
     viewSurah.style.display = '';
     viewList.style.display = 'none';
     var head = viewSurah.querySelector('.yh-shead');
     head.textContent = 'سورة ' + s.name;
+    renderSurahBody(s);
+    setHideBtn();
+    syncAyahHighlight();
+    syncSelects();
+  }
+
+  function renderSurahBody(s) {
     var body = viewSurah.querySelector('.yh-sbody');
     body.textContent = '';
     s.ayahs.forEach(function (a, i) {
@@ -201,7 +208,6 @@
       body.appendChild(card);
     });
     syncAyahHighlight();
-    syncSelects();
   }
 
   function firstUnplayed(s) {
@@ -240,7 +246,15 @@
   /* ---------- settings ---------- */
   function settings() {
     if (!P.settings) P.settings = { reciter: DEF_RECITER, repeat: DEF_REPEAT, pause: DEF_PAUSE };
+    if (P.settings.hideWords == null) P.settings.hideWords = false;
     return P.settings;
+  }
+
+  function setHideBtn() {
+    var b = viewSurah && viewSurah.querySelector('.yh-hb');
+    if (!b) return;
+    b.textContent = settings().hideWords ? '👁️ التسميع: أظهر الكلمات' : '🙈 التسميع: اخفِ الكلمات';
+    b.classList.toggle('yh-btn-on', settings().hideWords);
   }
 
   /* ---------- ayah text + word masking ---------- */
@@ -258,7 +272,7 @@
     var hidden = 0;
     words.forEach(function (w, wi) {
       var span = el('span', 'yh-word');
-      var masked = (wi % step === 0) && words.length > 3 && !isMemorized(s, a);
+      var masked = settings().hideWords && (wi % step === 0) && words.length > 3 && !isMemorized(s, a);
       if (masked) { span.classList.add('mask'); span.textContent = '\u203B\u203B\u203B'; hidden++; }
       else span.textContent = w;
       if (masked) {
@@ -464,6 +478,16 @@
     });
     pd.addEventListener('change', function () { settings().pause = parseInt(pd.value, 10) || 3; saveProg(); });
     ctrl.appendChild(pd);
+
+    var hb = el('button', 'yh-btn yh-btn-plain yh-hb', '🙈 التسميع: اخفِ الكلمات');
+    hb.type = 'button';
+    hb.addEventListener('click', function () {
+      settings().hideWords = !settings().hideWords;
+      saveProg();
+      setHideBtn();
+      if (nowView === 'surah' && eng.surah) renderSurahBody(eng.surah);
+    });
+    ctrl.appendChild(hb);
     viewSurah.appendChild(ctrl);
 
     var back = el('div', 'yh-nav');
