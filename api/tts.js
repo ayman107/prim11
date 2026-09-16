@@ -4,7 +4,7 @@ module.exports = async function handler(req, res) {
   const u = new URL(req.url, 'http://localhost');
   const q = u.searchParams;
   const text = (q.get('text') || '').slice(0, 4096);
-  let voice = q.get('voice') || 'ar-SA-ZariyahNeural';
+  let voice = q.get('voice') || 'ar-EG-ShakirNeural';
   const headers = { 'Content-Type': 'audio/mpeg', 'Cache-Control': 'public, max-age=86400' };
 
   if (voice.startsWith('edge:')) voice = voice.slice(5);
@@ -34,7 +34,7 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  if (!EQ[voice]) voice = 'ar-SA-ZariyahNeural';
+  if (!EQ[voice]) voice = 'ar-EG-ShakirNeural';
   const lang = voice.startsWith('en') ? 'en' : 'ar';
 
   try {

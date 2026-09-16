@@ -90,7 +90,7 @@
   var webA = null;
   function playWebZariyah(text, utt) {
     if (webA) { try { webA.pause(); } catch (e) {} }
-    var url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=ar-SA-ZariyahNeural';
+    var url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=ar-EG-ShakirNeural';
     var a = new Audio(url);
     a.__yumoOwn = 1;
     if (utt && typeof utt.volume === 'number') a.volume = utt.volume;
