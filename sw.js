@@ -75,6 +75,8 @@ self.addEventListener('fetch', (event) => {
         if (en) return en;
         const ar = await caches.match(self.location.origin + '/ar/');
         if (ar) return ar;
+        const islamic = await caches.match(self.location.origin + '/islamic/');
+        if (islamic) return islamic;
       }
       return new Response('', { status: 503 });
     }
