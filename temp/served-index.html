@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8f2" />
+  <meta name="description" content="ÙŠÙˆÙ…Ùˆ - Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© ØªÙØ§Ø¹Ù„ÙŠØ© Ù„Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„ Ø§Ù„Ø§Ø¨ØªØ¯Ø§Ø¦ÙŠ" />
+  <title>ÙŠÙˆÙ…Ùˆ | Ù…Ù†ØµØ§Øª Ø§Ù„ØªØ¹Ù„ÙŠÙ…</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #f7f8f2;
+      color: #2d2d2d;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #ff6d5a;
+      margin-bottom: .4rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 420px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 800px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1.2rem;
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: transform .18s, box-shadow .18s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .8rem;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 6px 24px rgba(0,0,0,.1); }
+    .card .icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .card h2 { font-size: 1.25rem; font-weight: 700; }
+    .card .desc { font-size: .9rem; color: #888; line-height: 1.5; }
+    .card.coming { opacity: .55; pointer-events: none; }
+    .icon-ar  { background: #fff0ec; }
+    .icon-en  { background: #e8f4fd; }
+    .icon-islamic { background: #e7f6e7; }
+    .icon-more { background: #f0f0f0; }
+    .footer {
+      margin-top: 3rem;
+      font-size: .8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>ÙŠÙˆÙ…Ùˆ</h1>
+    <p>Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© ØªÙØ§Ø¹Ù„ÙŠØ© Ù„Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„ Ø§Ù„Ø§Ø¨ØªØ¯Ø§Ø¦ÙŠ â€” Ø§Ø®ØªØ± Ù…Ø§Ø¯ØªÙƒ ÙˆØ§Ø¨Ø¯Ø£ Ø§Ù„ØªØ¹Ù„Ù‘Ù…</p>
+  </div>
+
+  <div class="grid">
+    <a href="/ar/" class="card">
+      <div class="icon icon-ar">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</div>
+      <h2>Ø§Ù„Ù„ØºØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</h2>
+      <p class="desc">ÙƒØªØ§Ø¨ Ø§Ù„Ù„ØºØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© â€” Ù‚Ø±Ø§Ø¡Ø©ØŒ Ø§Ø³ØªÙ…Ø§Ø¹ØŒ ÙˆØªÙ…Ø§Ø±ÙŠÙ† ØªÙØ§Ø¹Ù„ÙŠØ©</p>
+    </a>
+
+    <a href="/en/" class="card">
+      <div class="icon icon-en">EN</div>
+      <h2>Ø§Ù„Ù„ØºØ© Ø§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ÙŠØ©</h2>
+      <p class="desc">English Language â€” reading, listening &amp; interactive exercises</p>
+    </a>
+
+    <a href="/islamic/" class="card">
+      <div class="icon icon-islamic">Ø¯ÙŠÙ†ÙŠ</div>
+      <h2>Ø§Ù„ØªØ±Ø¨ÙŠØ© Ø§Ù„Ø¯ÙŠÙ†ÙŠØ© Ø§Ù„Ø¥Ø³Ù„Ø§Ù…ÙŠØ©</h2>
+      <p class="desc">ÙƒØªØ§Ø¨ Ø§Ù„ØªØ±Ø¨ÙŠØ© Ø§Ù„Ø¯ÙŠÙ†ÙŠØ© Ø§Ù„Ø¥Ø³Ù„Ø§Ù…ÙŠØ© â€” Ù‚Ø±Ø§Ø¡Ø©ØŒ Ø§Ø³ØªÙ…Ø§Ø¹ØŒ ÙˆØªÙ…Ø§Ø±ÙŠÙ† ØªÙØ§Ø¹Ù„ÙŠØ©</p>
+    </a>
+
+    <div class="card coming">
+      <div class="icon icon-more">soon</div>
+      <h2>Ù…Ù†ØµØ§Øª Ù‚Ø§Ø¯Ù…Ø©</h2>
+      <p class="desc">Ø±ÙŠØ§Ø¶ÙŠØ§ØªØŒ Ø¹Ù„ÙˆÙ…ØŒä»¥åŠå…¶ä»– Ù…ÙˆØ§Ø¯ â€” Ù‚Ø±ÙŠØ¨Ù‹Ø§ Ø¥Ù† Ø´Ø§Ø¡ Ø§Ù„Ù„Ù‡</p>
+    </div>
+  </div>
+
+  <div class="footer">ÙŠÙˆÙ…Ùˆ Â© 2026</div>
+</body>
+</html>
