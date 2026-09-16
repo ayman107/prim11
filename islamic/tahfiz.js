@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var KEY = 'yomo-tahfiz-v1';
-  var CDN = 'https://cdn.islamic.network/quran/audio/128/';
+  var CDN = 'https://cdn.islamic.network/quran/audio/';
   var DEF_RECITER = 'ar.husary';
   var DEF_REPEAT = 3;
   var DEF_PAUSE = 3;
@@ -35,7 +35,12 @@
     return a;
   }
 
-  function url(rec, g) { return CDN + rec + '/' + g + '.mp3'; }
+  function url(rec, g) { return CDN + recBitrate(rec) + '/' + rec + '/' + g + '.mp3'; }
+
+  function recBitrate(key) {
+    for (var i = 0; i < S.reciters.length; i++) if (S.reciters[i].key === key) return S.reciters[i].bitrate || '128';
+    return '128';
+  }
 
   function echoWait(sec, then) {
     stopTimer();
@@ -401,9 +406,31 @@ function viewSurahEl(s) {
 
   function playAudio(u) {
     var a = AAsync();
+    var tried = [];
+    function qualUrl(q) {
+      var rec = settings().reciter;
+      var g = eng.surah && eng.surah.ayahs[eng.idx] ? eng.surah.ayahs[eng.idx].g : 1;
+      return CDN + q + '/' + rec + '/' + g + '.mp3';
+    }
+    function attempt() {
+      if (tried.indexOf(a.src) < 0) tried.push(a.src);
+      var pr = a.play();
+      if (pr && pr.catch) pr.catch(next);
+    }
+    function next() {
+      if (a.__yumoFailFrom) return;
+      var qs = ['128', '64', '32'];
+      for (var i = 0; i < qs.length; i++) {
+        var cand = qualUrl(qs[i]);
+        if (tried.indexOf(cand) < 0) { a.src = cand; return attempt(); }
+      }
+a.__yumoFailFrom = 1;
+      if (!navigator.onLine) { showFlash('لا يوجد اتصال. تحقق من الإنترنت وأعد المحاولة.'); return; }
+      showFlash('تعذّر تشغيل صوت هذا الشيخ على جهازك. جرب قارئًا آخر.');
+    }
+    a.onerror = function () { next(); };
     a.src = u;
-    var pr = a.play();
-    if (pr && pr.catch) pr.catch(function () { showFlash('تعذّر تشغيل الصوت. تحقق من الاتصال.'); });
+    attempt();
   }
   function pausePlay() { eng.playing = false; stopAll(); syncSelects(); }
   function AAsync() { if (!A) A = mkAudio(); return A; }
