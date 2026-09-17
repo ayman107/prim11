@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#7ad0ff" />
+<title>التربية الدينية الإسلامية — الصف الأول الابتدائي | يومو</title>
+<link rel="stylesheet" href="/fonts/fonts.css" />
+<style>
+  * , *::before , *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --sky: #7ad0ff; --sun: #ffd93d; --pink: #ff8fab; --mint: #6fe7c0;
+    --cream: #fff8ef; --ink: #3a3a3a; --violet: #b983ff;
+  }
+  html { font-size: 17px; }
+  body {
+    font-family: 'Tajawal', 'Baloo Bhaijaan 2', sans-serif;
+    background: linear-gradient(180deg, #dff3ff 0%, #fdf6ec 100%);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 1rem clamp(.6rem, 4vw, 2.5rem) 4rem;
+    overflow-x: hidden;
+  }
+
+  /* شريط علوي */
+  .topbar { display: flex; align-items: center; justify-content: space-between; max-width: 1000px; margin: 0 auto .5rem; }
+  .logo { font-weight: 800; font-size: 1.15rem; color: #2f7fd4; }
+  .logo span { color: var(--sun); }
+  .chip { background: #fff; border-radius: 999px; padding: .35rem .9rem; font-size: .8rem; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+  .chip b { color: #2f7fd4; }
+
+  /* البطل */
+  .hero { text-align: center; max-width: 720px; margin: 2rem auto 1.5rem; }
+  .hero .book-emoji { font-size: 4.2rem; display: block; margin-bottom: .4rem; filter: drop-shadow(0 6px 14px rgba(0,0,0,.12)); }
+  .hero h1 { font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 800; color: #2f7fd4; line-height: 1.35; }
+  .hero h1 .c1 { color: #ff8a5c; } .hero h1 .c2 { color: #00b48a; } .hero h1 .c3 { color: #b064f4; }
+  .hero p { font-size: 1.02rem; color: #5a7a8a; max-width: 520px; margin: .5rem auto 0; line-height: 1.7; }
+
+  /* الأزرار الكبيرة (3-4) */
+  .actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin: 1.6rem auto 2.2rem; max-width: 760px; }
+  .btn {
+    border: 0; cursor: pointer; border-radius: 1.4rem; padding: .95rem 1.5rem;
+    font-family: inherit; font-size: 1.05rem; font-weight: 800; color: #fff;
+    display: inline-flex; align-items: center; gap: .5rem; transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  }
+  .btn:hover { transform: translateY(-3px) scale(1.02); }
+  .btn:active { transform: translateY(0) scale(.98); }
+  .btn .em { font-size: 1.4rem; }
+  .btn-read   { background: linear-gradient(135deg, #ffb347, #ff8a5c); }
+  .btn-toc    { background: linear-gradient(135deg, #43d9a3, #00b48a); }
+  .btn-act    { background: linear-gradient(135deg, #9b7bff, #b064f4); }
+  .btn-covers { background: linear-gradient(135deg, #ff9bb8, #f76ba8); }
+
+  /* الفهرس */
+  .toc { max-width: 1000px; margin: 0 auto; }
+  .section-title { display: flex; align-items: center; gap: .6rem; margin: 2.6rem 0 1rem; font-size: 1.25rem; color: #2f7fd4; }
+  .section-title::before { content: ""; flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(90deg, #7ad0ff, transparent); }
+  .section-title::after { content: ""; flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(270deg, #7ad0ff, transparent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)); gap: .9rem; }
+  .card {
+    background: #fff; border-radius: 1.3rem; padding: 1rem 1.1rem; cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07); border: 4px solid transparent;
+    display: flex; flex-direction: column; gap: .35rem; position: relative;
+    transition: transform .15s, box-shadow .15s, border-color .15s; overflow: hidden;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+  .card .em { font-size: 1.6rem; }
+  .card h3 { font-size: 1.02rem; font-weight: 800; line-height: 1.4; }
+  .card .meta { font-size: .78rem; color: #9aa8b2; }
+  .card .thb { margin-top: .5rem; border-radius: .8rem; overflow: hidden; border: 2px solid #f0f0f0; }
+  .card .thb img { width: 100%; height: 105px; object-fit: cover; display: block; }
+  .c1 { border-color: #ffd93d; } .c2 { border-color: #6fe7c0; }
+  .c3 { border-color: #b983ff; } .c4 { border-color: #ff8fab; }
+  .c5 { border-color: #7ad0ff; } .c6 { border-color: #ffb347; }
+
+  /* عارض الصفحات */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(20,30,40,.94);
+    display: none; flex-direction: column; z-index: 60; padding: .6rem;
+  }
+  .lightbox.on { display: flex; }
+  .lb-top { display: flex; align-items: center; justify-content: space-between; color: #fff; padding: .3rem .5rem; }
+  .lb-title { font-size: 1.05rem; font-weight: 800; }
+  .lb-close { background: rgba(255,255,255,.15); border: 0; color: #fff; font-size: 1.4rem; border-radius: 50%; width: 42px; height: 42px; cursor: pointer; }
+  .lb-body { flex: 1; display: flex; align-items: center; justify-content: center; gap: .7rem; min-height: 0; }
+  .page-img { max-height: 92vh; max-width: 92vw; border-radius: .6rem; box-shadow: 0 10px 40px rgba(0,0,0,.5); background: #fff; }
+  .nav { background: rgba(255,255,255,.14); border: 0; color: #fff; font-size: 1.7rem; width: 54px; height: 54px; border-radius: 50%; cursor: pointer; flex-shrink: 0; }
+  .nav:disabled { opacity: .35; cursor: default; }
+  .lb-bottom { display: flex; align-items: center; justify-content: center; gap: .7rem; padding: .6rem 0 .2rem; color: #fff; font-size: .92rem; }
+  .lb-bottom .jump { display: flex; align-items: center; gap: .4rem; }
+  .lb-bottom input[type=range] { width: min(220px, 40vw); accent-color: var(--sun); }
+
+  footer { text-align: center; margin-top: 3rem; color: #9aa8b2; font-size: .8rem; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">يومو<span>.</span></div>
+    <div class="chip">📖 كتابي <b id="totalPages"></b></div>
+  </div>
+
+  <header class="hero">
+    <span class="book-emoji">📗🕌⭐</span>
+    <h1>التربية الدينية <span class="c1">الـ‏إسلامية</span><br/>الصف <span class="c2">الأول</span> الابتدائي</h1>
+    <p>اقلب صفحات كتابك بنفسك، استمع، العب، وتعلّم أحكام ديننا الحنيف بأجمل صورة. 🌈</p>
+  </header>
+
+  <div class="actions">
+    <button class="btn btn-read" data-p="9">📖 اقرأ من البداية</button>
+    <button class="btn btn-toc" data-jump="toc">🗂️ الفهرس</button>
+    <button class="btn btn-act" data-p="73">🎨 أتحقق من تعلمي</button>
+    <button class="btn btn-covers" data-p="7">🕌 الوحدة الأولى</button>
+  </div>
+
+  <main class="toc" id="toc">
+    <div class="section-title">🗂️ فهرس الدروس</div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer>منصة يومو التعليمية — التربية الدينية الإسلامية للصف الأول الابتدائي</footer>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lb-top">
+      <div class="lb-title">📗 صفحة <span id="lbPage">1</span></div>
+      <button class="lb-close" id="lbClose">✕</button>
+    </div>
+    <div class="lb-body">
+      <button class="nav" id="prev">‹</button>
+      <img class="page-img" id="pageImg" alt="" />
+      <button class="nav" id="next">›</button>
+    </div>
+    <div class="lb-bottom">
+      <span id="lbCount"></span>
+      <div class="jump">
+        <input type="range" id="slider" min="1" />
+        <span id="lbPage2"></span>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function () {
+  "use strict";
+  var TOTAL = 1, cur = 1;
+  var grid = document.getElementById("grid");
+  var lb = document.getElementById("lightbox");
+  var img = document.getElementById("pageImg");
+  var pages = null;
+
+  function loadIndex() {
+    var p = fetch("report.json").then(function (r) { return r.ok ? r.json() : null; });
+    var topics = fetch("topics.json").then(function (r) { return r.ok ? r.json() : null; });
+    Promise.all([p, topics]).then(function (arr) {
+      var rep = arr[0], toc = arr[1];
+      if (rep && rep.page_images) { TOTAL = rep.page_images.length; }
+      if (toc && toc.length) { buildCards(toc); }
+      document.getElementById("totalPages").textContent = TOTAL + " صفحة";
+      document.getElementById("slider").max = TOTAL;
+      document.getElementById("lbCount").textContent = "من " + TOTAL + " صفحة";
+    });
+  }
+
+  function pageURL(n) {
+    var pad = ("00" + n).slice(-2);
+    return "pages/p" + (n < 1000 ? ("000" + n).slice(-3) : n) + ".png";
+  }
+
+  function buildCards(toc) {
+    var html = "";
+    toc.forEach(function (it, i) {
+      var cls = ["c1", "c2", "c3", "c4", "c5", "c6"][i % 6];
+      var thumb = it.page ? pageURL(it.page) : it.pages && it.pages[0] ? pageURL(it.pages[0]) : pageURL(1);
+      html +=
+        '<div class="card ' + cls + '" data-p="' + (it.page || 1) + '">' +
+          '<div class="em">' + (it.emoji || "📖") + "</div>" +
+          "<h3>" + it.title + "</h3>" +
+          '<div class="meta">' + (it.meta || "صفحة " + (it.page || 1)) + "</div>" +
+          '<div class="thb"><img loading="lazy" src="' + thumb + '" alt="" /></div>' +
+        "</div>";
+    });
+    grid.innerHTML = '<div class="card c1" data-p="1"><div class="em">📗</div><h3>الغلاف والمقدمة</h3><div class="meta">صفحة 1</div></div>' + html;
+    grid.querySelectorAll(".card").forEach(function (c) {
+      c.addEventListener("click", function () { openPage(parseInt(c.dataset.p, 10) || 1); });
+    });
+  }
+
+  function openPage(n) {
+    cur = Math.min(Math.max(1, n), TOTAL);
+    img.src = pageURL(cur);
+    document.getElementById("lbPage").textContent = cur;
+    document.getElementById("lbPage2").textContent = cur;
+    document.getElementById("slider").value = cur;
+    lb.classList.add("on");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLB() { lb.classList.remove("on"); document.body.style.overflow = ""; }
+
+  document.body.addEventListener("click", function (e) {
+    var b = e.target.closest(".btn[data-p]");
+    if (b) { openPage(parseInt(b.dataset.p, 10)); return; }
+    var j = e.target.closest(".btn[data-jump]");
+    if (j) { document.getElementById("toc").scrollIntoView({ behavior: "smooth" }); }
+    if (e.target.closest("#prev")) { cur = Math.max(1, cur - 1); openPage(cur); }
+    if (e.target.closest("#next")) { cur = Math.min(TOTAL, cur + 1); openPage(cur); }
+    if (e.target.id === "lbClose") { closeLB(); }
+    if (e.target.id !== "lightbox" && e.target.closest("#lightbox") && e.target.tagName === "IMG") { /* nothing */ }
+  });
+
+  document.getElementById("slider").addEventListener("input", function (e) { openPage(parseInt(e.target.value, 10)); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("on")) return;
+    if (e.key === "Escape") closeLB();
+    if (e.key === "ArrowLeft") { cur = Math.min(TOTAL, cur + 1); openPage(cur); }
+    if (e.key === "ArrowRight") { cur = Math.max(1, cur - 1); openPage(cur); }
+  });
+
+  loadIndex();
+})();
+</script>
+</body>
+</html>
