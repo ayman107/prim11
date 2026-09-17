@@ -1,228 +1,156 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>التربية الدينية الإسلامية — الصف الأول الابتدائي</title>
+<title>التربية الدينية الإسلامية - الصف الأول الابتدائي</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: "Segoe UI", "Amiri", "Noto Kufi Arabic", "Tahoma", sans-serif;
-    background: linear-gradient(160deg, #fef9e7 0%, #fdf2e9 45%, #e8f8f5 100%);
-    color: #2c3e50;
-    min-height: 100vh;
-  }
-  header {
-    background: linear-gradient(120deg, #27ae60, #229954, #1e8449);
-    color: #fff;
-    text-align: center;
-    padding: 28px 16px 20px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.18);
-  }
-  header h1 { font-size: clamp(22px, 4.5vw, 40px); margin-bottom: 4px; text-shadow: 1px 2px 3px rgba(0,0,0,.25); }
-  header p  { font-size: clamp(14px, 2.2vw, 20px); opacity: .96; }
-  .pen-note { margin-top: 8px; font-size: 13px; background: rgba(255,255,255,.18); display: inline-block; padding: 6px 14px; border-radius: 999px; }
-  .actions { max-width: 1000px; margin: 22px auto 6px; padding: 0 14px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .actions button {
-    font-family: inherit; font-size: clamp(14px, 2.2vw, 18px);
-    padding: 14px 22px; border: none; border-radius: 14px; cursor: pointer;
-    color: #fff; background: linear-gradient(135deg, #2e86c1, #1f618d);
-    box-shadow: 0 4px 10px rgba(0,0,0,.18); transition: transform .12s, box-shadow .12s;
-  }
-  .actions button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
-  .actions button.pen-btn.active { background: linear-gradient(135deg, #d35400, #a04000); }
-  main { max-width: 1200px; margin: 0 auto; padding: 8px 14px 60px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 16px;
-    margin-top: 18px;
-  }
-  .card {
-    background: #fff; border-radius: 16px; overflow: hidden; cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0,0,0,.12); transition: transform .13s, box-shadow .13s;
-    border: 2px solid #fff;
-  }
-  .card:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,.2); border-color: #f4d03f; }
-  .card .thumb {
-    position: relative; width: 100%; aspect-ratio: 5/7; background: #fdf2e9;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .card .thumb img { max-width: 100%; max-height: 100%; display: block; }
-  .card .pg-badge {
-    position: absolute; top: 6px; right: 6px; background: rgba(39,174,96,.92); color: #fff;
-    font-size: 12px; padding: 3px 9px; border-radius: 999px; font-weight: 700;
-  }
-  .card .card-title {
-    padding: 8px 10px 12px; font-size: 15px; text-align: center; color: #1a5276;
-    min-height: 44px; line-height: 1.35;
-  }
-  .pen-active .card::after {
-    content: "✎"; position: absolute; top: 180px; left: 50%; transform: translateX(-50%);
-    font-size: 26px; color: #d35400; text-shadow: 0 2px 4px rgba(0,0,0,.3); pointer-events: none;
-  }
-  #zoomBar {
-    position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.94);
-    border-bottom: 2px solid #27ae60; padding: 8px 14px; display: flex; align-items: center;
-    justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  }
-  #zoomBar button { width: 42px; height: 38px; font-size: 20px; border: none; border-radius: 10px; cursor: pointer; background: #eaf2f8; color: #1f618d; }
-  #zoomBar button:hover { background: #d4e6f1; }
-  #zoomVal { font-size: 15px; font-weight: 700; color: #21618c; min-width: 52px; text-align: center; }
-  .lb { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.88); display: none;
-        flex-direction: column; touch-action: none; }
-  .lb.open { display: flex; }
-  .lb-top { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: rgba(0,0,0,.35); }
-  .lb-top button { font-size: 16px; padding: 8px 14px; border: none; border-radius: 10px; cursor: pointer; background: rgba(255,255,255,.9); }
-  .lb-top .lb-title { color: #fff; margin-left: auto; font-size: 15px; }
-  .lb-stage { flex: 1; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-  .lb-img { max-width: 96%; max-height: 96%; transform-origin: center center; user-select: none; -webkit-user-drag: none; cursor: grab; }
-  .lb-img.dragging { cursor: grabbing; }
-  .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 30px; width: 48px; height: 48px;
-            border: none; border-radius: 50%; background: rgba(255,255,255,.85); cursor: pointer; z-index: 5; }
-  .lb-prev { right: 10px; } .lb-next { left: 10px; }
-  .lb-close { position: absolute; top: 14px; left: 14px; z-index: 8; }
-  .zoom-tools { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 8;
-                background: rgba(0,0,0,.55); border-radius: 999px; padding: 6px 12px; display: flex; gap: 10px; align-items: center; }
-  .zoom-tools button { width: 40px; height: 36px; font-size: 18px; border: none; border-radius: 50%; cursor: pointer; background: #fff; }
-  .zoom-tools span { color: #fff; font-size: 14px; min-width: 44px; text-align: center; font-weight: 700; }
-  footer { text-align: center; color: #7f8c8d; font-size: 13px; padding: 20px 10px 30px; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Amiri","Noto Kufi Arabic",Tahoma,sans-serif;min-height:100vh;color:#2c3e50;background:linear-gradient(160deg,#fef9e7,#fdf2e9 46%,#e8f8f5)}
+header{background:linear-gradient(120deg,#27ae60,#229954,#1e8449);color:#fff;text-align:center;padding:26px 16px 18px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+header h1{font-size:clamp(22px,4.6vw,40px);margin-bottom:6px;text-shadow:1px 2px 3px rgba(0,0,0,.25)}
+header p{font-size:clamp(14px,2.3vw,20px)}
+.pen-note{display:inline-block;margin-top:9px;font-size:13px;background:rgba(255,255,255,.2);padding:6px 15px;border-radius:999px}
+.actions{max-width:980px;margin:22px auto 6px;padding:0 14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.actions button{font-family:inherit;font-size:clamp(14px,2.3vw,18px);padding:14px 22px;border:none;border-radius:14px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#2e86c1,#1f618d);box-shadow:0 4px 10px rgba(0,0,0,.16);transition:transform .12s,box-shadow .12s}
+.actions button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.24)}
+.actions button.active{background:linear-gradient(135deg,#d35400,#a04000)}
+main{max-width:980px;margin:0 auto;padding:8px 14px 60px}
+.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:12px;margin-top:16px}
+.nums button{font-family:inherit;font-size:17px;font-weight:700;color:#1a5276;background:#fff;border:2px solid #d5e8d4;border-radius:14px;padding:15px 4px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .12s,box-shadow .12s,opacity .12s;position:relative}
+.nums button:hover{transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,.15);border-color:#27ae60}
+.nums button.key{background:linear-gradient(135deg,#f4d03f,#f39c12);border-color:#e67e22;color:#6e2c00;box-shadow:0 0 0 3px rgba(243,156,18,.25)}
+.nums button.dim{opacity:.4}
+.nums button .tiny{position:absolute;top:-6px;left:-6px;font-size:9px;font-weight:700;color:#fff;background:#d35400;border-radius:999px;padding:2px 6px}
+footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
+.tip{text-align:center;color:#7f8c8d;font-size:13px;margin-top:14px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:none;flex-direction:column;touch-action:none}
+.lb.open{display:flex}
+.lb-top{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(0,0,0,.35)}
+.lb-top button{font-size:14px;padding:8px 13px;border:none;border-radius:10px;cursor:pointer;background:rgba(255,255,255,.92)}
+.lb-title{color:#fff;margin-left:auto;font-size:15px;font-weight:700}
+.lb-stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.lb-img{max-width:96%;max-height:96%;transform-origin:center center;user-select:none;-webkit-user-drag:none;cursor:grab;touch-action:none}
+.lb-img.dragging{cursor:grabbing}
+.lb-prev{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.85);cursor:pointer;z-index:5;right:10px}
+.lb-next{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.85);cursor:pointer;z-index:5;left:10px}
+.lb-close{position:absolute;top:14px;left:14px;z-index:8}
+.zoom-tools{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:8;background:rgba(0,0,0,.55);border-radius:999px;padding:6px 14px;display:flex;gap:12px;align-items:center}
+.zoom-tools button{width:40px;height:36px;font-size:18px;border:none;border-radius:50%;cursor:pointer;background:#fff}
+.zoom-tools span{color:#fff;font-size:14px;min-width:46px;text-align:center;font-weight:700}
 </style>
 </head>
 <body>
 <header>
   <h1>📖 التربية الدينية الإسلامية</h1>
-  <p>الصف الأول الابتدائي — الفصل الدراسي الأول</p>
+  <p>الصف الأول الابتدائي - الفصل الدراسي الأول</p>
   <span class="pen-note">🖊️ فعّل القلم الناطق ليقرأ لك الدروس بصوت واضح</span>
 </header>
 
-<div id="zoomBar">
-  <button type="button" id="zOut" title="تصغير">−</button>
-  <span id="zoomVal">100%</span>
-  <button type="button" id="zIn" title="تكبير">+</button>
-  <button type="button" id="zReset" title="إعادة الضبط">⟲</button>
-</div>
-
 <div class="actions">
-  <button type="button" id="startBtn">🚀 اقرأ من البداية</button>
-  <button type="button" id="checkBtn">✅ أتحقق من تعلمي</button>
+  <button type="button" id="startBtn">🚀 اقرأ من البداية (صفحة 5)</button>
+  <button type="button" id="checkBtn">✅ أتحقق من تعلمي (صفحة 73)</button>
   <button type="button" id="penBtn" class="pen-btn">🖊️ القلم الناطق</button>
 </div>
 
 <main>
-  <div class="grid" id="grid"></div>
+  <div class="nums" id="nums"></div>
+  <p class="tip">اضغط على رقم أي صفحة لفتحها وتكبيرها والاستماع إليها</p>
 </main>
 
 <div class="lb" id="lb">
   <div class="lb-top">
+    <button type="button" id="lbPrevBtn">‹ السابقة</button>
     <button type="button" id="lbListen">🔊 استمع لهذه الصفحة</button>
     <span class="lb-title" id="lbTitle">صفحة 1</span>
+    <button type="button" id="lbNextBtn">التالية ›</button>
     <button type="button" id="lbClose">✖ إغلاق</button>
   </div>
   <div class="lb-stage" id="lbStage">
-    <button type="button" class="lb-nav lb-prev" id="lbPrev">›</button>
+    <button type="button" class="lb-prev" id="lbPrev">‹</button>
     <img class="lb-img" id="lbImg" alt="صفحة" draggable="false">
-    <button type="button" class="lb-nav lb-next" id="lbNext">‹</button>
+    <button type="button" class="lb-next" id="lbNext">›</button>
     <div class="zoom-tools">
-      <button type="button" id="zoomIn">+</button>
-      <span id="zoomVal2">100%</span>
-      <button type="button" id="zoomReset">⟲</button>
       <button type="button" id="zoomOut">−</button>
+      <span id="zoomVal">100%</span>
+      <button type="button" id="zoomReset">⟲</button>
+      <button type="button" id="zoomIn">+</button>
     </div>
   </div>
 </div>
 
-<footer>منصة تعليمية تفاعلية للأطفال — دروس الصف الأول الابتدائي</footer>
+<footer>منصة تعليمية تفاعلية للأطفال - دروس الصف الأول الابتدائي</footer>
 
 <script>
 (function () {
   "use strict";
-  const TOPICS_URL = "topics.json";
-  const REPORT_URL = "report.json";
-  const grid = document.getElementById("grid");
-  const lb = document.getElementById("lb");
-  const lbImg = document.getElementById("lbImg");
-  const lbTitle = document.getElementById("lbTitle");
-  const lbStage = document.getElementById("lbStage");
-  const zoomVal = document.getElementById("zoomVal");
-  const zoomVal2 = document.getElementById("zoomVal2");
+  var TOPICS_URL = "topics.json";
+  var REPORT_URL = "report.json";
+  var grid = document.getElementById("nums");
+  var lb = document.getElementById("lb");
+  var lbImg = document.getElementById("lbImg");
+  var lbTitle = document.getElementById("lbTitle");
+  var zoomVal = document.getElementById("zoomVal");
 
-  let topics = [];
-  let reportPages = {};
-  let total = 86;
-  let cur = 5;
+  var topics = [];
+  var reportPages = {};
+  var total = 86;
+  var cur = 50;
 
-  const pad3 = function (n) { n = Number(n); return (n < 10 ? "00" : n < 100 ? "0" : "") + n; };
-  const pageURL = function (n) { return "pages/p" + pad3(n) + ".png"; };
+  function pad3(n) {
+    n = Number(n);
+    if (n < 10) { return "00" + n; }
+    if (n < 100) { return "0" + n; }
+    return String(n);
+  }
+  function pageURL(n) { return "pages/p" + pad3(n) + ".png"; }
 
   function speak(text, voice) {
     if (!text) { return; }
-    const v = voice || "ar-SA-HamedNeural";
-    const url = "/api/tts?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(v);
-    const audio = new Audio(url);
+    var v = voice || "ar-SA-HamedNeural";
+    var url = "/api/tts?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(v);
+    var audio = new Audio(url);
     audio.play().catch(function () {
       if ("speechSynthesis" in window) {
-        const u = new SpeechSynthesisUtterance(text);
+        var u = new SpeechSynthesisUtterance(text);
         u.lang = "ar-SA";
         speechSynthesis.speak(u);
       }
     });
   }
 
-  function buildCard(t) {
-    const n = Number(t.page);
-    const card = document.createElement("div");
-    card.className = "card";
-    card.setAttribute("data-p", n);
-    card.setAttribute("data-len", t.len || 0);
-    const thumb = document.createElement("div");
-    thumb.className = "thumb";
-    const img = document.createElement("img");
-    img.src = pageURL(n);
-    img.alt = t.title || ("صفحة " + n);
-    img.loading = "lazy";
-    const badge = document.createElement("span");
-    badge.className = "pg-badge";
-    badge.textContent = "الصفحة " + n;
-    thumb.appendChild(img);
-    thumb.appendChild(badge);
-    const title = document.createElement("div");
-    title.className = "card-title";
-    title.textContent = t.title || ("درس الصفحة " + n);
-    card.appendChild(thumb);
-    card.appendChild(title);
-    card.addEventListener("click", function () {
-      openPage(n);
-      if (document.body.classList.contains("pen-active")) {
-        speak("الدرس في الصفحة " + n);
-        speak(t.title, "ar-PS-CamillaNeural");
-      }
-    });
-    return card;
+  function buildNum(n) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = n;
+    var t = topics.find(function (x) { return Number(x.page) === n; });
+    if (!t) { b.classList.add("dim"); }
+    if (n === 5 || n === 73) { b.classList.add("key"); }
+    b.addEventListener("click", function () { openPage(n); });
+    return b;
   }
 
   function renderAll() {
     grid.innerHTML = "";
-    topics.forEach(function (t) {
-      if (t && t.page) { grid.appendChild(buildCard(t)); }
-    });
+    for (var i = 1; i <= total; i++) { grid.appendChild(buildNum(i)); }
+  }
+
+  function updateTitle(n) {
+    var t = topics.find(function (x) { return Number(x.page) === n; });
+    var s = "صفحة " + n;
+    if (t && t.title) { s += " - " + t.title; }
+    if (reportPages[n] && reportPages[n].len) { s += " (" + Math.round(reportPages[n].len / 50) + " كلمة)"; }
+    lbTitle.textContent = s;
   }
 
   function loadTopics() {
     fetch(TOPICS_URL, { cache: "no-store" })
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        if (Array.isArray(data)) {
-          topics = data;
-        } else if (data && Array.isArray(data.topics)) {
-          topics = data.topics;
-        } else if (data && Array.isArray(data.lessons)) {
-          topics = data.lessons;
-        }
-        if (Array.isArray(topics) && topics.length) {
-          total = topics.length;
-          renderAll();
-        }
+        if (Array.isArray(data)) { topics = data; }
+        else if (data && Array.isArray(data.topics)) { topics = data.topics; }
+        else if (data && Array.isArray(data.lessons)) { topics = data.lessons; }
+        if (Array.isArray(topics) && topics.length) { renderAll(); }
       })
       .catch(function () {
         grid.innerHTML = "<p style='text-align:center;color:#c0392b;padding:30px'>تعذر تحميل فهرس الدروس.</p>";
@@ -233,12 +161,9 @@
     fetch(REPORT_URL, { cache: "no-store" })
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        if (data && Array.isArray(data.page_images)) {
-          data.page_images.forEach(function (im) {
-            if (im && im.file) {
-              var m = /p(\d+)\.png/.exec(im.file);
-              if (m) { reportPages[Number(m[1])] = im; }
-            }
+        if (data && Array.isArray(data.page_texts)) {
+          data.page_texts.forEach(function (t) {
+            if (t && t.page) { reportPages[Number(t.page)] = t; }
           });
         }
       })
@@ -252,9 +177,7 @@
     var s = zoomLevel / 100;
     lbImg.style.transform = "scale(" + s + ") translate(" + tx + "px," + ty + "px)";
     zoomVal.textContent = zoomLevel + "%";
-    zoomVal2.textContent = zoomLevel + "%";
   }
-
   function setZoom(v) {
     zoomLevel = Math.max(50, Math.min(600, v));
     applyZoom();
@@ -263,10 +186,10 @@
   function openPage(n) {
     cur = Number(n) || 5;
     if (cur < 1) { cur = 1; }
+    if (cur > total) { cur = total; }
     zoomLevel = 100; tx = 0; ty = 0;
     lbImg.src = pageURL(cur);
-    lbTitle.textContent = "صفحة " + cur;
-    if (reportPages[cur] && reportPages[cur].len) { lbTitle.textContent += " — " + Math.round(reportPages[cur].len / 50) + " كلمة"; }
+    updateTitle(cur);
     lb.classList.add("open");
     applyZoom();
   }
@@ -274,8 +197,6 @@
   function closeLb() { lb.classList.remove("open"); applyZoom(); }
   function prevPage() { cur = cur > 1 ? cur - 1 : 1; openPage(cur); }
   function nextPage() { cur = cur < total ? cur + 1 : total; openPage(cur); }
-
-  function askZoom(d) { setZoom(zoomLevel + d); }
 
   function panStart(e) {
     dragging = true;
@@ -293,7 +214,7 @@
     applyZoom();
     e.preventDefault();
   }
-  function panEnd(e) {
+  function panEnd() {
     dragging = false;
     lbImg.classList.remove("dragging");
     applyZoom();
@@ -301,7 +222,7 @@
 
   document.getElementById("startBtn").addEventListener("click", function () { openPage(5); });
   document.getElementById("checkBtn").addEventListener("click", function () { openPage(73); });
-  document.getElementById("penBtn").addEventListener("click", function (e) {
+  document.getElementById("penBtn").addEventListener("click", function () {
     document.body.classList.toggle("pen-active");
     this.classList.toggle("active");
   });
@@ -309,16 +230,17 @@
   document.getElementById("lbClose").addEventListener("click", closeLb);
   document.getElementById("lbPrev").addEventListener("click", prevPage);
   document.getElementById("lbNext").addEventListener("click", nextPage);
+  document.getElementById("lbPrevBtn").addEventListener("click", prevPage);
+  document.getElementById("lbNextBtn").addEventListener("click", nextPage);
   document.getElementById("lbListen").addEventListener("click", function () {
-    const t = topics.find(function (x) { return Number(x.page) === cur; });
-    speak(t ? t.title : ("صفحة " + cur));
+    var rt = reportPages[cur];
+    var t = topics.find(function (x) { return Number(x.page) === cur; });
+    var txt = (rt && rt.text) ? rt.text : (t ? t.title : "");
+    speak(txt || ("صفحة " + cur + " من كتاب التربية الدينية الإسلامية"));
   });
 
-  document.getElementById("zIn").addEventListener("click", function () { askZoom(20); });
-  document.getElementById("zOut").addEventListener("click", function () { askZoom(-20); });
-  document.getElementById("zReset").addEventListener("click", function () { setZoom(100); });
-  document.getElementById("zoomIn").addEventListener("click", function () { askZoom(20); });
-  document.getElementById("zoomOut").addEventListener("click", function () { askZoom(-20); });
+  document.getElementById("zoomIn").addEventListener("click", function () { setZoom(zoomLevel + 20); });
+  document.getElementById("zoomOut").addEventListener("click", function () { setZoom(zoomLevel - 20); });
   document.getElementById("zoomReset").addEventListener("click", function () { setZoom(100); });
 
   lbImg.addEventListener("mousedown", panStart);
