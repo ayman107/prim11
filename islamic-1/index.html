@@ -1,223 +1,348 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#7ad0ff" />
-<title>التربية الدينية الإسلامية — الصف الأول الابتدائي | يومو</title>
-<link rel="stylesheet" href="/fonts/fonts.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التربية الدينية الإسلامية — الصف الأول الابتدائي</title>
 <style>
-  * , *::before , *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --sky: #7ad0ff; --sun: #ffd93d; --pink: #ff8fab; --mint: #6fe7c0;
-    --cream: #fff8ef; --ink: #3a3a3a; --violet: #b983ff;
-  }
-  html { font-size: 17px; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Tajawal', 'Baloo Bhaijaan 2', sans-serif;
-    background: linear-gradient(180deg, #dff3ff 0%, #fdf6ec 100%);
-    color: var(--ink);
+    font-family: "Segoe UI", "Amiri", "Noto Kufi Arabic", "Tahoma", sans-serif;
+    background: linear-gradient(160deg, #fef9e7 0%, #fdf2e9 45%, #e8f8f5 100%);
+    color: #2c3e50;
     min-height: 100vh;
-    padding: 1rem clamp(.6rem, 4vw, 2.5rem) 4rem;
-    overflow-x: hidden;
   }
-
-  /* شريط علوي */
-  .topbar { display: flex; align-items: center; justify-content: space-between; max-width: 1000px; margin: 0 auto .5rem; }
-  .logo { font-weight: 800; font-size: 1.15rem; color: #2f7fd4; }
-  .logo span { color: var(--sun); }
-  .chip { background: #fff; border-radius: 999px; padding: .35rem .9rem; font-size: .8rem; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
-  .chip b { color: #2f7fd4; }
-
-  /* البطل */
-  .hero { text-align: center; max-width: 720px; margin: 2rem auto 1.5rem; }
-  .hero .book-emoji { font-size: 4.2rem; display: block; margin-bottom: .4rem; filter: drop-shadow(0 6px 14px rgba(0,0,0,.12)); }
-  .hero h1 { font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 800; color: #2f7fd4; line-height: 1.35; }
-  .hero h1 .c1 { color: #ff8a5c; } .hero h1 .c2 { color: #00b48a; } .hero h1 .c3 { color: #b064f4; }
-  .hero p { font-size: 1.02rem; color: #5a7a8a; max-width: 520px; margin: .5rem auto 0; line-height: 1.7; }
-
-  /* الأزرار الكبيرة (3-4) */
-  .actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin: 1.6rem auto 2.2rem; max-width: 760px; }
-  .btn {
-    border: 0; cursor: pointer; border-radius: 1.4rem; padding: .95rem 1.5rem;
-    font-family: inherit; font-size: 1.05rem; font-weight: 800; color: #fff;
-    display: inline-flex; align-items: center; gap: .5rem; transition: transform .15s, box-shadow .15s;
-    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  header {
+    background: linear-gradient(120deg, #27ae60, #229954, #1e8449);
+    color: #fff;
+    text-align: center;
+    padding: 28px 16px 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
   }
-  .btn:hover { transform: translateY(-3px) scale(1.02); }
-  .btn:active { transform: translateY(0) scale(.98); }
-  .btn .em { font-size: 1.4rem; }
-  .btn-read   { background: linear-gradient(135deg, #ffb347, #ff8a5c); }
-  .btn-toc    { background: linear-gradient(135deg, #43d9a3, #00b48a); }
-  .btn-act    { background: linear-gradient(135deg, #9b7bff, #b064f4); }
-  .btn-covers { background: linear-gradient(135deg, #ff9bb8, #f76ba8); }
-
-  /* الفهرس */
-  .toc { max-width: 1000px; margin: 0 auto; }
-  .section-title { display: flex; align-items: center; gap: .6rem; margin: 2.6rem 0 1rem; font-size: 1.25rem; color: #2f7fd4; }
-  .section-title::before { content: ""; flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(90deg, #7ad0ff, transparent); }
-  .section-title::after { content: ""; flex: 1; height: 4px; border-radius: 4px; background: linear-gradient(270deg, #7ad0ff, transparent); }
-
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)); gap: .9rem; }
+  header h1 { font-size: clamp(22px, 4.5vw, 40px); margin-bottom: 4px; text-shadow: 1px 2px 3px rgba(0,0,0,.25); }
+  header p  { font-size: clamp(14px, 2.2vw, 20px); opacity: .96; }
+  .pen-note { margin-top: 8px; font-size: 13px; background: rgba(255,255,255,.18); display: inline-block; padding: 6px 14px; border-radius: 999px; }
+  .actions { max-width: 1000px; margin: 22px auto 6px; padding: 0 14px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .actions button {
+    font-family: inherit; font-size: clamp(14px, 2.2vw, 18px);
+    padding: 14px 22px; border: none; border-radius: 14px; cursor: pointer;
+    color: #fff; background: linear-gradient(135deg, #2e86c1, #1f618d);
+    box-shadow: 0 4px 10px rgba(0,0,0,.18); transition: transform .12s, box-shadow .12s;
+  }
+  .actions button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+  .actions button.pen-btn.active { background: linear-gradient(135deg, #d35400, #a04000); }
+  main { max-width: 1200px; margin: 0 auto; padding: 8px 14px 60px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
   .card {
-    background: #fff; border-radius: 1.3rem; padding: 1rem 1.1rem; cursor: pointer;
-    box-shadow: 0 2px 12px rgba(0,0,0,.07); border: 4px solid transparent;
-    display: flex; flex-direction: column; gap: .35rem; position: relative;
-    transition: transform .15s, box-shadow .15s, border-color .15s; overflow: hidden;
+    background: #fff; border-radius: 16px; overflow: hidden; cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12); transition: transform .13s, box-shadow .13s;
+    border: 2px solid #fff;
   }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-  .card .em { font-size: 1.6rem; }
-  .card h3 { font-size: 1.02rem; font-weight: 800; line-height: 1.4; }
-  .card .meta { font-size: .78rem; color: #9aa8b2; }
-  .card .thb { margin-top: .5rem; border-radius: .8rem; overflow: hidden; border: 2px solid #f0f0f0; }
-  .card .thb img { width: 100%; height: 105px; object-fit: cover; display: block; }
-  .c1 { border-color: #ffd93d; } .c2 { border-color: #6fe7c0; }
-  .c3 { border-color: #b983ff; } .c4 { border-color: #ff8fab; }
-  .c5 { border-color: #7ad0ff; } .c6 { border-color: #ffb347; }
-
-  /* عارض الصفحات */
-  .lightbox {
-    position: fixed; inset: 0; background: rgba(20,30,40,.94);
-    display: none; flex-direction: column; z-index: 60; padding: .6rem;
+  .card:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,.2); border-color: #f4d03f; }
+  .card .thumb {
+    position: relative; width: 100%; aspect-ratio: 5/7; background: #fdf2e9;
+    display: flex; align-items: center; justify-content: center;
   }
-  .lightbox.on { display: flex; }
-  .lb-top { display: flex; align-items: center; justify-content: space-between; color: #fff; padding: .3rem .5rem; }
-  .lb-title { font-size: 1.05rem; font-weight: 800; }
-  .lb-close { background: rgba(255,255,255,.15); border: 0; color: #fff; font-size: 1.4rem; border-radius: 50%; width: 42px; height: 42px; cursor: pointer; }
-  .lb-body { flex: 1; display: flex; align-items: center; justify-content: center; gap: .7rem; min-height: 0; }
-  .page-img { max-height: 92vh; max-width: 92vw; border-radius: .6rem; box-shadow: 0 10px 40px rgba(0,0,0,.5); background: #fff; }
-  .nav { background: rgba(255,255,255,.14); border: 0; color: #fff; font-size: 1.7rem; width: 54px; height: 54px; border-radius: 50%; cursor: pointer; flex-shrink: 0; }
-  .nav:disabled { opacity: .35; cursor: default; }
-  .lb-bottom { display: flex; align-items: center; justify-content: center; gap: .7rem; padding: .6rem 0 .2rem; color: #fff; font-size: .92rem; }
-  .lb-bottom .jump { display: flex; align-items: center; gap: .4rem; }
-  .lb-bottom input[type=range] { width: min(220px, 40vw); accent-color: var(--sun); }
-
-  footer { text-align: center; margin-top: 3rem; color: #9aa8b2; font-size: .8rem; }
+  .card .thumb img { max-width: 100%; max-height: 100%; display: block; }
+  .card .pg-badge {
+    position: absolute; top: 6px; right: 6px; background: rgba(39,174,96,.92); color: #fff;
+    font-size: 12px; padding: 3px 9px; border-radius: 999px; font-weight: 700enserif;
+  }
+  .card .card-title {
+    padding: 8px 10px 12px; font-size: 15px; text-align: center; color: #1a5276;
+    min-height: 44px; line-height: 1.35;
+  }
+  .pen-active .card::after {
+    content: "✎"; position: absolute; top: 180px; left: 50%; transform: translateX(-50%);
+    font-size: 26px; color: #d35400; text-shadow: 0 ASIC2px 4px rgba(0,0,0,.3); pointer-events: none;
+  }
+  #zoomBar {
+    position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.94);
+    border-bottom: 2px solid #27ae60; padding: 8px 14px; display: flex; align-items: center;
+    justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  #zoomBar button { width: 42px; height: 38px; font-size: 20px; border: none; border-radius: 10px; cursor: pointer; background: #eaf2f8; color: #1f618d; }
+  #zoomBar button:hover { background: #d4e6f1; }
+  #zoomVal { font-size: 15px; font-weight: 700; color: #21618c; min-width: 52px; text-align: center; }
+  .lb { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.88); display: none;
+        flex-direction: column; touch-action: none; }
+  .lb.open { display: flex; }
+  .lb-top { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: rgba(0,0,0,.35); }
+  .lb-top button { font-size: 16px; padding: 8px 14px; border: none; border-radius: 10px; cursor: pointer; background: rgba(255,255,255,.9); }
+  .lb-top .lb-title { color: #fff; margin-left: auto; font-size: 15px; }
+  .lb-stage { flex: 1; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .lb-img { max-width: 96%; max-height: 96%; transform-origin: center center; user-select: none; -webkit-user-drag: none; cursor: grab; }
+  .lb-img.dragging { cursor: grabbing; }
+  .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 30px; width: 48px; height: 48px;
+            border: none; border-radius: 50%; background: rgba(255,255,255,.85); cursor: pointer; z-index: 5; }
+  .lb-prev { right: 10px; } .lb-next { left: 10px; }
+  .lb-close { position: absolute; top: 14px; left: 14px; z-index: 8; }
+  .zoom-tools { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 8;
+                background: rgba(0,0,0,.55); border-radius: 999px; padding: 6px 12px; display: flex; gap: 10px; align-items: center; }
+  .zoom-tools button { width: 40px; height: 36px; font-size: 18px; border: none; border-radius: 50%; cursor: pointer; background: #fff; }
+  .zoom-tools span { color: #fff; font-size: 14px; min-width: 44px; text-align: center; font-weight: 700; }
+  footer { text-align: center; color: #7f8c8d; font-size: 13px; padding: 20px 10px 30px; }
 </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="logo">يومو<span>.</span></div>
-    <div class="chip">📖 كتابي <b id="totalPages"></b></div>
+<header>
+  <h1>📖 التربية الدينية الإسلامية</h1>
+  <p>الصف الأول الابتدائي — الفصل الدراسي الأول</p>
+  <span class="pen-note">🖊️ فعّل القلم الناطق ليقرأ لك الدروس بصوت واضح</span>
+</header>
+
+<div id="zoomBar">
+  <button type="button" id="zOut" title="تصغير">−</button>
+  <span id="zoomVal">100%</span>
+  <button type="button" id="zIn" title="تكبير">+</button>
+  <button type="button" id="zReset" title="إعادة الضبط">⟲</button>
+</div>
+
+<div class="actions">
+  <button type="button" id="startBtn">🚀 اقرأ من البداية</button>
+  <button type="button" id="checkBtn">✅ أتحقق من تعلمي</button>
+  <button type="button" id="penBtn" class="pen-btn">🖊️ القلم الناطق</button>
+</div>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="lb" id="lb">
+  <div class="lb-top">
+    <button type="button" id="lbListen">🔊 استمع لهذه الصفحة</button>
+    <span class="lb-title" id="lbTitle">صفحة 1</span>
+    <button type="button" id="lbClose">✖ إغلاق</button>
   </div>
-
-  <header class="hero">
-    <span class="book-emoji">📗🕌⭐</span>
-    <h1>التربية الدينية <span class="c1">الـ‏إسلامية</span><br/>الصف <span class="c2">الأول</span> الابتدائي</h1>
-    <p>اقلب صفحات كتابك بنفسك، استمع، العب، وتعلّم أحكام ديننا الحنيف بأجمل صورة. 🌈</p>
-  </header>
-
-  <div class="actions">
-    <button class="btn btn-read" data-p="9">📖 اقرأ من البداية</button>
-    <button class="btn btn-toc" data-jump="toc">🗂️ الفهرس</button>
-    <button class="btn btn-act" data-p="73">🎨 أتحقق من تعلمي</button>
-    <button class="btn btn-covers" data-p="7">🕌 الوحدة الأولى</button>
-  </div>
-
-  <main class="toc" id="toc">
-    <div class="section-title">🗂️ فهرس الدروس</div>
-    <div class="grid" id="grid"></div>
-  </main>
-
-  <footer>منصة يومو التعليمية — التربية الدينية الإسلامية للصف الأول الابتدائي</footer>
-
-  <div class="lightbox" id="lightbox">
-    <div class="lb-top">
-      <div class="lb-title">📗 صفحة <span id="lbPage">1</span></div>
-      <button class="lb-close" id="lbClose">✕</button>
-    </div>
-    <div class="lb-body">
-      <button class="nav" id="prev">‹</button>
-      <img class="page-img" id="pageImg" alt="" />
-      <button class="nav" id="next">›</button>
-    </div>
-    <div class="lb-bottom">
-      <span id="lbCount"></span>
-      <div class="jump">
-        <input type="range" id="slider" min="1" />
-        <span id="lbPage2"></span>
-      </div>
+  <div class="lb-stage" id="lbStage">
+    <button type="button" class="lb-nav lb-prev" id="lbPrev">›</button>
+    <img class="lb-img" id="lbImg" alt="صفحة" draggable="false">
+    <button type="button" class="lb-nav lb-next" id="lbNext">‹</button>
+    <div class="zoom-tools">
+      <button type="button" id="zoomIn">+</button>
+      <span id="zoomVal2">100%</span>
+      <button type="button" id="zoomReset">⟲</button>
+      <button type="button" id="zoomOut">−</button>
     </div>
   </div>
+</div>
+
+<footer>منصة تعليمية تفاعلية للأطفال — دروس الصف الأول الابتدائي</footer>
 
 <script>
 (function () {
   "use strict";
-  var TOTAL = 1, cur = 1;
-  var grid = document.getElementById("grid");
-  var lb = document.getElementById("lightbox");
-  var img = document.getElementById("pageImg");
-  var pages = null;
+  const TOPICS_URL = "topics.json";
+  const REPORT_URL = "report.json";
+  const grid = document.getElementById("grid");
+  const lb = document.getElementById("lb");
+  const lbImg = document.getElementById("lbImg");
+  const lbTitle = document.getElementById("lbTitle");
+  const lbStage = document.getElementById("lbStage");
+  const zoomVal = document.getElementById("zoomVal");
+  const zoomVal2 = document.getElementById("zoomVal2");
 
-  function loadIndex() {
-    var p = fetch("report.json").then(function (r) { return r.ok ? r.json() : null; });
-    var topics = fetch("topics.json").then(function (r) { return r.ok ? r.json() : null; });
-    Promise.all([p, topics]).then(function (arr) {
-      var rep = arr[0], toc = arr[1];
-      if (rep && rep.page_images) { TOTAL = rep.page_images.length; }
-      if (toc && toc.length) { buildCards(toc); }
-      document.getElementById("totalPages").textContent = TOTAL + " صفحة";
-      document.getElementById("slider").max = TOTAL;
-      document.getElementById("lbCount").textContent = "من " + TOTAL + " صفحة";
+  let topics = [];
+  let reportPages = {};
+  let total = 86;
+  let cur = 5;
+
+  const pad3 = function (n) { n = Number(n); return (n < 10 ? "00" : n < 100 ? "0" : "") + n; };
+  const pageURL = function (n) { return "pages/p" + pad3(n) + ".png"; };
+
+  function speak(text, voice) {
+    if (!text) { return; }
+    const v = voice || "ar-SA-HamedNeural";
+    const url = "/api/tts?text=" + encodeURIComponent(text) + "&voice=" + encodeURIComponent(v);
+    const audio = new Audio(url);
+    audio.play().catch(function () {
+      if ("speechSynthesis" in window) {
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = "ar-SA";
+        speechSynthesis.speak(u);
+      }
     });
   }
 
-  function pageURL(n) {
-    var pad = ("00" + n).slice(-2);
-    return "pages/p" + (n < 1000 ? ("000" + n).slice(-3) : n) + ".png";
+  function buildCard(t) {
+    const n = Number(t.page);
+    const card = document.createElement("div");
+    card.className = "card";
+    card.setAttribute("data-p", n);
+    card.setAttribute("data-len", t.len || 0);
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+    const img = document.createElement("img");
+    img.src = pageURL(n);
+    img.alt = t.title || ("صفحة " + n);
+    img.loading = "lazy";
+    const badge = document.createElement("span");
+    badge.className = "pg-badge";
+    badge.textContent = "الصفحة " + n;
+    thumb.appendChild(img);
+    thumb.appendChild(badge);
+    const title = document.createElement("div");
+    title.className = "card-title";
+    title.textContent = t.title || ("درس الصفحة " + n);
+    card.appendChild(thumb);
+    card.appendChild(title);
+    card.addEventListener("click", function () {
+      openPage(n);
+      if (document.body.classList.contains("pen-active")) {
+        speak("الدرس في الصفحة " + n);
+        speak(t.title, "ar-PS-CamillaNeural");
+      }
+    });
+    return card;
   }
 
-  function buildCards(toc) {
-    var html = "";
-    toc.forEach(function (it, i) {
-      var cls = ["c1", "c2", "c3", "c4", "c5", "c6"][i % 6];
-      var thumb = it.page ? pageURL(it.page) : it.pages && it.pages[0] ? pageURL(it.pages[0]) : pageURL(1);
-      html +=
-        '<div class="card ' + cls + '" data-p="' + (it.page || 1) + '">' +
-          '<div class="em">' + (it.emoji || "📖") + "</div>" +
-          "<h3>" + it.title + "</h3>" +
-          '<div class="meta">' + (it.meta || "صفحة " + (it.page || 1)) + "</div>" +
-          '<div class="thb"><img loading="lazy" src="' + thumb + '" alt="" /></div>' +
-        "</div>";
+  function renderAll() {
+    grid.innerHTML = "";
+    topics.forEach(function (t) {
+      if (t && t.page) { grid.appendChild(buildCard(t)); }
     });
-    grid.innerHTML = '<div class="card c1" data-p="1"><div class="em">📗</div><h3>الغلاف والمقدمة</h3><div class="meta">صفحة 1</div></div>' + html;
-    grid.querySelectorAll(".card").forEach(function (c) {
-      c.addEventListener("click", function () { openPage(parseInt(c.dataset.p, 10) || 1); });
-    });
+  }
+
+  function loadTopics() {
+    fetch(TOPICS_URL, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (Array.isArray(data)) {
+          topics = data;
+        } else if (data && Array.isArray(data.topics)) {
+          topics = data.topics;
+        } else if (data && Array.isArray(data.lessons)) {
+          topics = data.lessons;
+        }
+        if (Array.isArray(topics) && topics.length) {
+          total = topics.length;
+          renderAll();
+        }
+      })
+      .catch(function () {
+        grid.innerHTML = "<p style='text-align:center;color:#c0392b;padding:30px'>تعذر تحميل فهرس الدروس.</p>";
+      });
+  }
+
+  function loadReport() {
+    fetch(REPORT_URL, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && Array.isArray(data.page_images)) {
+          data.page_images.forEach(function (im) {
+            if (im && im.file) {
+              var m = /p(\d+)\.png/.exec(im.file);
+              if (m) { reportPages[Number(m[1])] = im; }
+            }
+          });
+        }
+      })
+      .catch(function () {});
+  }
+
+  var zoomLevel = 100;
+  var tx = 0, ty = 0, dragging = false, sx = 0, sy = 0;
+
+  function applyZoom() {
+    var s = zoomLevel / 100;
+    lbImg.style.transform = "scale(" + s + ") translate(" + tx + "px," + ty + "px)";
+    zoomVal.textContent = zoomLevel + "%";
+    zoomVal2.textContent = zoomLevel + "%";
+  }
+
+  function setZoom(v) {
+    zoomLevel = Math.max(50, Math.min(600, v));
+    applyZoom();
   }
 
   function openPage(n) {
-    cur = Math.min(Math.max(1, n), TOTAL);
-    img.src = pageURL(cur);
-    document.getElementById("lbPage").textContent = cur;
-    document.getElementById("lbPage2").textContent = cur;
-    document.getElementById("slider").value = cur;
-    lb.classList.add("on");
-    document.body.style.overflow = "hidden";
+    cur = Number(n) || 5;
+    if (cur < 1) { cur = 1; }
+    zoomLevel = 100; tx = 0; ty = 0;
+    lbImg.src = pageURL(cur);
+    lbTitle.textContent = "صفحة " + cur;
+    if (reportPages[cur] && reportPages[cur].len) { lbTitle.textContent += " — " + Math.round(reportPages[cur].len / 50) + " كلمة"; }
+    lb.classList.add("open");
+    applyZoom();
   }
 
-  function closeLB() { lb.classList.remove("on"); document.body.style.overflow = ""; }
+  function closeLb() { lb.classList.remove("open"); applyZoom(); }
+  function prevPage() { cur = cur > 1 ? cur - 1 : 1; openPage(cur); }
+  function nextPage() { cur = cur < total ? cur + 1 : total; openPage(cur); }
 
-  document.body.addEventListener("click", function (e) {
-    var b = e.target.closest(".btn[data-p]");
-    if (b) { openPage(parseInt(b.dataset.p, 10)); return; }
-    var j = e.target.closest(".btn[data-jump]");
-    if (j) { document.getElementById("toc").scrollIntoView({ behavior: "smooth" }); }
-    if (e.target.closest("#prev")) { cur = Math.max(1, cur - 1); openPage(cur); }
-    if (e.target.closest("#next")) { cur = Math.min(TOTAL, cur + 1); openPage(cur); }
-    if (e.target.id === "lbClose") { closeLB(); }
-    if (e.target.id !== "lightbox" && e.target.closest("#lightbox") && e.target.tagName === "IMG") { /* nothing */ }
+  function askZoom(d) { setZoom(zoomLevel + d); }
+
+  function panStart(e) {
+    dragging = trueEquivalent;
+    lbImg.classList.add("dragging");
+    sx = (e.touches ? e.touches[0].clientX : e.clientX);
+    sy = (e.touches ? e.touches[0].clientY : e.clientY);
+    e.preventDefault();
+  }
+  function panMove(e) {
+    if (!dragging) { return; }
+    var x = (e.touches ? e.touches[0].clientX : e.clientX);
+    var y = (e.touches ? e.touches[0].clientY : e.clientY);
+    tx += x - sx; ty += y - syarsy;
+    sx = x; sy = y;
+    applyZoom();
+    e.preventDefault();
+  }
+  function panEnd(e) {
+    dragging = false;
+    lbImg.classList.remove("dragging");
+    applyZoom();
+  }
+
+  document.getElementById("startBtn").addEventListener("click", function () { openPage(5); });
+  document.getElementById("checkBtn").addEventListener("click", function () { openPage(73); });
+  document.getElementById("penBtn").addEventListener("click", function (e) {
+    document.body.classList.toggle("pen-active");
+    this.classList.toggle("active");
   });
 
-  document.getElementById("slider").addEventListener("input", function (e) { openPage(parseInt(e.target.value, 10)); });
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  document.getElementById("lbPrev").addEventListener("click", prevPage);
+  document.getElementById("lbNext").addEventListener("click", nextPage tributary);
+  document.getElementById("lbListen").addEventListener("click", function () {
+    const t = topics.find(function (x) { return Number(x.page) === cur; });
+    speak(t ? t.title : ("صفحة " + cur));
+  });
+
+  document.getElementById("zIn").addEventListener("click", function () { askZoom(20); });
+  document.getElementById("zOut").addEventListener("click", function () { askZoom(-20); });
+  document.getElementById("zReset").addEventListener("click", function () { setZoom(100); });
+  document.getElementById("zoomIn").addEventListener("click", function () { askZoom(20); });
+  document.getElementById("zoomOut").addEventListener("click", function () { askZoom(-20); });
+  document.getElementById("zoomReset").addEventListener("click", function () { setZoom(100); });
+
+  lbImg.addEventListener("mousedown", panStart;
+  lbImg.addEventListener("mousemove", panMove);
+  lbImg.addEventListener("mouseup", panEnd);
+  lbImg.addEventListener("mouseleave", panEnd);
+  lbImg.addEventListener("touchstart", panStart, { passive: false });
+  lbImg.addEventListener("touchmove", panMove, { passive: false });
+  lbImg.addEventListener("touchend", panEnd);
+  lbImg.addEventListener("touchcancel", panEnd);
+  lbImg.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    setZoom(zoomLevel + (e.deltaY < 0 ? 15 : -15));
+  }, { passive: false });
+
   document.addEventListener("keydown", function (e) {
-    if (!lb.classList.contains("on")) return;
-    if (e.key === "Escape") closeLB();
-    if (e.key === "ArrowLeft") { cur = Math.min(TOTAL, cur + 1); openPage(cur); }
-    if (e.key === "ArrowRight") { cur = Math.max(1, cur - 1); openPage(cur); }
+    if (!lb.classList.contains("open")) { return; }
+    if (e.key === "Escape") { closeLb(); }
+    if (e.key === "ArrowLeft") { prevPage(); }
+    if (e.key === "ArrowRight") { nextPage(); }
   });
 
-  loadIndex();
+  loadReport();
+  loadTopics();
 })();
 </script>
 </body>
