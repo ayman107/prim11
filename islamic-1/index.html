@@ -3,99 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>التربية الدينية الإسلامية - الصف الأول الابتدائي</title>
+<title>التربية الدينية الإسلامية — الصف الأول الابتدائي (قارئ الكتاب)</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Segoe UI","Amiri","Noto Kufi Arabic",Tahoma,sans-serif;min-height:100vh;color:#2c3e50;background:linear-gradient(160deg,#fef9e7,#fdf2e9 46%,#e8f8f5)}
-header{background:linear-gradient(120deg,#27ae60,#229954,#1e8449);color:#fff;text-align:center;padding:26px 16px 18px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-header h1{font-size:clamp(22px,4.6vw,40px);margin-bottom:6px;text-shadow:1px 2px 3px rgba(0,0,0,.25)}
-header p{font-size:clamp(14px,2.3vw,20px)}
-.pen-note{display:inline-block;margin-top:9px;font-size:13px;background:rgba(255,255,255,.2);padding:6px 15px;border-radius:999px}
-.actions{max-width:980px;margin:22px auto 6px;padding:0 14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.actions button{font-family:inherit;font-size:clamp(14px,2.3vw,18px);padding:14px 22px;border:none;border-radius:14px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#2e86c1,#1f618d);box-shadow:0 4px 10px rgba(0,0,0,.16);transition:transform .12s,box-shadow .12s}
-.actions button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.24)}
-.actions button.active{background:linear-gradient(135deg,#d35400,#a04000)}
-main{max-width:980px;margin:0 auto;padding:8px 14px 60px}
-.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:12px;margin-top:16px}
-.nums button{font-family:inherit;font-size:17px;font-weight:700;color:#1a5276;background:#fff;border:2px solid #d5e8d4;border-radius:14px;padding:15px 4px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .12s,box-shadow .12s,opacity .12s;position:relative}
-.nums button:hover{transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,.15);border-color:#27ae60}
-.nums button.key{background:linear-gradient(135deg,#f4d03f,#f39c12);border-color:#e67e22;color:#6e2c00;box-shadow:0 0 0 3px rgba(243,156,18,.25)}
-.nums button.dim{opacity:.4}
-.nums button .tiny{position:absolute;top:-6px;left:-6px;font-size:9px;font-weight:700;color:#fff;background:#d35400;border-radius:999px;padding:2px 6px}
-footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
-.tip{text-align:center;color:#7f8c8d;font-size:13px;margin-top:14px}
-.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:none;flex-direction:column;touch-action:none}
-.lb.open{display:flex}
-.lb-top{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(0,0,0,.35)}
-.lb-top button{font-size:14px;padding:8px 13px;border:none;border-radius:10px;cursor:pointer;background:rgba(255,255,255,.92)}
-.lb-title{color:#fff;margin-left:auto;font-size:15px;font-weight:700}
-.lb-stage{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.lb-img{max-width:96%;max-height:96%;transform-origin:center center;user-select:none;-webkit-user-drag:none;cursor:grab;touch-action:none}
-.lb-img.dragging{cursor:grabbing}
-.lb-prev{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.85);cursor:pointer;z-index:5;right:10px}
-.lb-next{position:absolute;top:50%;transform:translateY(-50%);font-size:30px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.85);cursor:pointer;z-index:5;left:10px}
-.lb-close{position:absolute;top:14px;left:14px;z-index:8}
-.zoom-tools{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:8;background:rgba(0,0,0,.55);border-radius:999px;padding:6px 14px;display:flex;gap:12px;align-items:center}
-.zoom-tools button{width:40px;height:36px;font-size:18px;border:none;border-radius:50%;cursor:pointer;background:#fff}
-.zoom-tools span{color:#fff;font-size:14px;min-width:46px;text-align:center;font-weight:700}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Amiri", "Noto Kufi Arabic", "Tahoma", sans-serif;
+    background:
+      radial-gradient(1000px 600px at 50% -10%, rgba(244,208,63,.28), transparent 60%),
+      linear-gradient(160deg, #fdf2e9 0%, #fef9e7 40%, #eafaf1 100%);
+    color: #2c3e50; min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(120deg, #27ae60, #229954, #1e8449);
+    color: #fff; text-align: center; padding: 24px 16px 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  }
+  header h1 { font-size: clamp(22px, 4.4vw, 40px); margin-bottom: 4px; text-shadow: 1px 2px 3px rgba(0,0,0,.25); }
+  header p  { font-size: clamp(14px, 2.2vw, 19px); opacity: .96; }
+  .pen-note { margin-top: 8px; font-size: 13px; background: rgba(255,255,255,.2); display: inline-block; padding: 6px 14px; border-radius: 999px; }
+  .toolbar {
+    max-width: 1050px; margin: 18px auto 4px; padding: 0 14px;
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+  }
+  .toolbar button {
+    font-family: inherit; font-size: clamp(13px, 2vw, 16px);
+    padding: 12px 18px; border: none; border-radius: 12px; cursor: pointer; color: #fff;
+    background: linear-gradient(135deg, #2e86c1, #1f618d);
+    box-shadow: 0 4px 10px rgba(0,0,0,.16); transition: transform .12s, box-shadow .12s;
+  }
+  .toolbar button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.24); }
+  .toolbar button.active { background: linear-gradient(135deg, #d35400, #a04000); }
+  main { max-width: 1100px; margin: 0 auto; padding: 6px 14px 60px; }
+
+  .book-frame {
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #d8cbb8;
+    box-shadow: 0 12px 34px rgba(0,0,0,.22), 0 2px 8px rgba(0,0,0,.12);
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .book-spine { position: absolute; top: 0; bottom: 0; right: 8px; width: 3px; background: repeating-linear-gradient(180deg, #e9dcc9, #e9dcc9 3px, #d9c9b2 3px, #d9c9b2 6px); }
+
+  .stage {
+    position: relative; height: clamp(320px, 82vh, 820px);
+    background:
+      radial-gradient(120% 100% at 70% 10%, rgba(39,174,96,.05), transparent 55%),
+      #faf6ef;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; touch-action: none;
+  }
+  .page {
+    max-width: 97%; max-height: 97%;
+    transform-origin: center center;
+    user-select: none; -webkit-user-drag: none; cursor: grab;
+    box-shadow: 0 6px 22px rgba(0,0,0,.28);
+    touch-action: none;
+  }
+  .page.dragging { cursor: grabbing; }
+  .page-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 50px; height: 50px; font-size: 28px; border: none; border-radius: 50%;
+    background: rgba(255,255,255,.92); cursor: pointer; z-index: 4;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  }
+  .page-prev { right: 12px; }
+  .page-next { left: 12px; }
+
+  .page-info {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 8px 14px; background: #2c3e50; color: #fff;
+  }
+  .page-info .pg-title { font-size: clamp(13px, 2vw, 16px); font-weight: 700; }
+  .page-info .pg-count { font-size: clamp(13px, 2vw, 16px); font-weight: 700; white-space: nowrap; }
+  .page-info .pg-hint { font-size: clamp(11px, 1.6vw, 13px); opacity: .85; }
+
+  .listen-bar {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 10px 12px; border-top: 3px solid #27ae60; background: #fff;
+  }
+  .listen-bar button {
+    font-family: inherit; font-size: clamp(13px, 2vw, 16px);
+    padding: 12px 18px; border: none; border-radius: 999px; cursor: pointer;
+    background: linear-gradient(135deg, #27ae60, #1e8449); color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.16); transition: transform .12s, box-shadow .12s;
+  }
+  .listen-bar button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.24); }
+  .listen-bar .read-full { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+  .listen-bar .pg-meta { font-size: 12px; color: #7f8c8d; }
+  footer { text-align: center; color: #7f8c8d; font-size: 13px; padding: 20px 10px 30px; }
+
+  .zoom-tools {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 6; background: rgba(0,0,0,.55); border-radius: 999px;
+    padding: 6px 12px; display: flex; gap: 10px; align-items: center;
+  }
+  .zoom-tools button { width: 38px; height: 34px; font-size: 17px; border: none; border-radius: 50%; cursor: pointer; background: #fff; }
+  .zoom-tools span { color: #fff; font-size: 13px; min-width: 44px; text-align: center; font-weight: 700; }
 </style>
 </head>
 <body>
 <header>
   <h1>📖 التربية الدينية الإسلامية</h1>
-  <p>الصف الأول الابتدائي - الفصل الدراسي الأول</p>
-  <span class="pen-note">🖊️ فعّل القلم الناطق ليقرأ لك الدروس بصوت واضح</span>
+  <p>الصف الأول الابتدائي — الفصل الدراسي الأول</p>
+  <span class="pen-note">🖊️ فعّل القلم الناطق ليقرأ لك الدروس، واضغط «استمع» لقراءة الصفحة كاملة</span>
 </header>
 
-<div class="actions">
-  <button type="button" id="startBtn">🚀 اقرأ من البداية (صفحة 5)</button>
-  <button type="button" id="checkBtn">✅ أتحقق من تعلمي (صفحة 73)</button>
-  <button type="button" id="penBtn" class="pen-btn">🖊️ القلم الناطق</button>
+<div class="toolbar">
+  <button type="button" id="startBtn">🚀 اقرأ من البداية</button>
+  <button type="button" id="checkBtn">✅ أتحقق من تعلمي</button>
+  <button type="button" id="penBtn">🖊️ القلم الناطق</button>
 </div>
 
 <main>
-  <div class="nums" id="nums"></div>
-  <p class="tip">اضغط على رقم أي صفحة لفتحها وتكبيرها والاستماع إليها</p>
-</main>
-
-<div class="lb" id="lb">
-  <div class="lb-top">
-    <button type="button" id="lbPrevBtn">‹ السابقة</button>
-    <button type="button" id="lbListen">🔊 استمع لهذه الصفحة</button>
-    <span class="lb-title" id="lbTitle">صفحة 1</span>
-    <button type="button" id="lbNextBtn">التالية ›</button>
-    <button type="button" id="lbClose">✖ إغلاق</button>
-  </div>
-  <div class="lb-stage" id="lbStage">
-    <button type="button" class="lb-prev" id="lbPrev">‹</button>
-    <img class="lb-img" id="lbImg" alt="صفحة" draggable="false">
-    <button type="button" class="lb-next" id="lbNext">›</button>
-    <div class="zoom-tools">
-      <button type="button" id="zoomOut">−</button>
-      <span id="zoomVal">100%</span>
-      <button type="button" id="zoomReset">⟲</button>
-      <button type="button" id="zoomIn">+</button>
+  <div class="book-frame">
+    <div class="book-spine"></div>
+    <div class="stage" id="stage">
+      <button type="button" class="page-nav page-prev" id="prevBtn">›</button>
+      <img class="page" id="pageImg" alt="صفحة الكتاب" draggable="false">
+      <button type="button" class="page-nav page-next" id="nextBtn">‹</button>
+      <div class="zoom-tools">
+        <button type="button" id="zoomOut">−</button>
+        <span id="zoomVal">100%</span>
+        <button type="button" id="zoomReset">⟲</button>
+        <button type="button" id="zoomIn">+</button>
+      </div>
+    </div>
+    <div class="page-info">
+      <span class="pg-title" id="pageTitle">درس الصفحة 5</span>
+      <span class="pg-count" id="pageCount">صفحة 5 من 86</span>
+      <span class="pg-hint" id="pageHint">اقلب الصفحات بالأسهم أو بالسحب</span>
+    </div>
+    <div class="listen-bar">
+      <button type="button" class="read-full" id="listenFull">🔊 استمع كاملًا لهذه الصفحة</button>
+      <button type="button" id="listenTitle">🗣️ اسمع العنوان</button>
     </div>
   </div>
-</div>
+</main>
 
-<footer>منصة تعليمية تفاعلية للأطفال - دروس الصف الأول الابتدائي</footer>
+<footer>منصة تعليمية تفاعلية للأطفال — دروس الصف الأول الابتدائي</footer>
 
 <script>
 (function () {
   "use strict";
   var TOPICS_URL = "topics.json";
   var REPORT_URL = "report.json";
-  var grid = document.getElementById("nums");
-  var lb = document.getElementById("lb");
-  var lbImg = document.getElementById("lbImg");
-  var lbTitle = document.getElementById("lbTitle");
-  var zoomVal = document.getElementById("zoomVal");
 
   var topics = [];
   var reportPages = {};
   var total = 86;
-  var cur = 50;
+  var cur = 5;
 
   function pad3(n) {
     n = Number(n);
@@ -104,6 +162,25 @@ footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
     return String(n);
   }
   function pageURL(n) { return "pages/p" + pad3(n) + ".png"; }
+
+  var stage = document.getElementById("stage");
+  var pageImg = document.getElementById("pageImg");
+  var pageTitle = document.getElementById("pageTitle");
+  var pageCount = document.getElementById("pageCount");
+  var pageHint = document.getElementById("pageHint");
+  var zoomVal = document.getElementById("zoomVal");
+
+  var zoomLevel = 100;
+  var tx = 0, ty = 0;
+  var dragging = false, sx = 0, sy = 0;
+
+  function applyZoom() {
+    var s = zoomLevel / 100;
+    pageImg.style.transform = "scale(" + s + ") translate(" + tx + "px," + ty + "px)";
+    zoomVal.textContent = zoomLevel + "%";
+  }
+  function setZoom(v) { zoomLevel = Math.max(50, Math.min(600, v)); if (zoomLevel === 100) { tx = 0; ty = 0; } applyZoom(); }
+  function askZoom(d) { setZoom(zoomLevel + d); }
 
   function speak(text, voice) {
     if (!text) { return; }
@@ -118,69 +195,19 @@ footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
       }
     });
   }
-
-  function buildNum(n) {
-    var b = document.createElement("button");
-    b.type = "button";
-    b.textContent = n;
-    var t = topics.find(function (x) { return Number(x.page) === n; });
-    if (!t) { b.classList.add("dim"); }
-    if (n === 5 || n === 73) { b.classList.add("key"); }
-    b.addEventListener("click", function () { openPage(n); });
-    return b;
-  }
-
-  function renderAll() {
-    grid.innerHTML = "";
-    for (var i = 1; i <= total; i++) { grid.appendChild(buildNum(i)); }
-  }
-
-  function updateTitle(n) {
-    var t = topics.find(function (x) { return Number(x.page) === n; });
-    var s = "صفحة " + n;
-    if (t && t.title) { s += " - " + t.title; }
-    if (reportPages[n] && reportPages[n].len) { s += " (" + Math.round(reportPages[n].len / 50) + " كلمة)"; }
-    lbTitle.textContent = s;
-  }
-
-  function loadTopics() {
-    fetch(TOPICS_URL, { cache: "no-store" })
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (Array.isArray(data)) { topics = data; }
-        else if (data && Array.isArray(data.topics)) { topics = data.topics; }
-        else if (data && Array.isArray(data.lessons)) { topics = data.lessons; }
-        if (Array.isArray(topics) && topics.length) { renderAll(); }
-      })
-      .catch(function () {
-        grid.innerHTML = "<p style='text-align:center;color:#c0392b;padding:30px'>تعذر تحميل فهرس الدروس.</p>";
-      });
-  }
-
-  function loadReport() {
-    fetch(REPORT_URL, { cache: "no-store" })
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data && Array.isArray(data.page_texts)) {
-          data.page_texts.forEach(function (t) {
-            if (t && t.page) { reportPages[Number(t.page)] = t; }
-          });
-        }
-      })
-      .catch(function () {});
-  }
-
-  var zoomLevel = 100;
-  var tx = 0, ty = 0, dragging = false, sx = 0, sy = 0;
-
-  function applyZoom() {
-    var s = zoomLevel / 100;
-    lbImg.style.transform = "scale(" + s + ") translate(" + tx + "px," + ty + "px)";
-    zoomVal.textContent = zoomLevel + "%";
-  }
-  function setZoom(v) {
-    zoomLevel = Math.max(50, Math.min(600, v));
-    applyZoom();
+  function fullText(n) {
+    var t = reportPages[n];
+    if (n === 73) {
+      var check = topics.find(function (x) { return Number(x.page) === n; });
+      return "صفحة أتحقق من تعلمي — اقرأ الأسئلة الموجودة في الصفحة وأجب عنها للمعلم";
+    }
+    if (n === 5) {
+      return "صفحة البداية — ابدأ قراءة دروس التربية الدينية الإسلامية من الصف الأول الابتدائي";
+    }
+    if (t && t.text) { return t.text.trim(); }
+    var top = topics.find(function (x) { return Number(x.page) === n; });
+    if (top && top.title) { return top.title.trim(); }
+    return "";
   }
 
   function openPage(n) {
@@ -188,19 +215,22 @@ footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
     if (cur < 1) { cur = 1; }
     if (cur > total) { cur = total; }
     zoomLevel = 100; tx = 0; ty = 0;
-    lbImg.src = pageURL(cur);
-    updateTitle(cur);
-    lb.classList.add("open");
+    pageImg.src = pageURL(cur);
+    var t = topics.find(function (x) { return Number(x.page) === cur; });
+    pageTitle.textContent = "درس الصفحة " + cur;
+    if (t && t.title) { pageTitle.textContent = t.title; }
+    pageCount.textContent = "صفحة " + cur + " من " + total;
+    var rt = reportPages[cur];
+    pageHint.textContent = rt && rt.text ? "جاهزة للاستماع الكامل" : "اضغط «استمع كاملًا» لقراءة هذه الصفحة";
     applyZoom();
   }
 
-  function closeLb() { lb.classList.remove("open"); applyZoom(); }
   function prevPage() { cur = cur > 1 ? cur - 1 : 1; openPage(cur); }
   function nextPage() { cur = cur < total ? cur + 1 : total; openPage(cur); }
 
   function panStart(e) {
     dragging = true;
-    lbImg.classList.add("dragging");
+    pageImg.classList.add("dragging");
     sx = (e.touches ? e.touches[0].clientX : e.clientX);
     sy = (e.touches ? e.touches[0].clientY : e.clientY);
     e.preventDefault();
@@ -216,8 +246,32 @@ footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
   }
   function panEnd() {
     dragging = false;
-    lbImg.classList.remove("dragging");
+    pageImg.classList.remove("dragging");
     applyZoom();
+  }
+
+  function loadTopics() {
+    fetch(TOPICS_URL, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (Array.isArray(data)) { topics = data; }
+        else if (data && Array.isArray(data.topics)) { topics = data.topics; }
+        else if (data && Array.isArray(data.lessons)) { topics = data.lessons; }
+      })
+      .catch(function () {});
+  }
+
+  function loadReport() {
+    fetch(REPORT_URL, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && Array.isArray(data.page_texts)) {
+          data.page_texts.forEach(function (t) {
+            if (t && t.page) { reportPages[Number(t.page)] = t; }
+          });
+        }
+      })
+      .catch(function () {});
   }
 
   document.getElementById("startBtn").addEventListener("click", function () { openPage(5); });
@@ -227,44 +281,43 @@ footer{text-align:center;color:#7f8c8d;font-size:13px;padding:20px 10px 30px}
     this.classList.toggle("active");
   });
 
-  document.getElementById("lbClose").addEventListener("click", closeLb);
-  document.getElementById("lbPrev").addEventListener("click", prevPage);
-  document.getElementById("lbNext").addEventListener("click", nextPage);
-  document.getElementById("lbPrevBtn").addEventListener("click", prevPage);
-  document.getElementById("lbNextBtn").addEventListener("click", nextPage);
-  document.getElementById("lbListen").addEventListener("click", function () {
-    var rt = reportPages[cur];
-    var t = topics.find(function (x) { return Number(x.page) === cur; });
-    var txt = (rt && rt.text) ? rt.text : (t ? t.title : "");
-    speak(txt || ("صفحة " + cur + " من كتاب التربية الدينية الإسلامية"));
-  });
-
-  document.getElementById("zoomIn").addEventListener("click", function () { setZoom(zoomLevel + 20); });
-  document.getElementById("zoomOut").addEventListener("click", function () { setZoom(zoomLevel - 20); });
+  document.getElementById("prevBtn").addEventListener("click", prevPage);
+  document.getElementById("nextBtn").addEventListener("click", nextPage);
+  document.getElementById("zoomIn").addEventListener("click", function () { askZoom(20); });
+  document.getElementById("zoomOut").addEventListener("click", function () { askZoom(-20); });
   document.getElementById("zoomReset").addEventListener("click", function () { setZoom(100); });
 
-  lbImg.addEventListener("mousedown", panStart);
-  lbImg.addEventListener("mousemove", panMove);
-  lbImg.addEventListener("mouseup", panEnd);
-  lbImg.addEventListener("mouseleave", panEnd);
-  lbImg.addEventListener("touchstart", panStart, { passive: false });
-  lbImg.addEventListener("touchmove", panMove, { passive: false });
-  lbImg.addEventListener("touchend", panEnd);
-  lbImg.addEventListener("touchcancel", panEnd);
-  lbImg.addEventListener("wheel", function (e) {
+  document.getElementById("listenFull").addEventListener("click", function () {
+    var txt = fullText(cur);
+    if (txt) { speak(txt); }
+    else { speak("صفحة " + cur + " من كتاب التربية الدينية الإسلامية"); }
+  });
+  document.getElementById("listenTitle").addEventListener("click", function () {
+    var t = topics.find(function (x) { return Number(x.page) === cur; });
+    speak(t && t.title ? t.title : ("صفحة " + cur));
+  });
+
+  stage.addEventListener("mousedown", panStart);
+  stage.addEventListener("mousemove", panMove);
+  stage.addEventListener("mouseup", panEnd);
+  stage.addEventListener("mouseleave", panEnd);
+  stage.addEventListener("touchstart", panStart, { passive: false });
+  stage.addEventListener("touchmove", panMove, { passive: false });
+  stage.addEventListener("touchend", panEnd);
+  stage.addEventListener("touchcancel", panEnd);
+  stage.addEventListener("wheel", function (e) {
     e.preventDefault();
     setZoom(zoomLevel + (e.deltaY < 0 ? 15 : -15));
   }, { passive: false });
 
   document.addEventListener("keydown", function (e) {
-    if (!lb.classList.contains("open")) { return; }
-    if (e.key === "Escape") { closeLb(); }
-    if (e.key === "ArrowLeft") { prevPage(); }
-    if (e.key === "ArrowRight") { nextPage(); }
+    if (e.key === "ArrowRight") { prevPage(); }
+    if (e.key === "ArrowLeft") { nextPage(); }
   });
 
-  loadReport();
   loadTopics();
+  loadReport();
+  openPage(5);
 })();
 </script>
 </body>
